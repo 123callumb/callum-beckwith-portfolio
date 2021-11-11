@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
+import SplashSection from "../components/Homepage/SplashSection";
+import Layout from "../components/shared/Layout";
 
 export default function Home(){
-  return (
-    <Box w="100%">
-      hi
-    </Box>
-  )
+  return <Layout>
+    <SplashSection />
+  </Layout>
 }
