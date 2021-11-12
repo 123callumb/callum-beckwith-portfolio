@@ -16,7 +16,7 @@ export default () => <Box w="100%" h="68vh" pos="relative">
         </Stack>
     </Flex>
     <VStack pos="absolute" bottom="12" w="100%">
-        <Text color="whiteShade" fontSize="2xl">What I've been up to...</Text>
+        <Text color="whiteShade" fontSize="2xl" fontWeight="100">What I've been up to...</Text>
         <Icon as={FaArrowCircleDown} color="whiteShade" boxSize="6"/>
       </VStack>
 </Box>
