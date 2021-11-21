@@ -1,0 +1,23 @@
+.projectItem {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    .projectContent {
+        transition: all 0.3s ease-in-out;
+
+        .projectTitle {
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+    }
+
+    &:hover {
+        .projectContent {
+            transform: scale(1.1);
+
+            .projectTitle {
+                opacity: 1;
+            }
+        }
+    }
+}
