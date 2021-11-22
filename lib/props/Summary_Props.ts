@@ -4,4 +4,5 @@ export default interface Summary_Props {
     featureImageURL: string;
     brandLogoURL?: string;
     link?: string;
+    colours: string[];
 }

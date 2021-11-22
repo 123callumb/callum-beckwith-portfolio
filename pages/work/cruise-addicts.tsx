@@ -2,7 +2,7 @@ import Layout from "../../components/shared/Layout";
 import Summary from "../../components/Work/Summary";
 
 export default function CruiseAddicts() {
-    return <Layout>
+    return <Layout breadcrumb="Work">
         <Summary 
             name="Cruise Addicts"
             desc="Cruise Addicts Magazine are a free online Magazine 
@@ -12,6 +12,7 @@ export default function CruiseAddicts() {
             distribute all their content."
             featureImageURL="/img/ca-feature-preview.png"
             brandLogoURL="/img/ca-logo.png"
+            colours={["#1384A3", "#33A5B8", "#EFF9FE", "#282828"]}
         />
     </Layout>;
 } 
