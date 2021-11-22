@@ -19,7 +19,7 @@ const projects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Elem
         name: 'Cruise Addicts',
         imgSrc: "/img/ca-white-logo.png",
         forceHeight: "120px",
-        slug: 'easy-learn'
+        slug: 'cruise-addicts'
     },
     {
         name: 'Forensic Neuroscience',
