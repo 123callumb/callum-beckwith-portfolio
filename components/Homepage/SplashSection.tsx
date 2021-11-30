@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Icon, IconButton, Spacer, Stack, Text, VStack } from "@chakra-ui/react";
 import { FaArrowCircleDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import LinkEnum from "../../lib/models/LinkEnum";
+import LinkEnum from "../../lib/enums/LinkEnum";
 
 export default () => <Box w="100%" h="68vh" pos="relative">
     <Flex mt="28vh">

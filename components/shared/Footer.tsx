@@ -1,5 +1,5 @@
 import { Box, Container, Flex, Spacer, Text } from "@chakra-ui/react";
-import LinkEnum from "../../lib/models/LinkEnum";
+import LinkEnum from "../../lib/enums/LinkEnum";
 
 export default () => <Container maxW="sm" pb="10" pt="12">
     <Flex direction={{ md: 'row' }} color="whiteShade" fontWeight="500">
