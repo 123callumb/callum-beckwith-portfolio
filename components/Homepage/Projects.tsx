@@ -24,12 +24,12 @@ const projects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Elem
     {
         name: 'Forensic Neuroscience',
         imgSrc: "/img/fn-white-logo.png",
-        slug: 'easy-learn'
+        slug: 'forensic-neurosciences'
     },
     {
         name: 'Sheffield Hallam Students\' Union',
         imgSrc: "/img/shu-white-logo.png",
-        slug: 'easy-learn'
+        slug: 'sheffield-hallam-students-union'
     },
     {
         name: 'View all projects',
