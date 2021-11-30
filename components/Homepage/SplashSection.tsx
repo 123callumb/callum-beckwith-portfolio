@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Icon, IconButton, Spacer, Stack, Text, VStack } from "@chakra-ui/react";
 import { FaArrowCircleDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import LinkEnum from "../../lib/models/LinkEnum";
 
 export default () => <Box w="100%" h="68vh" pos="relative">
     <Flex mt="28vh">
@@ -9,14 +10,22 @@ export default () => <Box w="100%" h="68vh" pos="relative">
             <Button maxW="max-content" bgColor="cyanShade1" size="sm" mt="4" >Contact me</Button>
         </Flex>
         <Spacer />
-        <Stack spacing={8} flexDirection="column" color="whiteShade" px="4">
-            <IconButton variant="ghost" icon={<Icon as={FaTwitter} boxSize="10" />} aria-label="My Twitter" />
-            <IconButton variant="ghost" icon={<Icon as={FaLinkedin} boxSize="10" />} aria-label="My Linkedin" />
-            <IconButton variant="ghost" icon={<Icon as={FaGithub} boxSize="10" />} aria-label="My Github" />
+        <Stack spacing={6} flexDirection="column" color="whiteShade" px="4">
+            <a href={LinkEnum.GitHub} target="_blank">
+                <IconButton variant="ghost" icon={<Icon as={FaTwitter} boxSize="10" />} aria-label="My Twitter" _hover={{ opacity: 0.8}} />
+            </a>
+            <Spacer />
+            <a href={LinkEnum.LinkedIn} target="_blank">
+                <IconButton variant="ghost" icon={<Icon as={FaLinkedin} boxSize="10" />} aria-label="My Linkedin" _hover={{ opacity: 0.8}} />
+            </a>
+            <Spacer />
+            <a href={LinkEnum.Twitter} target="_blank">
+                <IconButton variant="ghost" icon={<Icon as={FaGithub} boxSize="10" />} aria-label="My Github" _hover={{ opacity: 0.8}} />
+            </a>
         </Stack>
     </Flex>
     <VStack pos="absolute" bottom="12" w="100%">
         <Text color="whiteShade" fontSize="2xl" fontWeight="100">What I've been up to...</Text>
-        <Icon as={FaArrowCircleDown} color="whiteShade" boxSize="6"/>
-      </VStack>
+        <Icon as={FaArrowCircleDown} color="whiteShade" boxSize="6" />
+    </VStack>
 </Box>

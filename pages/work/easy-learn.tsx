@@ -2,7 +2,7 @@ import Layout from "../../components/shared/Layout";
 import Summary from "../../components/Work/Summary";
 
 export default function EasyLearn() {
-    return <Layout>
+    return <Layout breadcrumb="Work">
         <Summary
             name="Easy Learn"
             desc="Easy Learn is one of my favourite on going projects to date.
