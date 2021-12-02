@@ -1,5 +1,6 @@
 import { Box, Center, Flex, Spacer, Stack, Text } from "@chakra-ui/react"
 import NextLink from 'next/link';
+import LinkEnum from "../../lib/enums/LinkEnum";
 
 export default ({ breadcrumb }: { breadcrumb?: string }) => {
     return <Box w="100%" color="whiteShade" p="4" px="8">
@@ -17,10 +18,10 @@ export default ({ breadcrumb }: { breadcrumb?: string }) => {
             <Spacer />
             <Center>
                 <Stack direction={{ md: 'row' }} spacing={12}>
-                    <NextLink href="/">
+                    <NextLink href={LinkEnum.Contact}>
                         <Text fontWeight="500" className="linkAnimation">Contact</Text>
                     </NextLink>
-                    <NextLink href="/">
+                    <NextLink href={LinkEnum.CVSummary}>
                         <Text fontWeight="500" className="linkAnimation">CV Summary</Text>
                     </NextLink>
                 </Stack>

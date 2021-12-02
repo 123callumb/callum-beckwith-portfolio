@@ -12,15 +12,15 @@ export default () => <Box w="100%" h="68vh" pos="relative">
         <Spacer />
         <Stack spacing={6} flexDirection="column" color="whiteShade" px="4">
             <a href={LinkEnum.GitHub} target="_blank">
-                <IconButton variant="ghost" icon={<Icon as={FaTwitter} boxSize="10" />} aria-label="My Twitter" _hover={{ opacity: 0.8}} />
+                <IconButton variant="ghost" icon={<Icon as={FaTwitter} boxSize="10" />} aria-label="My Twitter" _hover={{ opacity: 0.8 }} />
             </a>
             <Spacer />
             <a href={LinkEnum.LinkedIn} target="_blank">
-                <IconButton variant="ghost" icon={<Icon as={FaLinkedin} boxSize="10" />} aria-label="My Linkedin" _hover={{ opacity: 0.8}} />
+                <IconButton variant="ghost" icon={<Icon as={FaLinkedin} boxSize="10" />} aria-label="My Linkedin" _hover={{ opacity: 0.8 }} />
             </a>
             <Spacer />
             <a href={LinkEnum.Twitter} target="_blank">
-                <IconButton variant="ghost" icon={<Icon as={FaGithub} boxSize="10" />} aria-label="My Github" _hover={{ opacity: 0.8}} />
+                <IconButton variant="ghost" icon={<Icon as={FaGithub} boxSize="10" />} aria-label="My Github" _hover={{ opacity: 0.8 }} />
             </a>
         </Stack>
     </Flex>
