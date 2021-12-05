@@ -1,4 +1,4 @@
-import { Button, Icon, Text } from "@chakra-ui/react";
+import { Box, Button, Icon, Text, VStack } from "@chakra-ui/react";
 import Layout from "../components/shared/Layout";
 import { Job } from "../lib/props/Job_Props";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
@@ -48,7 +48,7 @@ const jobDetails: Job[] = [
 export default function CVSummary() {
     return <Layout>
         <VerticalTimeline>
-            {jobDetails.map((m,i) => <VerticalTimelineElement 
+            {jobDetails.map((m, i) => <VerticalTimelineElement
                 key={i}
                 contentStyle={{ boxShadow: 'unset', backgroundColor: ColourPaletteEnum.White }}
                 icon={m.relatedIcon}
@@ -57,9 +57,11 @@ export default function CVSummary() {
                     {m.startDate.toLocaleString('default', { month: 'long', year: 'numeric' })} - {m.endDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present'}
                 </Text>}
             >
-                <Text fontSize="lg">{m.jobRole}</Text>
-                <Text fontSize="md">{m.companyName}</Text>
-                <Text fontSize="sm">{m.roleDescription}</Text>
+                <VStack spacing={2} alignItems="start">
+                    <Box fontSize="xl" fontWeight="500">{m.jobRole}</Box>
+                    <Box fontSize="md" fontWeight="500">{m.companyName}</Box>
+                    <Box fontSize="sm">{m.roleDescription}</Box>
+                </VStack>
             </VerticalTimelineElement>)}
         </VerticalTimeline>
         <a href="/res/CallumBeckwith_LatestCV.pdf" target="_blank">
