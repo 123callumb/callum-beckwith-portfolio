@@ -6,6 +6,7 @@ export interface Job {
     location: string;
     startDate: Date;
     endDate?: Date;
-    roleDescription: string;
+    roleDescription?: string;
     relatedIcon: JSX.Element;
+    jobIndex?: number;
 }
