@@ -1,6 +1,12 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Icon, Text } from "@chakra-ui/react";
 import Layout from "../components/shared/Layout";
 import { Job } from "../lib/props/Job_Props";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import 'react-vertical-timeline-component/style.min.css';
+import { MdGroups, MdAnalytics } from 'react-icons/md/index';
+import { FaPencilRuler } from 'react-icons/fa/index';
+import { AiOutlineFileSearch } from 'react-icons/ai/index';
+import ColourPaletteEnum from "../lib/enums/ColourPaletteEnum";
 
 const jobDetails: Job[] = [
     {
@@ -9,6 +15,7 @@ const jobDetails: Job[] = [
         location: 'York, UK - Remote',
         roleDescription: 'Full stack application developer working with large client datasets - skills include .Net Core/Framework,  Node.Js, TypeScript, SQL and more...',
         startDate: new Date(2019, 6, 1, 0, 0, 0, 0),
+        relatedIcon: <Icon as={AiOutlineFileSearch} />
     },
     {
         companyName: 'Webur',
@@ -16,6 +23,7 @@ const jobDetails: Job[] = [
         location: 'Sheffield, UK',
         roleDescription: 'Duties include handling clients, producing company branding, site designs and full stack web development - skills include PHP, React.JS, Node.Js and more...',
         startDate: new Date(2018, 6, 1, 0, 0, 0, 0),
+        relatedIcon: <Icon as={FaPencilRuler} />
     },
     {
         companyName: 'Sheffield Hallam Students Union',
@@ -23,7 +31,8 @@ const jobDetails: Job[] = [
         location: 'Sheffield, UK',
         roleDescription: 'Duties include the creation of multiple web pages (including designs), a blog system and a Welcome Week page.',
         startDate: new Date(2018, 6, 1, 0, 0, 0, 0),
-        endDate: new Date(2018, 8, 1, 0, 0, 0, 0)
+        endDate: new Date(2018, 8, 1, 0, 0, 0, 0),
+        relatedIcon: <Icon as={MdGroups} />
     },
     {
         companyName: 'Liberty Trading GB Ltd',
@@ -31,12 +40,28 @@ const jobDetails: Job[] = [
         location: 'Barnsley, UK',
         roleDescription: 'Duties include handling stock values across three companies and developing private inventory analysis software. ',
         startDate: new Date(2017, 4, 1, 0, 0, 0, 0),
-        endDate: new Date(2017, 8, 1, 0, 0, 0, 0)
+        endDate: new Date(2017, 8, 1, 0, 0, 0, 0),
+        relatedIcon: <Icon as={MdAnalytics} />
     }
 ]
 
 export default function CVSummary() {
     return <Layout>
+        <VerticalTimeline>
+            {jobDetails.map((m,i) => <VerticalTimelineElement 
+                key={i}
+                contentStyle={{ boxShadow: 'unset', backgroundColor: ColourPaletteEnum.White }}
+                icon={m.relatedIcon}
+                iconStyle={{ background: ColourPaletteEnum.Cyan, color: ColourPaletteEnum.White }}
+                date={<Text mt='0' color={ColourPaletteEnum.White}>
+                    {m.startDate.toLocaleString('default', { month: 'long', year: 'numeric' })} - {m.endDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present'}
+                </Text>}
+            >
+                <Text fontSize="lg">{m.jobRole}</Text>
+                <Text fontSize="md">{m.companyName}</Text>
+                <Text fontSize="sm">{m.roleDescription}</Text>
+            </VerticalTimelineElement>)}
+        </VerticalTimeline>
         <a href="/res/CallumBeckwith_LatestCV.pdf" target="_blank">
             <Button colorScheme="blueShade2">Download CV</Button>
         </a>

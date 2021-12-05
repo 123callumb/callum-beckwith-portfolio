@@ -1,3 +1,5 @@
+import { ComponentWithAs, IconProps } from "@chakra-ui/react";
+
 export interface Job {
     companyName: string;
     jobRole: string;
@@ -5,4 +7,5 @@ export interface Job {
     startDate: Date;
     endDate?: Date;
     roleDescription: string;
+    relatedIcon: JSX.Element;
 }
