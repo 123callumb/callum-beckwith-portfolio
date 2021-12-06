@@ -4,13 +4,13 @@ import LinkEnum from "../../lib/enums/LinkEnum";
 
 export default () => <Box w="100%" h="68vh" pos="relative">
     <Flex mt="28vh">
-        <Flex spacing={4} color="whiteShade" borderLeft="6px white solid" ml="15%" pl="6" pb="3" flexDirection="column">
+        <Flex spacing={4} color="whiteShade" borderLeft="6px white solid" ml="15%" pl="6" pb="0" flexDirection="column">
             <Text fontSize="56" fontWeight="600">Callum Beckwith</Text>
             <Text fontSize="26" fontWeight="200" mt="-2">Software Developer</Text>
             <Button maxW="max-content" bgColor="cyanShade1" size="sm" mt="4" >Contact me</Button>
         </Flex>
         <Spacer />
-        <Stack spacing={6} flexDirection="column" color="whiteShade" px="4">
+        <Stack spacing={5} flexDirection="column" color="whiteShade" px="4">
             <a href={LinkEnum.GitHub} target="_blank">
                 <IconButton variant="ghost" icon={<Icon as={FaTwitter} boxSize="10" />} aria-label="My Twitter" _hover={{ opacity: 0.8 }} />
             </a>

@@ -77,7 +77,7 @@ export default function CVSummary() {
                 </Link>
             </Container>
         </Box>
-        <Box bgColor="blueShade2">
+        <Box bgColor="blueShade1">
             <Container maxW="6xl" py="8" pb="12">
                 <Box textAlign={{ lg: 'center', md: 'left' }} mb="4" fontWeight="500" fontSize="lg" color={ColourPaletteEnum.White}>
                     <Text>My journey</Text>

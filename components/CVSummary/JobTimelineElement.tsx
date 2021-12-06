@@ -11,7 +11,7 @@ export default class JobTimelineElement extends React.Component<Job> {
             key={this.props.jobIndex}
             contentStyle={{ boxShadow: 'unset', backgroundColor: ColourPaletteEnum.White }}
             icon={this.props.relatedIcon}
-            iconStyle={{ background: ColourPaletteEnum.Cyan, color: ColourPaletteEnum.White }}
+            iconStyle={{ background: ColourPaletteEnum.Blue, color: ColourPaletteEnum.White }}
             date={<Text mt='0' color={{ lg: ColourPaletteEnum.White, md: 'black' }}>
                 {this.props.startDate.toLocaleString('default', { month: 'long', year: 'numeric' })} - {this.props.endDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present'}
             </Text>}

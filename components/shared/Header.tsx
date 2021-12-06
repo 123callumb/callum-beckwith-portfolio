@@ -18,11 +18,11 @@ export default ({ breadcrumb }: { breadcrumb?: string }) => {
             <Spacer />
             <Center>
                 <Stack direction={{ md: 'row' }} spacing={12}>
-                    <NextLink href={LinkEnum.Contact}>
-                        <Text fontWeight="500" className="linkAnimation">Contact</Text>
-                    </NextLink>
                     <NextLink href={LinkEnum.CVSummary}>
                         <Text fontWeight="500" className="linkAnimation">CV Summary</Text>
+                    </NextLink>
+                    <NextLink href={LinkEnum.Contact}>
+                        <Text fontWeight="500" className="linkAnimation">Contact</Text>
                     </NextLink>
                 </Stack>
             </Center>
