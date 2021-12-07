@@ -1,5 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Center, Divider, Flex, IconButton, Menu, MenuButton, MenuItem, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
+import { Box, Center, Divider, Flex, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
 import NextLink from 'next/link';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import LinkEnum from "../../lib/enums/LinkEnum";
@@ -38,6 +38,9 @@ export default ({ breadcrumb }: { breadcrumb?: string }) => {
                     <MenuList bgColor={ColourPaletteEnum.DarkBlue} textAlign="right">
                         <VStack px="4" pt="2" alignItems="end">
                             <Text fontSize="sm" fontWeight="100">Site</Text>
+                            <NextLink href={"/"}>
+                                <Text fontWeight="500" className="linkAnimation">Home</Text>
+                            </NextLink>
                             <NextLink href={LinkEnum.CVSummary}>
                                 <Text fontWeight="500" className="linkAnimation">CV Summary</Text>
                             </NextLink>

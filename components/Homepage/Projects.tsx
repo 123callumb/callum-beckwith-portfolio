@@ -32,13 +32,13 @@ const projects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Elem
         slug: 'sheffield-hallam-students-union'
     },
     {
-        name: 'View all projects',
+        name: 'View cv summary',
         custom: <Flex>
-            <Text fontSize="24">View all projects</Text>
+            <Text fontSize="24">View CV Summary</Text>
             <Icon ml="3" mt="14px" as={FaArrowCircleRight} />
         </Flex>,
         forceHeight: "40px",
-        slug: 'easy-learn'
+        slug: '../cv-summary'
     }
 ];
 const desktopColourAlternation = (i: number) => (i % 4) > 1 ? (i % 2 ? "blueShade2" : "blueShade1") : (i % 2 ? "blueShade1" : "blueShade2");

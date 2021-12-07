@@ -5,8 +5,8 @@ const enum LinkEnum {
     LinkedIn = "https://www.linkedin.com/in/callumbeckwith/",
 
     // Internal
-    Contact = "contact",
-    CVSummary = "cv-summary"
+    Contact = "../contact",
+    CVSummary = "../cv-summary"
 }
 
 export default LinkEnum;
