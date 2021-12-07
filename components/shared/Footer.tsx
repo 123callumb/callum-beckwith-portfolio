@@ -2,7 +2,7 @@ import { Box, Container, Flex, Spacer, Text } from "@chakra-ui/react";
 import LinkEnum from "../../lib/enums/LinkEnum";
 
 export default () => <Container maxW="sm" pb="10" pt="12">
-    <Flex direction={{ md: 'row' }} color="whiteShade" fontWeight="500">
+    <Flex direction={{ md: 'row' }} color="whiteShade" fontWeight="500" px={{ base: '10' }}>
         <a href={LinkEnum.GitHub} target="_blank">
             <Text className="linkAnimation">GitHub</Text>
         </a>

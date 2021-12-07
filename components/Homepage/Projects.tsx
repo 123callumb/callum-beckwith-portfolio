@@ -41,10 +41,12 @@ const projects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Elem
         slug: 'easy-learn'
     }
 ];
+const desktopColourAlternation = (i: number) => (i % 4) > 1 ? (i % 2 ? "blueShade2" : "blueShade1") : (i % 2 ? "blueShade1" : "blueShade2");
+const mobileColourAlternation = (i: number) => i % 2 ? "blueShade2" : "blueShade1";
 
 export default () => <SimpleGrid w="100%" color="whiteShade" columns={{ md: 2, sm: 1, base: 1 }}>
     {projects.map((m, i) => <LinkBox key={i}>
-        <Center bgColor={(i % 4) > 1 ? (i % 2 ? "blueShade2" : "blueShade1") : (i % 2 ? "blueShade1" : "blueShade2")} height="400px" className={style.projectItem}>
+        <Center bgColor={{ md: desktopColourAlternation(i), base: mobileColourAlternation(i) }} height="400px" className={style.projectItem}>
             <NextLink href={`/work/${m.slug}`} passHref>
                 <LinkOverlay>
                     <Box height={m.forceHeight || '90px'} className={style.projectContent}>

@@ -11,7 +11,7 @@ const Layout = ({ children, breadcrumb }: { children: any, breadcrumb?: string})
         <title>Callum Beckwith</title>
     </Head>
     <main>
-        <Flex flexDir="column" minH="100vh">
+        <Flex flexDir="column" minH="100vh" maxW="100vw" overflowX="hidden">
             <Header breadcrumb={breadcrumb} />
             <Box flex="1 1 auto">
                 {children}
