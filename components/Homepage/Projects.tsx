@@ -32,9 +32,9 @@ const projects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Elem
         slug: 'sheffield-hallam-students-union'
     },
     {
-        name: 'View cv summary',
+        name: 'Cv summary',
         custom: <Flex>
-            <Text fontSize="24">View CV Summary</Text>
+            <Text fontSize="24">CV Summary</Text>
             <Icon ml="3" mt="14px" as={FaArrowCircleRight} />
         </Flex>,
         forceHeight: "40px",
