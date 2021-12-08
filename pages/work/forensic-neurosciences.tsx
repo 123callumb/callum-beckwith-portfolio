@@ -1,5 +1,6 @@
 import Layout from "../../components/shared/Layout";
 import Summary from "../../components/Work/Summary";
+import { SiCss3, SiHtml5, SiJavascript, SiMysql, SiPhp, SiPhpmyadmin, SiReact, SiWebpack } from "react-icons/si";
 
 export default function ForensicNeurosciences() {
     return <Layout breadcrumb="Work">
@@ -14,6 +15,8 @@ export default function ForensicNeurosciences() {
             featureImageURL="/img/fn-feature-preview.png"
             brandLogoURL="/img/fn-logo.png"
             colours={["#003A6A", "#005496", "#8FC9FF", "#FFFFFF"]}
+            technologyUsed={[SiReact, SiWebpack, SiPhpmyadmin, SiMysql]}
+            languagesUsed={[SiPhp, SiJavascript, SiCss3, SiHtml5]}
         />
     </Layout>;
 } 

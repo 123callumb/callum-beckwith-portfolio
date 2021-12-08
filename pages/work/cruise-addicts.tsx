@@ -1,5 +1,6 @@
 import Layout from "../../components/shared/Layout";
 import Summary from "../../components/Work/Summary";
+import { SiCss3, SiHtml5, SiJavascript, SiMysql, SiPhp, SiPhpmyadmin, SiReact, SiWebpack } from "react-icons/si";
 
 export default function CruiseAddicts() {
     return <Layout breadcrumb="Work">
@@ -13,6 +14,8 @@ export default function CruiseAddicts() {
             featureImageURL="/img/ca-feature-preview.png"
             brandLogoURL="/img/ca-logo.png"
             colours={["#1384A3", "#33A5B8", "#EFF9FE", "#282828"]}
+            technologyUsed={[SiReact, SiWebpack, SiPhpmyadmin, SiMysql]}
+            languagesUsed={[SiPhp, SiJavascript, SiCss3, SiHtml5]}
         />
     </Layout>;
 } 

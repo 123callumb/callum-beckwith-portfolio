@@ -1,3 +1,5 @@
+import { IconType } from "react-icons/lib";
+
 export default interface Summary_Props {
     name: string;
     desc: string;
@@ -5,4 +7,6 @@ export default interface Summary_Props {
     brandLogoURL?: string;
     link?: string;
     colours: string[];
+    technologyUsed: IconType[];
+    languagesUsed: IconType[]
 }

@@ -1,3 +1,4 @@
+import { SiCss3, SiHtml5, SiJavascript, SiMysql, SiPhp, SiPhpmyadmin, SiReact, SiWebpack } from "react-icons/si";
 import Layout from "../../components/shared/Layout";
 import Summary from "../../components/Work/Summary";
 
@@ -14,6 +15,8 @@ export default function Webur() {
             brandLogoURL="/img/wb-logo.png"
             colours={["#F15D5E", "#2A2B2A", "#FAFAFA", "#393939"]}
             link="https://webur.co.uk"
+            technologyUsed={[SiReact, SiWebpack, SiPhpmyadmin, SiMysql]}
+            languagesUsed={[SiPhp, SiJavascript, SiCss3, SiHtml5]}
         />
     </Layout>;
 } 
