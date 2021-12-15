@@ -1,8 +1,8 @@
 import { Avatar, Button, Center, Container, Flex, HStack, Icon, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverTrigger, Spacer, Text, VStack } from "@chakra-ui/react";
 import { FaPhone } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
-import Layout from "../components/shared/Layout";
-import ColourPaletteEnum from "../lib/enums/ColourPaletteEnum";
+import Layout from "../../components/shared/Layout";
+import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 
 export default function Contact() {
     return <Layout>

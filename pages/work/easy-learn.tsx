@@ -1,6 +1,8 @@
 import Layout from "../../components/shared/Layout";
 import Summary from "../../components/Work/Summary";
 import { SiDotnet, SiReact, SiMysql, SiDocker, SiCsharp, SiWebpack, SiTypescript, SiJavascript, SiSass, SiNextdotjs } from 'react-icons/si/index';
+import ResourceEnum from "../../lib/enums/ResourceEnum";
+import ResourceHelper from "../../lib/helpers/ResourceHelper";
 
 export default function EasyLearn() {
     return <Layout breadcrumb="Work">
@@ -13,7 +15,7 @@ export default function EasyLearn() {
             through realistic scenarios and experiences. EasyLearn also provides
             teachers with classroom management abilities, ease of access features
             for their learners, and performance analysis tools."
-            featureImageURL="/img/el-feature-preview.png"
+            featureImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_EasyLearn)}
             colours={["#E4F2EE", "#BAD9C8", "#407352", "#68A67E", "#3B5946"]}
             technologyUsed={[SiDotnet, SiReact, SiWebpack, SiMysql, SiDocker, SiNextdotjs]}
             languagesUsed={[SiCsharp, SiTypescript, SiJavascript, SiSass]}

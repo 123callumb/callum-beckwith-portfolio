@@ -1,13 +1,13 @@
 import { Box, Button, Container, Icon, Link, Text, VStack } from "@chakra-ui/react";
-import Layout from "../components/shared/Layout";
-import { Job } from "../lib/props/Job_Props";
+import Layout from "../../components/shared/Layout";
+import { Job } from "../../lib/props/Job_Props";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 import { MdGroups, MdAnalytics, MdFoodBank } from 'react-icons/md/index';
 import { FaHotel, FaPencilRuler } from 'react-icons/fa/index';
 import { AiOutlineFileSearch } from 'react-icons/ai/index';
-import ColourPaletteEnum from "../lib/enums/ColourPaletteEnum";
-import JobTimelineElement from "../components/CVSummary/JobTimelineElement";
+import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
+import JobTimelineElement from "../../components/CVSummary/JobTimelineElement";
 
 const jobDetails: Job[] = [
     {
