@@ -10,9 +10,13 @@ export default class ResourceHelper {
     }
 
     public static CreateResourceURL(resource: ResourceEnum): string {
-        if (resource.includes(".svg"))
-            return `${isProd ? rootDir : ""}/svg/${resource}`;
-        else
-            return `${isProd ? rootDir : ""}/img/${resource}`;
+        let fodlerName = "img";
+        
+        if (resource.toLowerCase().includes(".svg"))
+            fodlerName = `svg`;
+        if (resource.toLowerCase().includes(".pdf"))
+            fodlerName = `res`;
+
+        return `${isProd ? rootDir : ""}/${fodlerName}/${resource}`;
     }
 }

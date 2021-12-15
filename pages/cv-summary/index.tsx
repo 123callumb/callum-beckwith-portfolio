@@ -8,6 +8,8 @@ import { FaHotel, FaPencilRuler } from 'react-icons/fa/index';
 import { AiOutlineFileSearch } from 'react-icons/ai/index';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import JobTimelineElement from "../../components/CVSummary/JobTimelineElement";
+import ResourceHelper from "../../lib/helpers/ResourceHelper";
+import ResourceEnum from "../../lib/enums/ResourceEnum";
 
 const jobDetails: Job[] = [
     {
@@ -72,7 +74,7 @@ export default function CVSummary() {
                 <Text mb="8" fontSize="xl">
                     You can get a local copy of my cv here.
                 </Text>
-                <Link href="/res/CallumBeckwith_LatestCV.pdf" target="_blank">
+                <Link href={ResourceHelper.CreateResourceURL(ResourceEnum.CV_PDF)} target="_blank">
                     <Button bgColor="cyanShade1" color={ColourPaletteEnum.White}>Download CV</Button>
                 </Link>
             </Container>
