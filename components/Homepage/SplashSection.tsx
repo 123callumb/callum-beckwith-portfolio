@@ -16,7 +16,7 @@ export default function SplashSection() {
             </Flex>
             <Spacer />
             <Stack spacing={5} flexDirection="column" color="whiteShade" px="4" d={{ base: 'none', md: 'flex' }}>
-                <a href={ExternalLinkEnum.GitHub} target="_blank" rel="noreferrer">
+                <a href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
                     <IconButton variant="ghost" icon={<Icon as={FaTwitter} boxSize="10" />} aria-label="My Twitter" _hover={{ opacity: 0.8 }} />
                 </a>
                 <Spacer />
@@ -24,7 +24,7 @@ export default function SplashSection() {
                     <IconButton variant="ghost" icon={<Icon as={FaLinkedin} boxSize="10" />} aria-label="My Linkedin" _hover={{ opacity: 0.8 }} />
                 </a>
                 <Spacer />
-                <a href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
+                <a href={ExternalLinkEnum.GitHub} target="_blank" rel="noreferrer">
                     <IconButton variant="ghost" icon={<Icon as={FaGithub} boxSize="10" />} aria-label="My Github" _hover={{ opacity: 0.8 }} />
                 </a>
             </Stack>
