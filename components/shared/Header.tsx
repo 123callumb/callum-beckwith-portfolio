@@ -1,17 +1,17 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Center, Divider, Flex, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
+import { Box, Center, Container, Divider, Flex, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
 import NextLink from 'next/link';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 
 export default function Header({ breadcrumb }: { breadcrumb?: string }) {
-    return <Box w="100%" color="whiteShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
+    return <Container maxW="2xl" color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
         <Flex flexDir={{ md: 'row' }}>
             <Center>
                 <Flex fontWeight="700" style={{ wordSpacing: '10px' }} d="flex">
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Home)}>
-                        <Text className="linkAnimation">CBeckwith.co.uk</Text>
+                        <Text className="linkAnimation">cbeckwith.co.uk</Text>
                     </NextLink>
                     <Center>
                         <Text ml="4">{breadcrumb && ` / ${breadcrumb}`}</Text>
@@ -22,10 +22,10 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
             <Center>
                 <Stack direction={{ md: 'row' }} spacing={12} d={{ base: 'none', md: 'flex' }}>
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
-                        <Text fontWeight="500" className="linkAnimation">CV Summary</Text>
+                        <Text fontWeight="500" className="linkAnimation">CV SUMMARY</Text>
                     </NextLink>
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
-                        <Text fontWeight="500" className="linkAnimation">Contact</Text>
+                        <Text fontWeight="500" className="linkAnimation">MY WORK</Text>
                     </NextLink>
                 </Stack>
                 <Menu id="mobile-menu">
@@ -65,6 +65,10 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                     </MenuList>
                 </Menu>
             </Center>
+            <Spacer />
+            <Center>
+                Contact Me
+            </Center>
         </Flex>
-    </Box>
+    </Container>
 }
