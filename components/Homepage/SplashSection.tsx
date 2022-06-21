@@ -7,7 +7,7 @@ import ResourceHelper from "../../lib/helpers/ResourceHelper";
 export default function SplashSection() {
     return <Box w="100%" h="68vh" pos="relative">
         <Flex mt={{ md: "28vh", base: "24vh" }}>
-            <Flex spacing={4} color="whiteShade" borderLeft="6px white solid" ml={{ md: "15%", base: "5%" }} pl="6" pb="0" flexDirection="column">
+            <Flex spacing={4} color="blackShade" borderLeft="6px black solid" ml={{ md: "15%", base: "5%" }} pl="6" pb="0" flexDirection="column">
                 <Text fontSize="56" fontWeight="600">Callum Beckwith</Text>
                 <Text fontSize="26" fontWeight="200" mt="-2">Software Developer</Text>
                 <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>

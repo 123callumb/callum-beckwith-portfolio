@@ -1,17 +1,21 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Center, Container, Divider, Flex, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
+import { Box, Center, Container, Divider, Flex, Icon, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
 import NextLink from 'next/link';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
+import { VscProject } from 'react-icons/vsc/index'
 
 export default function Header({ breadcrumb }: { breadcrumb?: string }) {
-    return <Container maxW="2xl" color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
+    return <Container maxW="4xl" color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
         <Flex flexDir={{ md: 'row' }}>
             <Center>
                 <Flex fontWeight="700" style={{ wordSpacing: '10px' }} d="flex">
+                    <Center mr="8px">
+                        <Icon as={VscProject} />
+                    </Center>
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Home)}>
-                        <Text className="linkAnimation">cbeckwith.co.uk</Text>
+                        <Text fontSize="lg" className="linkAnimation">cbeckwith.co.uk</Text>
                     </NextLink>
                     <Center>
                         <Text ml="4">{breadcrumb && ` / ${breadcrumb}`}</Text>
@@ -21,12 +25,18 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
             <Spacer />
             <Center>
                 <Stack direction={{ md: 'row' }} spacing={12} d={{ base: 'none', md: 'flex' }}>
-                    <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
-                        <Text fontWeight="500" className="linkAnimation">CV SUMMARY</Text>
-                    </NextLink>
-                    <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
-                        <Text fontWeight="500" className="linkAnimation">MY WORK</Text>
-                    </NextLink>
+                    <Flex flexDir={"column"} alignItems="center">
+                        <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
+                            <Text fontWeight="500" fontSize="sm">CV SUMMARY</Text>
+                        </NextLink>
+                        <Divider w="30%" borderColor={"blackShade"} opacity="0.2"/>
+                    </Flex>
+                    <Flex flexDir={"column"} alignItems="center">
+                        <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
+                            <Text fontWeight="500" fontSize="sm">MY WORK</Text>
+                        </NextLink>
+                        <Divider mt="6px" w="30%" borderColor={"blackShade"} opacity="0.2"/>
+                    </Flex>
                 </Stack>
                 <Menu id="mobile-menu">
                     <MenuButton

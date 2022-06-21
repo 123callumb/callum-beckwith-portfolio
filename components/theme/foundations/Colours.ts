@@ -11,6 +11,8 @@ const colours: Colors = {
     transparent: { 
         500:'transparent'
     },
+	bgWhite: 'rgb(255, 250, 250)',
+	btnBlueShade: 'rgb(88, 158, 166)',
 	current: 'currentColor',
 	black: '#000000',
 	white: '#FFFFFF',
