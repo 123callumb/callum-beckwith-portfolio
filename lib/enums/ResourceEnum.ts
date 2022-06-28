@@ -12,7 +12,8 @@ const enum ResourceEnum {
     Logo_CruiseAddicts = "ca-logo.png",
     Logo_ForensicNeurosciences = "fn-logo.png",
     Logo_SHU = "shu-logo.png",
-    CV_PDF = "CallumBeckwith_LatestCV.pdf"
+    CV_PDF = "CallumBeckwith_LatestCV.pdf",
+    IsometricSplash = "laptop-chip-isometric.svg",
 } 
 
 export default ResourceEnum;

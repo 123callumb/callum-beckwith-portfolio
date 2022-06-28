@@ -3,7 +3,7 @@ import { ExternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function Footer() {
     return <Container maxW="sm" pb="10" pt="12">
-        <Flex direction={{ md: 'row' }} color="whiteShade" fontWeight="500" px={{ base: '10' }}>
+        <Flex direction={{ md: 'row' }} color="blackShade" fontWeight="500" px={{ base: '10' }}>
             <a href={ExternalLinkEnum.GitHub} target="_blank" rel="noreferrer">
                 <Text className="linkAnimation">GitHub</Text>
             </a>
