@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Icon, LinkBox, SimpleGrid, Text, LinkOverlay } from "@chakra-ui/react";
+import { Box, Center, Flex, Icon, LinkBox, SimpleGrid, Text, LinkOverlay, Container } from "@chakra-ui/react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import style from '../../styles/Components/Projects.module.scss';
 import NextLink from "next/link";
@@ -48,21 +48,29 @@ const desktopColourAlternation = (i: number) => (i % 4) > 1 ? (i % 2 ? "blueShad
 const mobileColourAlternation = (i: number) => i % 2 ? "blueShade2" : "blueShade1";
 
 export default function Projects() {
-    return <SimpleGrid w="100%" color="whiteShade" columns={{ md: 2, sm: 1, base: 1 }}>
-        {projects.map((m, i) => <LinkBox key={i}>
-            <Center bgColor={{ md: desktopColourAlternation(i), base: mobileColourAlternation(i) }} height="400px" className={style.projectItem}>
-                <NextLink href={m.slug} passHref>
-                    <LinkOverlay>
-                        <Box height={m.forceHeight || '90px'} className={style.projectContent}>
-                            {m.imgSrc ? <embed src={m.imgSrc} height="100%" draggable="false" /> : m.custom || m.name}
-                            {!m.custom && <Box opacity="0" className={style.projectTitle} mt="8" fontSize="sm">
-                                <Text>View project details</Text>
-                                <Icon ml="2" mt="2" as={FaArrowCircleRight} />
-                            </Box>}
-                        </Box>
-                    </LinkOverlay>
-                </NextLink>
-            </Center>
-        </LinkBox>)}
-    </SimpleGrid>
+    return <Flex bgColor={"white"} py="100px">
+        <Container maxW={"4xl"} flexDirection={"column"} w="100%" columns={{ md: 2, sm: 1, base: 1 }}>
+            <Flex alignItems={"baseline"}>
+                <Text fontSize="34" fontWeight="700" mr="20px">My Work.</Text>
+                <Text>Here are a couple of my most recent projects I've worked on.</Text>
+            </Flex>
+        </Container>
+    </Flex>;
 }
+
+// Old bblue boxes 
+// {projects.map((m, i) => <LinkBox key={i}>
+// <Center bgColor={{ md: desktopColourAlternation(i), base: mobileColourAlternation(i) }} height="400px" className={style.projectItem}>
+//     <NextLink href={m.slug} passHref>
+//         <LinkOverlay>
+//             <Box height={m.forceHeight || '90px'} className={style.projectContent}>
+//                 {m.imgSrc ? <embed src={m.imgSrc} height="100%" draggable="false" /> : m.custom || m.name}
+//                 {!m.custom && <Box opacity="0" className={style.projectTitle} mt="8" fontSize="sm">
+//                     <Text>View project details</Text>
+//                     <Icon ml="2" mt="2" as={FaArrowCircleRight} />
+//                 </Box>}
+//             </Box>
+//         </LinkOverlay>
+//     </NextLink>
+// </Center>
+// </LinkBox>)}

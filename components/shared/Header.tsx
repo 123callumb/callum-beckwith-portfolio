@@ -7,8 +7,8 @@ import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { VscProject } from 'react-icons/vsc/index'
 
 export default function Header({ breadcrumb }: { breadcrumb?: string }) {
-    return <Container maxW="4xl" color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
-        <Flex flexDir={{ md: 'row' }}>
+    return <Container maxW={"4xl"}>
+        <Flex flexDir={{ md: 'row' }} color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
             <Center>
                 <Flex fontWeight="700" style={{ wordSpacing: '10px' }} d="flex">
                     <Center mr="8px">
@@ -29,13 +29,13 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                         <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
                             <Text fontWeight="500" fontSize="sm">CV SUMMARY</Text>
                         </NextLink>
-                        <Divider w="30%" borderColor={"blackShade"} opacity="0.2"/>
+                        <Divider w="30%" borderColor={"blackShade"} opacity="0.2" />
                     </Flex>
                     <Flex flexDir={"column"} alignItems="center">
                         <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
                             <Text fontWeight="500" fontSize="sm">MY WORK</Text>
                         </NextLink>
-                        <Divider mt="6px" w="30%" borderColor={"blackShade"} opacity="0.2"/>
+                        <Divider mt="6px" w="30%" borderColor={"blackShade"} opacity="0.2" />
                     </Flex>
                 </Stack>
                 <Menu id="mobile-menu">
@@ -80,5 +80,5 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                 Contact Me
             </Center>
         </Flex>
-    </Container>
+    </Container>;
 }
