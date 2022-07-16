@@ -1,10 +1,11 @@
-import { Box, Center, Flex, Icon, LinkBox, SimpleGrid, Text, LinkOverlay, Container } from "@chakra-ui/react";
+import { Box, Center, Flex, Icon, LinkBox, SimpleGrid, Text, LinkOverlay, Container, Spacer } from "@chakra-ui/react";
 import { FaArrowCircleRight } from "react-icons/fa";
 import style from '../../styles/Components/Projects.module.scss';
 import NextLink from "next/link";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import ResourceEnum from "../../lib/enums/ResourceEnum";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 
 const projects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Element, forceHeight?: string, slug: string }[] = [
     {
@@ -48,11 +49,36 @@ const desktopColourAlternation = (i: number) => (i % 4) > 1 ? (i % 2 ? "blueShad
 const mobileColourAlternation = (i: number) => i % 2 ? "blueShade2" : "blueShade1";
 
 export default function Projects() {
+    const { scrollYProgress } = useViewportScroll();
+    const workBoxScale = useTransform(scrollYProgress, [1, 0], [0.75, 1]);
+
     return <Flex bgColor={"white"} py="100px">
         <Container maxW={"4xl"} flexDirection={"column"} w="100%" columns={{ md: 2, sm: 1, base: 1 }}>
-            <Flex alignItems={"baseline"}>
+            <Flex alignItems={"baseline"} mb="40px">
                 <Text fontSize="34" fontWeight="700" mr="20px">My Work.</Text>
                 <Text>Here are a couple of my most recent projects I've worked on.</Text>
+            </Flex>
+            <motion.div style={{ scale: workBoxScale, width: '100%', marginBottom: "1%" }}>
+                <Box w="100%" bgColor="#52b291" borderRadius={"5px"} color="white" p="8"  height={"340px"}>
+                    <Text>Personal project</Text>
+                    <Text fontSize={"30"} fontWeight="600" my="2">YouLearn</Text>
+                </Box>
+            </motion.div>
+            <Flex>
+                <motion.div style={{ scale: workBoxScale, width: '49%' }}>
+                    <Box w="100%" bgColor="#f15d5e" borderRadius={"5px"} color="white" p="8" height={"340px"}>
+                        <Text>Webur</Text>
+                        <Text fontSize={"30"} fontWeight="600" my="2">Freelance Design & Development</Text>
+                    </Box>
+                </motion.div>
+                <Spacer />
+                <motion.div style={{ scale: workBoxScale, width: '49%' }}>
+                    <Box w="100%" bgColor="#6B163F" borderRadius={"5px"} color="white" p="8"  height={"340px"}>
+                        <Text>Sheffield Hallam Students Union</Text>
+                        <Text fontSize={"30"} fontWeight="600" my="2">University Welcome Week</Text>
+                    </Box>
+                </motion.div>
+
             </Flex>
         </Container>
     </Flex>;

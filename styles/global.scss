@@ -49,3 +49,13 @@ a {
     margin-top: 0 !important; // dumb
   }
 }
+
+.fade-out {
+  transition: all ease-out 0.3s;
+  opacity: 0;
+}
+
+.fade-out-long {
+  transition: all ease-out 2s;
+  opacity: 0;
+}
