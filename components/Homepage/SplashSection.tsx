@@ -1,7 +1,6 @@
-import { Box, Button, Flex, Text, Image, Container, Stack, IconButton, Spacer, Icon } from "@chakra-ui/react";
-import { FaArrowCircleDown, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
-import NextLink from 'next/link';
+import { Box, Flex, Text, Image, Container, IconButton, Icon } from "@chakra-ui/react";
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { ExternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import ResourceEnum from "../../lib/enums/ResourceEnum";
 import Vivus from "vivus";
@@ -12,9 +11,8 @@ export default function SplashSection() {
     const [blueCircuitRef, setBlueCircuitRef] = useState<HTMLObjectElement>();
 
     useEffect(() => {
-
         if (blueCircuitRef) {
-            const circuitAnimation = new Vivus(blueCircuitRef, {
+            new Vivus(blueCircuitRef, {
                 duration: 500,
                 type: "scenario",
                 reverseStack: true
@@ -28,7 +26,6 @@ export default function SplashSection() {
                 }
             });
         }
-
     });
 
     return <Container maxW={"4xl"}>
