@@ -18,6 +18,11 @@ const enum ResourceEnum {
     TitleCircuitBlue = "title-circuit-blue.svg",
     YouLearn_Preview_Desktop = "el-feature-desktop.png",
     YouLearn_Preview_Mobile = "el-feature-mobile.png",
-} 
+    Webur_Preview_Desktop = "wb-feature-desktop.png",
+    SHU_Preview_Desktop = "shu-feature-desktop.png",
+    LC_Logo = "lc-logo.jpg",
+    LT_Logo = "lt-logo.jpg",
+    AP_Logo = "ap-logo.png"
+}
 
 export default ResourceEnum;
