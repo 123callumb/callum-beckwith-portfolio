@@ -23,7 +23,7 @@ const jobDetails: Job[] = [
     {
         companyName: 'Webur',
         jobRole: 'Freelance Web Designer and Developer',
-        location: 'Sheffield, UK',
+        location: 'Sheffield, UK', 
         roleDescription: 'Duties include handling clients, producing company branding, site designs and full stack web development - skills include PHP, React.JS, Node.Js and more...',
         startDate: new Date(2018, 6, 1, 0, 0, 0, 0),
         relatedIcon: <Icon as={FaPencilRuler} />

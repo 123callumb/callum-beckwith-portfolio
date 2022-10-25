@@ -5,6 +5,7 @@ import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { VscProject } from 'react-icons/vsc/index'
+import StandoutButton from "./StandoutButton";
 
 export default function Header({ breadcrumb }: { breadcrumb?: string }) {
     return <Container maxW={"4xl"}>
@@ -56,7 +57,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                                 <Text fontWeight="500" className="linkAnimation">CV Summary</Text>
                             </NextLink>
                             <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
-                                <Text fontWeight="500" className="linkAnimation">Contact</Text>
+                                <StandoutButton text={"Contact"} />
                             </NextLink>
                         </VStack>
                         <Divider my="3" />
@@ -77,7 +78,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
             </Center>
             <Spacer />
             <Center>
-                Contact Me
+                <StandoutButton text={"Contact Me"} />
             </Center>
         </Flex>
     </Container>;

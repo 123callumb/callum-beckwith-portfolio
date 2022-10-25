@@ -6,7 +6,7 @@ export default class CompanyManager {
         { 
             Name: "Audit Partnership Ltd",
             ImageUrl: ResourceHelper.CreateResourceURL(ResourceEnum.AP_Logo),
-            JobTitle: "Software Developer"
+            JobTitle: "Senior Software Developer"
         },
         {
             Name: "Webur",
@@ -21,12 +21,12 @@ export default class CompanyManager {
         {
             Name: "Cruise Addicts",
             ImageUrl: ResourceHelper.CreateResourceURL(ResourceEnum.Logo_CruiseAddicts),
-            JobTitle: "Freelance Designer & Developer"
+            JobTitle: "Designer & Developer"
         },
         {
             Name: "Forensic Neurosciences",
             ImageUrl: ResourceHelper.CreateResourceURL(ResourceEnum.Logo_ForensicNeurosciences),
-            JobTitle: "Freelance Designer & Developer"
+            JobTitle: "Designer & Developer"
         },
         {
             Name: "Liberty Trading",
