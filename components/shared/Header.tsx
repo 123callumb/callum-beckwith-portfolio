@@ -57,7 +57,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                                 <Text fontWeight="500" className="linkAnimation">CV Summary</Text>
                             </NextLink>
                             <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
-                                <StandoutButton text={"Contact"} />
+                            <Text fontWeight="500" className="linkAnimation">Contact Me</Text>
                             </NextLink>
                         </VStack>
                         <Divider my="3" />
