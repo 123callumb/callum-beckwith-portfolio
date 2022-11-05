@@ -22,7 +22,12 @@ const enum ResourceEnum {
     SHU_Preview_Desktop = "shu-feature-desktop.png",
     LC_Logo = "lc-logo.jpg",
     LT_Logo = "lt-logo.jpg",
-    AP_Logo = "ap-logo.png"
+    AP_Logo = "ap-logo.png",
+    Header_Abstract = "header-abstract.svg",
+    HomeFeature_Webur = "wb-home-feature.png",
+    HomeFeature_EasyLearn = "el-home-feature.png",
+    HomeFeature_SHU = "shu-home-feature.png",
+    HomeFeature_CruiseAddicts = "ca-home-feature.png",
 }
 
 export default ResourceEnum;

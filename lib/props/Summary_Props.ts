@@ -8,5 +8,6 @@ export default interface Summary_Props {
     link?: string;
     colours: string[];
     technologyUsed: IconType[];
-    languagesUsed: IconType[]
+    languagesUsed: IconType[];
+    showcaseImageURL: string;
 }

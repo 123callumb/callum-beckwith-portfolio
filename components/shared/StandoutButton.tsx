@@ -1,5 +1,4 @@
 import { Button } from "@chakra-ui/react";
-import style from "../../styles/Components/StandoutButton.module.scss";
 
 
 export default function StandoutButton(props: { text: string, size?: string }) {
@@ -10,6 +9,7 @@ export default function StandoutButton(props: { text: string, size?: string }) {
         backgroundSize="200%"
         color="white"
         boxShadow="2px 2px 3px rgba(0, 0, 0, 0.1)"
+        borderRadius={2}
         _hover={{
             backgroundPosition: "right center !important",
         }}
