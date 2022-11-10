@@ -1,7 +1,8 @@
-import { Flex, SimpleGrid, Text, Container} from "@chakra-ui/react";
+import { Flex, SimpleGrid, Text, Container, Icon} from "@chakra-ui/react";
 import ScaleIntoView from "../Motion/ScaleIntoView";
 import ProjectManager from "../../lib/services/ProjectManager";
 import SummaryBox from "../Work/SummaryBox";
+import { TiArrowRight } from 'react-icons/ti/index';
 
 export default function Projects() {
     return <Flex pt={"120px"} bgColor="white" w="100%">
@@ -15,6 +16,10 @@ export default function Projects() {
                     {ProjectManager.GetFeaturedProjects.map((m, i) => <SummaryBox {...m} key={i} />)}
                 </SimpleGrid>
             </ScaleIntoView>
+            <Flex justifyContent={"center"} alignItems="center" py="10" mb="10">
+                <Text fontSize={"24"} fontWeight={"500"}>View all projects </Text>
+                <Icon fontSize={"24"} as={TiArrowRight} />
+            </Flex>
         </Container>
     </Flex>;
 }

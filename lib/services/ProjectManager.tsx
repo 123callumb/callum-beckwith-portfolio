@@ -50,7 +50,7 @@ export default class ProjectManager {
     public static GetFeaturedProjects: Summary_Props[] = [
         {
             name: "YouLearn",
-            desc: "YouLearn delivers learning experiences for users to get to grips with using online services and mobile apps. EasyLearn places the users in guided sandbox environments where they can learn through realistic scenarios and experiences.",
+            desc: "YouLearn delivers learning experiences for users to get to grips with using online services and mobile apps.",
             showcaseImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_EasyLearn),
             colours: ["#E4F2EE", "#BAD9C8", "#407352", "#68A67E", "#3B5946"],
             technologyUsed: [SiDotnet, SiReact, SiWebpack, SiMysql, SiDocker, SiNextdotjs],
@@ -59,7 +59,7 @@ export default class ProjectManager {
         },
         {
             name: "Webur",
-            desc: "Webur have delivered websites, online software, and branding for multiple clients over the last several years. There are a couple of projects showcased on my portfolio associated with Webur. The work I&apos;ve done with Webur, the diversity of projects delivered, and the client experience gained is something I am very proud of.",
+            desc: "Webur have delivered websites, online software, and branding for multiple clients over the last several years.",
             showcaseImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_Webur),
             brandLogoURL: ResourceHelper.CreateResourceURL(ResourceEnum.Logo_Webur),
             colours: ["#F15D5E", "#2A2B2A", "#FAFAFA", "#393939"],
@@ -70,7 +70,7 @@ export default class ProjectManager {
         },
         {
             name:"Sheffield Hallam Students' Union",
-            desc:"After working for Sheffield Hallam Students Union for a period of time, they were quick to contact my freelance design and development partnership, Webur, throughout my time at university. Although there are multiple projects that have been worked on with Sheffield Hallam Students' Union, the one showcased below is a personal favourite of mine. These are the deliverables produced for their 2018 Welcome Week, which is viewed by the majority of people starting at Sheffield Hallam university.",
+            desc:" These are the deliverables produced for their 2018 Welcome Week, which is viewed by the majority of people starting at Sheffield Hallam university.",
             showcaseImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_SHU),
             brandLogoURL: ResourceHelper.CreateResourceURL(ResourceEnum.Logo_SHU),
             colours:["#E50071", "#EA8C04", "#1275BB", "#00ADCD"],
@@ -80,7 +80,7 @@ export default class ProjectManager {
         },
         {
             name:"Cruise Addicts",
-            desc:"Cruise Addicts Magazine is a free online Magazine subscription company that provides their fans with the latest and greatest Cruise content.The  development for Cruise Addicts was completed by my freelance design and development partnership, Webur. Webur delivered a branding package and built an original content management system. Here they were able to distribute all their content and subscribe users to their magazine.",
+            desc:"Cruise Addicts Magazine is a free online Magazine subscription company that provides their fans with the latest and greatest Cruise content.",
             showcaseImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_CruiseAddicts),
             brandLogoURL: ResourceHelper.CreateResourceURL(ResourceEnum.Logo_CruiseAddicts),
             colours: ["#1384A3", "#33A5B8", "#EFF9FE", "#282828"],

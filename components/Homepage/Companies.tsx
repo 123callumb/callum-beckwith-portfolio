@@ -13,7 +13,7 @@ export default class Companies extends React.Component {
                     <Text fontSize="32" fontWeight="700">Who I've worked with.</Text>
                 </Flex>
             </Container>
-            <ScaleIntoView>
+            {/* <ScaleIntoView>
                     <AliceCarousel
                         responsive={{ 0: { items: 1 }, 400: { items: 4 } }}
                         infinite={true}
@@ -39,8 +39,8 @@ export default class Companies extends React.Component {
                                 </Box>
                             </Box>
                         )} />
-            </ScaleIntoView>
-            {/* <Flex flexDir="column">
+            </ScaleIntoView> */}
+            <Flex flexDir="column">
                     <HStack w="100%" justifyContent={"center"} gridGap={2}>
                         {CompanyManager.GetCompanies.slice(0, 2).map((m, i) => <ScaleIntoView key={i}>
                             <Tooltip borderRadius={"5px"} bgColor="blackShade" placement="top" hasArrow label={<Box>
@@ -77,7 +77,7 @@ export default class Companies extends React.Component {
                             </Tooltip>
                         </ScaleIntoView>)}
                     </HStack>
-                </Flex> */}
+                </Flex>
         </Flex>
     }
 }
