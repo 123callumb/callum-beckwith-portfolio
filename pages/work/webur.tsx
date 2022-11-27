@@ -1,4 +1,4 @@
-import { Link } from "@chakra-ui/react";
+import { Box, Link } from "@chakra-ui/react";
 import { SiCss3, SiHtml5, SiJavascript, SiMysql, SiPhp, SiPhpmyadmin, SiReact, SiWebpack } from "react-icons/si";
 import Layout from "../../components/shared/Layout";
 import Summary from "../../components/Work/Summary";
@@ -10,7 +10,7 @@ export default function Webur() {
     return <Layout breadcrumb="Work">
         <Summary 
             name="Webur"
-            desc={<a>Webur is my web design & development partnership I created with 
+            desc={<div>Webur is my web design & development partnership I created with 
             <Link href="https://www.linkedin.com/in/killian-comerford/" 
              ml="1" 
              fontWeight="500"
@@ -22,7 +22,7 @@ export default function Webur() {
             clients over the last several years. There are a couple of projects
             showcased on my portfolio associated with Webur.
             The work I&apos;ve done with Webur, the diversity of projects delivered, and
-            the client experience gained is something I am very proud of.</a>}
+            the client experience gained is something I am very proud of.</div>}
             featureImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_Webur)}
             brandLogoURL={ResourceHelper.CreateResourceURL(ResourceEnum.Logo_Webur)}
             colours={["#F15D5E", "#2A2B2A", "#FAFAFA", "#393939"]}

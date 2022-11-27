@@ -14,11 +14,11 @@ export default class Summary extends React.Component<Summary_Props> {
                     <Text fontSize="40" fontWeight="400">{this.props.name}</Text>
                 </Box>
                 <Box borderLeft="6px white solid" p="2" px="4">
-                    <Text fontSize="18" fontWeight="400">{this.props.desc}</Text>
+                    <Box fontSize="18" fontWeight="400">{this.props.desc}</Box>
                 </Box>
                 {this.props.brandLogoURL && <Box borderLeft="6px white solid" p="2" px="4">
                     <Box bgColor="whiteShade" p="8" borderRadius="8">
-                        <Image src={this.props.brandLogoURL} height="80px" draggable="false" w="auto" />
+                        <Image src={`../${this.props.brandLogoURL}`} height="80px" draggable="false" w="auto" />
                     </Box>
                 </Box>}
                 {this.props.colours?.length && <Box borderLeft="6px white solid" p="2" px="4">
@@ -37,9 +37,9 @@ export default class Summary extends React.Component<Summary_Props> {
                 </Box>
                 <Box borderLeft="6px white solid" p="2" px="4">
                     <Text fontWeight="500" fontSize="sm" mb="3" fontStyle="italic">Showcase</Text>
-                    <Image src={this.props.featureImageURL} width="100%" draggable="false" />
+                    <Image src={`../${this.props.featureImageURL}`} width="100%" draggable="false" />
                 </Box>
-                <Text d={{ base: 'block', md: 'none' }} mt="4" fontWeight="100" fontStyle="italic" fontSize="sm" textAlign="center" w="100%">*It&apos;s recommend to view showcase images via desktop or pinching out to zoom in on a mobile device.*</Text>
+                <Text display={{ base: 'block', md: 'none' }} mt="4" fontWeight="100" fontStyle="italic" fontSize="sm" textAlign="center" w="100%">*It&apos;s recommend to view showcase images via desktop or pinching out to zoom in on a mobile device.*</Text>
                 {this.props.link && <Box p="2" px="4" textAlign="center" w="100%">
                     <LinkBox>
                         <NextLink href={this.props.link} passHref>

@@ -9,7 +9,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
     return <Box w="100%" color="whiteShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
         <Flex flexDir={{ md: 'row' }}>
             <Center>
-                <Flex fontWeight="700" style={{ wordSpacing: '10px' }} d="flex">
+                <Flex fontWeight="700" style={{ wordSpacing: '10px' }}>
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Home)}>
                         <Text className="linkAnimation">CBeckwith.co.uk</Text>
                     </NextLink>
@@ -20,7 +20,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
             </Center>
             <Spacer />
             <Center>
-                <Stack direction={{ md: 'row' }} spacing={12} d={{ base: 'none', md: 'flex' }}>
+                <Stack direction={{ md: 'row' }} spacing={12} display={{ base: 'none', md: 'flex' }}>
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
                         <Text fontWeight="500" className="linkAnimation">CV Summary</Text>
                     </NextLink>
@@ -30,7 +30,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                 </Stack>
                 <Menu id="mobile-menu">
                     <MenuButton
-                        d={{ base: 'flex', md: 'none' }}
+                        display={{ base: 'flex', md: 'none' }}
                         as={IconButton}
                         aria-label='Menu'
                         icon={<HamburgerIcon />}

@@ -7,7 +7,7 @@ import ResourceHelper from "../../lib/helpers/ResourceHelper";
 export default function SplashSection() {
     return <Box w="100%" h="68vh" pos="relative">
         <Flex mt={{ md: "28vh", base: "24vh" }}>
-            <Flex spacing={4} color="whiteShade" borderLeft="6px white solid" ml={{ md: "15%", base: "5%" }} pl="6" pb="0" flexDirection="column">
+            <Flex color="whiteShade" borderLeft="6px white solid" ml={{ md: "15%", base: "5%" }} pl="6" pb="0" flexDirection="column">
                 <Text fontSize="56" fontWeight="600">Callum Beckwith</Text>
                 <Text fontSize="26" fontWeight="200" mt="-2">Software Developer</Text>
                 <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
@@ -15,7 +15,7 @@ export default function SplashSection() {
                 </NextLink>
             </Flex>
             <Spacer />
-            <Stack spacing={5} flexDirection="column" color="whiteShade" px="4" d={{ base: 'none', md: 'flex' }}>
+            <Stack spacing={5} flexDirection="column" color="whiteShade" px="4" display={{ base: 'none', md: 'flex' }}>
                 <a href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
                     <IconButton variant="ghost" icon={<Icon as={FaTwitter} boxSize="10" />} aria-label="My Twitter" _hover={{ opacity: 0.8 }} />
                 </a>

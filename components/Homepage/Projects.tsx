@@ -41,7 +41,7 @@ const projects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Elem
             <Icon ml="3" mt="14px" as={FaArrowCircleRight} />
         </Flex>,
         forceHeight: "40px",
-        slug: '../cv-summary'
+        slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)
     }
 ];
 const desktopColourAlternation = (i: number) => (i % 4) > 1 ? (i % 2 ? "blueShade2" : "blueShade1") : (i % 2 ? "blueShade1" : "blueShade2");
