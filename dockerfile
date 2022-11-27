@@ -1,5 +1,3 @@
-#docker build -t webur-static-image .
-#docker run --name webur-static -p 81:80 webur-static-image
 FROM node:16-alpine as build-stage
 
 RUN mkdir -p /usr/src/app
