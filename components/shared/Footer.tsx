@@ -19,5 +19,5 @@ export default function Footer() {
         <Box textAlign="center" w="100%" pt="6">
             <Text color="whiteShade" fontWeight="100" fontSize="12">© Callum Beckwith {new Date().getFullYear()}</Text>
         </Box>
-    </Container>
+    </Container>;
 }
