@@ -1,5 +1,5 @@
 const enum ColourPaletteEnum {
-    Cyan = '#75bfbf',
+    Cyan = '#68D8C2',
     LightBlue = '#496373',
     Blue = '#364F59',
     DarkBlue = '#2A333A',
