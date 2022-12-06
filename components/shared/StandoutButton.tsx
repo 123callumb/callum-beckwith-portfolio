@@ -8,8 +8,8 @@ export default function StandoutButton(props: { text: string, size?: string }) {
         transition="0.5s all"
         backgroundSize="200%"
         color="white"
-        boxShadow="2px 2px 3px rgba(0, 0, 0, 0.1)"
-        borderRadius={2}
+        boxShadow="1px 2px 1px rgba(40, 40, 40, 0.1)"
+        borderRadius={4}
         _hover={{
             backgroundPosition: "right center !important",
         }}

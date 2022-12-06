@@ -39,7 +39,7 @@ export default class Summary extends React.Component<Summary_Props> {
                     <Text fontWeight="500" fontSize="sm" mb="3" fontStyle="italic">Showcase</Text>
                     <Image src={this.props.featureImageURL} width="100%" draggable="false" />
                 </Box>
-                <Text d={{ base: 'block', md: 'none' }} mt="4" fontWeight="100" fontStyle="italic" fontSize="sm" textAlign="center" w="100%">*It&apos;s recommend to view showcase images via desktop or pinching out to zoom in on a mobile device.*</Text>
+                <Text display={{ base: 'block', md: 'none' }} mt="4" fontWeight="100" fontStyle="italic" fontSize="sm" textAlign="center" w="100%">*It&apos;s recommend to view showcase images via desktop or pinching out to zoom in on a mobile device.*</Text>
                 {this.props.link && <Box p="2" px="4" textAlign="center" w="100%">
                     <LinkBox>
                         <NextLink href={this.props.link} passHref>

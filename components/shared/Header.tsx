@@ -1,5 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Box, Center, Container, Divider, Flex, Icon, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
+import { Center, Container, Divider, Flex, Icon, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
 import NextLink from 'next/link';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
@@ -11,7 +11,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
     return <Container maxW={"4xl"}>
         <Flex flexDir={{ md: 'row' }} color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
             <Center>
-                <Flex fontWeight="700" style={{ wordSpacing: '10px' }} d="flex">
+                <Flex fontWeight="700" style={{ wordSpacing: '10px' }} display="flex">
                     <Center mr="8px">
                         <Icon as={VscProject} />
                     </Center>
@@ -25,7 +25,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
             </Center>
             <Spacer />
             <Center>
-                <Stack direction={{ md: 'row' }} spacing={12} d={{ base: 'none', md: 'flex' }}>
+                <Stack direction={{ md: 'row' }} spacing={12} display={{ base: 'none', md: 'flex' }}>
                     <Flex flexDir={"column"} alignItems="center">
                         <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
                             <Text fontWeight="500" fontSize="sm">CV SUMMARY</Text>
@@ -41,7 +41,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                 </Stack>
                 <Menu id="mobile-menu">
                     <MenuButton
-                        d={{ base: 'flex', md: 'none' }}
+                        display={{ base: 'flex', md: 'none' }}
                         as={IconButton}
                         aria-label='Menu'
                         icon={<HamburgerIcon />}

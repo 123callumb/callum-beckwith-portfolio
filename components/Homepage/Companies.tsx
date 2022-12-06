@@ -41,43 +41,37 @@ export default class Companies extends React.Component {
                         )} />
             </ScaleIntoView> */}
             <Flex flexDir="column">
-                    <HStack w="100%" justifyContent={"center"} gridGap={2}>
-                        {CompanyManager.GetCompanies.slice(0, 2).map((m, i) => <ScaleIntoView key={i}>
-                            <Tooltip borderRadius={"5px"} bgColor="blackShade" placement="top" hasArrow label={<Box>
-                                <Text fontSize={16}>{m.Name}</Text>
-                                <Text>I worked with {m.Name} as a {m.JobTitle}!</Text>
-                            </Box>}>
-                                <Flex bgColor={"white"} borderRadius="10px" w="250px" h="120px" alignItems={"center"} justifyContent={"center"} boxShadow="1px 2px 4px rgba(40, 40, 40, 0.05)">
-                                    <Image h="60px" src={m.ImageUrl} />
-                                </Flex>
-                            </Tooltip>
-                        </ScaleIntoView>)}
-                    </HStack>
-                    <HStack w="100%" justifyContent={"center"} my="4" gridGap={2}>
-                        {CompanyManager.GetCompanies.slice(2, 5).map((m, i) => <ScaleIntoView key={i}>
-                            <Tooltip borderRadius={"5px"} bgColor="blackShade" placement="top" hasArrow label={<Box>
-                                <Text fontSize={16}>{m.Name}</Text>
-                                <Text>I worked with {m.Name} as a {m.JobTitle}!</Text>
-                            </Box>}>
-                                <Flex bgColor={"white"} borderRadius="10px" w="250px" h="120px" justifyContent={"center"} alignItems={"center"} boxShadow="1px 2px 4px rgba(40, 40, 40, 0.05)">
-                                    <Image h="60px" src={m.ImageUrl} />
-                                </Flex>
-                            </Tooltip>
-                        </ScaleIntoView>)}
-                    </HStack>
-                    <HStack w="100%" justifyContent={"center"} gridGap={2}>
-                        {CompanyManager.GetCompanies.slice(5, 7).map((m, i) => <ScaleIntoView key={i}>
-                            <Tooltip borderRadius={"5px"} bgColor="blackShade" placement="top" hasArrow label={<Box>
-                                <Text fontSize={16}>{m.Name}</Text>
-                                <Text>I worked with {m.Name} as a {m.JobTitle}!</Text>
-                            </Box>}>
-                                <Flex bgColor={"white"} borderRadius="10px" w="250px" h="120px" justifyContent={"center"} alignItems={"center"} boxShadow="1px 2px 4px rgba(40, 40, 40, 0.05)">
-                                    <Image h="70px" src={m.ImageUrl} />
-                                </Flex>
-                            </Tooltip>
-                        </ScaleIntoView>)}
-                    </HStack>
-                </Flex>
+                <HStack w="100%" justifyContent={"center"} gridGap={2}>
+                    {CompanyManager.GetCompanies.slice(0, 2).map((m, i) => <Tooltip key={i} borderRadius={"5px"} bgColor="blackShade" placement="top" hasArrow label={<Box>
+                        <Text fontSize={16}>{m.Name}</Text>
+                        <Text>I worked with {m.Name} as a {m.JobTitle}!</Text>
+                    </Box>}>
+                        <Flex bgColor={"white"} borderRadius="4" w="250px" h="120px" alignItems={"center"} justifyContent={"center"} boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)">
+                            <Image h="60px" src={m.ImageUrl} />
+                        </Flex>
+                    </Tooltip>)}
+                </HStack>
+                <HStack w="100%" justifyContent={"center"} my="4" gridGap={2}>
+                    {CompanyManager.GetCompanies.slice(2, 5).map((m, i) => <Tooltip key={i} borderRadius={"5px"} bgColor="blackShade" placement="top" hasArrow label={<Box>
+                        <Text fontSize={16}>{m.Name}</Text>
+                        <Text>I worked with {m.Name} as a {m.JobTitle}!</Text>
+                    </Box>}>
+                        <Flex bgColor={"white"} borderRadius="4" w="250px" h="120px" justifyContent={"center"} alignItems={"center"} boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)">
+                            <Image h="60px" src={m.ImageUrl} />
+                        </Flex>
+                    </Tooltip>)}
+                </HStack>
+                <HStack w="100%" justifyContent={"center"} gridGap={2}>
+                    {CompanyManager.GetCompanies.slice(5, 7).map((m, i) => <Tooltip key={i} borderRadius={"5px"} bgColor="blackShade" placement="top" hasArrow label={<Box>
+                        <Text fontSize={16}>{m.Name}</Text>
+                        <Text>I worked with {m.Name} as a {m.JobTitle}!</Text>
+                    </Box>}>
+                        <Flex bgColor={"white"} borderRadius="4" w="250px" h="120px" justifyContent={"center"} alignItems={"center"} boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)">
+                            <Image h="70px" src={m.ImageUrl} />
+                        </Flex>
+                    </Tooltip>)}
+                </HStack>
+            </Flex>
         </Flex>
     }
 }
