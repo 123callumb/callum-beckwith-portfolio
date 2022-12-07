@@ -17,7 +17,7 @@ export default function Footer() {
             </a>
         </Flex>
         <Box textAlign="center" w="100%" pt="6">
-            <Text color="whiteShade" fontWeight="100" fontSize="12">© Callum Beckwith {new Date().getFullYear()}</Text>
+            <Text fontWeight="300" fontSize="12">© Callum Beckwith {new Date().getFullYear()}</Text>
         </Box>
     </Container>;
 }

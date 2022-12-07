@@ -28,15 +28,13 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                 <Stack direction={{ md: 'row' }} spacing={12} display={{ base: 'none', md: 'flex' }}>
                     <Flex flexDir={"column"} alignItems="center">
                         <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
-                            <Text fontWeight="500" fontSize="sm">CV SUMMARY</Text>
+                            <Text className="linkAnimation" fontWeight="600" fontSize="sm">Cv Summary</Text>
                         </NextLink>
-                        <Divider w="30%" borderColor={"blackShade"} opacity="0.2" />
                     </Flex>
                     <Flex flexDir={"column"} alignItems="center">
                         <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
-                            <Text fontWeight="500" fontSize="sm">MY WORK</Text>
+                            <Text className="linkAnimation" fontWeight="600" fontSize="sm">My Work</Text>
                         </NextLink>
-                        <Divider mt="6px" w="30%" borderColor={"blackShade"} opacity="0.2" />
                     </Flex>
                 </Stack>
                 <Menu id="mobile-menu">

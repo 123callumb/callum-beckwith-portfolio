@@ -15,7 +15,7 @@ export default function Projects() {
             </SimpleGrid>
             <Flex justifyContent={"center"} alignItems="center" py="10" my="10">
                 <Flex flexDir={"row"} fontSize={"24"} fontWeight={"500"} className="linkAnimation">
-                    <Text>View all projects</Text>
+                    <Text>View all my work</Text>
                     <Center pt={"1.5"}>
                         <Icon as={TiArrowRight} />
                     </Center>

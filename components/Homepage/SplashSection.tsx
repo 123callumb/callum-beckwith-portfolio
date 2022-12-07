@@ -55,10 +55,10 @@ export default function SplashSection() {
                 </Box>
                 <Flex flexDir="column" maxW="420px" justifyContent="center" borderLeft="6px solid">
                     <Box borderColor="blackShade" pl="6">
-                        <Text fontSize="48" fontWeight="700" mt="-4" >Callum Beckwith</Text>
+                        <Text fontSize="48" fontWeight="700" mt="-4">Callum Beckwith</Text>
                         <Text fontSize="34" fontWeight="700" mt="-2">Software Developer</Text>
                         <Text fontSize="16" my="3">
-                            Hey! I’m Callum, software developer from the north of England. Come have a look at some of my work and experience :)
+                            Hey! I&apos;m Callum, a software developer from the north of England. Come have a look at some of my work and experience :)
                         </Text>
                         <Flex color="blackShade">
                             <motion.a whileHover={{ scale: 1.1, transition: { type: "spring", velocity: 6, stiffness: 500 } }} whileTap={{ scale: 0.8 }} href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
