@@ -1,7 +1,7 @@
 import { VStack, Box, Text, HStack, Icon, Flex } from "@chakra-ui/react";
-import Summary_Props from "../../lib/props/Summary_Props";
+import FeaturedProject from "../../lib/props/FeaturedProject";
 
-export default function SummaryBox(props: Summary_Props) {
+export default function SummaryBox(props: FeaturedProject) {
     return <VStack w="360px" alignItems={"center"} justifyContent="center">
         <Box bgColor={'#F4F9F6'} borderRadius="2" p="4" pb="0" w="100%">
             <img width="100%" src={props.featureImageURL} />

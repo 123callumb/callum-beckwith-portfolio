@@ -1,12 +1,12 @@
 import { Box, Text, Image, Container, VStack, HStack, Button, LinkBox, LinkOverlay, Icon, Flex } from "@chakra-ui/react";
 import React from "react";
 import NextLink from 'next/link';
-import Summary_Props from "../../lib/props/Summary_Props";
+import FeaturedProject from "../../lib/props/FeaturedProject";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import StandoutButton from "../shared/StandoutButton";
 
-export default class Summary extends React.Component<Summary_Props> {
-    constructor(props: Summary_Props) {
+export default class Summary extends React.Component<FeaturedProject> {
+    constructor(props: FeaturedProject) {
         super(props);
     }
     render() {

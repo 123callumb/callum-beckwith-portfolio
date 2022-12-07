@@ -1,7 +1,9 @@
-import { Container, Divider, Flex, Spacer, Text, Box, Link } from "@chakra-ui/react";
+import { Container, Divider, Flex, Text, Box, Link, VStack, Center, Icon } from "@chakra-ui/react";
 import StandoutButton from "../shared/StandoutButton";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import CompanyManager from "../../lib/services/CompanyManager";
 
 export default function FooterSummary() {
     return <Flex w="100%" bgColor="white" py="100px">
@@ -20,12 +22,21 @@ export default function FooterSummary() {
                         Reach out to my email:  <Link fontWeight={"600"} href="mailto:123callumb@gmail.com" color={ColourPaletteEnum.Cyan}>123callumb@gmail.com</Link>
                     </Text>
                     <Box fontStyle={"italic"} fontWeight="light" fontSize={"sm"}>
-                        If you're interested, you can view the source code for this portfolio site on my GitHub  
-                        <Link fontWeight={"500"} color={ColourPaletteEnum.Cyan} href="https://github.com/123callumb/callum-beckwith-portfolio" target={"_blank"}> here</Link>. 
-                        <Divider w="10%" my="2"/>
+                        If you're interested, you can view the source code for this portfolio site on my GitHub
+                        <Link fontWeight={"500"} color={ColourPaletteEnum.Cyan} href="https://github.com/123callumb/callum-beckwith-portfolio" target={"_blank"}> here</Link>.
+                        <Divider w="10%" my="2" />
                         As much as I'd love to share all of my code, most repositories on my GitHub are not public for client privacy reasons.
                     </Box>
                 </Flex>
+                <VerticalTimeline>
+                    {CompanyManager.SoftwareJobs.filter(f => f.ShowInTimeline).map((m, i) => <VerticalTimelineElement
+                        key={i}
+                        icon={<Icon as={m.IconContext} />}
+                        iconStyle={{ background: ColourPaletteEnum.Cyan, color: ColourPaletteEnum.White }}
+                        date={m.StartDate.toLocaleString('default', { month: 'long', year: 'numeric' }) + " - " + m.EndDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present'}>
+                            {m.CompanyName}
+                        </VerticalTimelineElement>)}
+                </VerticalTimeline>
             </Flex>
         </Container>
     </Flex>;

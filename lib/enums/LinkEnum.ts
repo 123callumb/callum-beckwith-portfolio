@@ -1,5 +1,3 @@
-const inProd = process.env.NODE_ENV === 'production';
-
 export const enum ExternalLinkEnum {
     GitHub = "https://github.com/123callumb",
     Twitter = "https://twitter.com/CalZonie_",

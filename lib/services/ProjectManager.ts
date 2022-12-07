@@ -1,16 +1,13 @@
-import { FaArrowCircleRight } from "react-icons/fa";
 import ResourceHelper from "../helpers/ResourceHelper";
 import ResourceEnum from "../enums/ResourceEnum";
 import { InternalLinkEnum } from "../enums/LinkEnum";
-import { Flex, Icon, Link, Text } from '@chakra-ui/react';
-import Summary_Props from "../props/Summary_Props";
+import FeaturedProject from "../props/FeaturedProject";
 import { SiCsharp, SiCss3, SiDocker, SiDotnet, SiHtml5, SiJavascript, SiJquery, SiMysql, SiNextdotjs, SiPhp, SiPhpmyadmin, SiReact, SiSass, SiTypescript, SiWebpack } from "react-icons/si";
-import ColourPaletteEnum from "../enums/ColourPaletteEnum";
 
 export default class ProjectManager {
     public static GetProjects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Element, forceHeight?: string, slug: string }[] = [
         {
-            name: <Text fontSize="26" textAlign="center">You<b>Learn</b></Text>,
+            name: "YouLearn",
             forceHeight: "40px",
             slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.Work_EasyLearn)
         },
@@ -35,19 +32,10 @@ export default class ProjectManager {
             name: 'Sheffield Hallam Students\' Union',
             imgSrc: ResourceHelper.CreateResourceURL(ResourceEnum.White_Logo_SHU),
             slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.Work_SHU)
-        },
-        {
-            name: 'Cv summary',
-            custom: <Flex>
-                <Text fontSize="24">CV Summary</Text>
-                <Icon ml="3" mt="14px" as={FaArrowCircleRight} />
-            </Flex>,
-            forceHeight: "40px",
-            slug: '../cv-summary'
         }
     ];
 
-    public static GetFeaturedProjects: Summary_Props[] = [
+    public static GetFeaturedProjects: FeaturedProject[] = [
         {
             name: "YouLearn",
             desc: "YouLearn delivers learning experiences for users to get to grips with using online services and mobile apps.",

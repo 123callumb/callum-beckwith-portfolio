@@ -1,6 +1,6 @@
 import { IconType } from "react-icons/lib";
 
-export default interface Summary_Props {
+export default interface FeaturedProject {
     name: string;
     desc: string | JSX.Element;
     featureImageURL: string;
