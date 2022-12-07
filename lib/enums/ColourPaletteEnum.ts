@@ -4,6 +4,7 @@ const enum ColourPaletteEnum {
     Blue = '#364F59',
     DarkBlue = '#2A333A',
     White = '#F0F1F2',
+    WhiteAlt = "#fafbfc",
     BtnBlue = "#589ea6",
 } 
 

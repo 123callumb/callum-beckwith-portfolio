@@ -1,15 +1,16 @@
-import { Container, Divider, Flex, Text, Box, Link, VStack, Center, Icon } from "@chakra-ui/react";
+import { Container, Divider, Flex, Text, Box, Link, VStack, Center, Icon, Spacer } from "@chakra-ui/react";
 import StandoutButton from "../shared/StandoutButton";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import CompanyManager from "../../lib/services/CompanyManager";
+import { MdLocationPin } from "react-icons/md";
 
 export default function FooterSummary() {
     return <Flex w="100%" bgColor="white" py="100px">
         <Container maxW={"4xl"} flexDir={"column"}>
             <Text fontSize="32" fontWeight="700" mb="50px">To Conclude.</Text>
-            <Flex>
+            <Flex w={"100%"}>
                 <Flex gap={3} w={{ md: "50%" }} alignItems="flex-start" flexDir={"column"}>
                     <Text fontSize={"20"} fontWeight="600">My Timeline</Text>
                     <Text mb="3">To find further information about my previous job positions, the technologies I have used, and the responsibilites I've had, click below to visit a detailed timeline:</Text>
@@ -28,15 +29,31 @@ export default function FooterSummary() {
                         As much as I'd love to share all of my code, most repositories on my GitHub are not public for client privacy reasons.
                     </Box>
                 </Flex>
-                <VerticalTimeline>
-                    {CompanyManager.SoftwareJobs.filter(f => f.ShowInTimeline).map((m, i) => <VerticalTimelineElement
-                        key={i}
-                        icon={<Icon as={m.IconContext} />}
-                        iconStyle={{ background: ColourPaletteEnum.Cyan, color: ColourPaletteEnum.White }}
-                        date={m.StartDate.toLocaleString('default', { month: 'long', year: 'numeric' }) + " - " + m.EndDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present'}>
-                            {m.CompanyName}
+                <Spacer />
+                <Flex w={{ md: "40%"}} mt="-36px">
+                    <VerticalTimeline lineColor={ColourPaletteEnum.Cyan} layout="1-column-right">
+                        {CompanyManager.SoftwareJobs.filter(f => f.ShowInTimeline).map((m, i) => <VerticalTimelineElement
+                            key={i}
+                            position={"left"}
+                            icon={<Icon as={m.IconContext} />}
+                            iconStyle={{ background: ColourPaletteEnum.Cyan, color: ColourPaletteEnum.White }}
+                            contentStyle={{ padding: '0', boxShadow: 'unset' }}
+                            contentArrowStyle={{ backgroundColor: ColourPaletteEnum.Cyan }}>
+                            <Flex borderRadius={"4"} boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)" flexDir={"column"} bgColor={ColourPaletteEnum.WhiteAlt} borderTop={`2px solid ${ColourPaletteEnum.Cyan}`} p="2" pl="3">
+                                <Box fontSize={"md"} fontWeight="600">{m.Title}</Box>
+                                <Box fontSize={"sm"} fontWeight="400">{m.CompanyName}</Box>
+                                <Flex mt="2">
+                                    <Center>
+                                        <Icon as={MdLocationPin} />
+                                    </Center>
+                                    <Box marginLeft="1" fontSize="sm" fontStyle="italic">
+                                        {m.Location}
+                                    </Box>
+                                </Flex>
+                            </Flex>
                         </VerticalTimelineElement>)}
-                </VerticalTimeline>
+                    </VerticalTimeline>
+                </Flex>
             </Flex>
         </Container>
     </Flex>;
