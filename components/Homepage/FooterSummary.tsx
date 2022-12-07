@@ -46,7 +46,7 @@ export default function FooterSummary() {
                                     <Center>
                                         <Icon as={MdLocationPin} />
                                     </Center>
-                                    <Box marginLeft="1" fontSize="sm" fontStyle="italic">
+                                    <Box marginLeft="1" pt="0.5" fontSize="xs" fontWeight={"light"} fontStyle="italic">
                                         {m.Location}
                                     </Box>
                                 </Flex>
