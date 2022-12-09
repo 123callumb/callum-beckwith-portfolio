@@ -1,6 +1,7 @@
 import { AiOutlineFileSearch } from "react-icons/ai";
 import { FaHotel, FaPencilRuler } from "react-icons/fa";
-import { MdAnalytics, MdDock, MdFoodBank, MdGroups, MdWaves } from "react-icons/md";
+import { MdAnalytics, MdFoodBank, MdGroups, MdWaves, MdOutlineSmartToy } from "react-icons/md";
+import { GiBrain } from 'react-icons/gi';
 import ResourceEnum from "../enums/ResourceEnum";
 import { Job } from "../props/Job";
 
@@ -55,7 +56,7 @@ export default class CompanyManager {
             ShowInTimeline: false,
             Location: "Sheffield, UK",
             Description: "Designer & developer at Webur",
-            IconContext: MdDock,
+            IconContext: GiBrain,
             StartDate: new Date(2019, 6, 1, 0, 0 ,0)
         },
         {
@@ -67,7 +68,7 @@ export default class CompanyManager {
             Description: 'Duties include handling stock values across three companies and developing private inventory analysis software. ',
             StartDate: new Date(2017, 4, 1, 0, 0, 0, 0),
             EndDate: new Date(2017, 8, 1, 0, 0, 0, 0),
-            IconContext: MdAnalytics
+            IconContext: MdOutlineSmartToy
         },
         {
             CompanyName: "Liberty Charms",
