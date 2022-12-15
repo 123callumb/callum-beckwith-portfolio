@@ -18,6 +18,7 @@ export default function ForensicNeurosciences() {
             colours={["#003A6A", "#005496", "#8FC9FF", "#FFFFFF"]}
             technologyUsed={[SiReact, SiWebpack, SiPhpmyadmin, SiMysql]}
             languagesUsed={[SiPhp, SiJavascript, SiCss3, SiHtml5]}
+            showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_ForensicNeurosciences)}
         />
     </Layout>;
 } 

@@ -19,6 +19,7 @@ export default function EasyLearn() {
             colours={["#E4F2EE", "#BAD9C8", "#407352", "#68A67E", "#3B5946"]}
             technologyUsed={[SiDotnet, SiReact, SiWebpack, SiMysql, SiDocker, SiNextdotjs]}
             languagesUsed={[SiCsharp, SiTypescript, SiJavascript, SiSass]}
+            showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_EasyLearn)}
         />
     </Layout>;
 } 

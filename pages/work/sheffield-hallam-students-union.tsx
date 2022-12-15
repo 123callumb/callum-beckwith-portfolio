@@ -16,6 +16,7 @@ export default function SHU() {
             for their 2018 Welcome Week, which is viewed by the majority of people starting
             at Sheffield Hallam university."
             featureImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_SHU)}
+            showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_SHU)}
             brandLogoURL={ResourceHelper.CreateResourceURL(ResourceEnum.Logo_SHU)}
             colours={["#E50071", "#EA8C04", "#1275BB", "#00ADCD"]}
             technologyUsed={[SiJquery]}

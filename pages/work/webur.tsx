@@ -24,6 +24,7 @@ export default function Webur() {
             The work I&apos;ve done with Webur, the diversity of projects delivered, and
             the client experience gained is something I am very proud of.</a>}
             featureImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_Webur)}
+            showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_Webur)}
             brandLogoURL={ResourceHelper.CreateResourceURL(ResourceEnum.Logo_Webur)}
             colours={["#F15D5E", "#2A2B2A", "#FAFAFA", "#393939"]}
             link="https://webur.co.uk"

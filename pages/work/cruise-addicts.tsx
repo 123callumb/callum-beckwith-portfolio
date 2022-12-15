@@ -14,6 +14,7 @@ export default function CruiseAddicts() {
             colours={["#1384A3", "#33A5B8", "#EFF9FE", "#282828"]}
             technologyUsed={[SiReact, SiWebpack, SiPhpmyadmin, SiMysql]}
             languagesUsed={[SiPhp, SiJavascript, SiCss3, SiHtml5]}
+            showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_CruiseAddicts)}
         />
     </Layout>;
 } 
