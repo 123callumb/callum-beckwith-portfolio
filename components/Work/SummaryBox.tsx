@@ -1,5 +1,6 @@
 import { VStack, Box, Text, HStack, Icon, Flex } from "@chakra-ui/react";
 import FeaturedProject from "../../lib/props/FeaturedProject";
+import FramerBox from "../Motion/FramerBox";
 
 export default function SummaryBox(props: FeaturedProject) {
     return <VStack w="360px" alignItems={"center"} justifyContent="center">
