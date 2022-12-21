@@ -13,5 +13,6 @@ export const enum InternalLinkEnum {
     Work_ForensicNeurosciences = "work/forensic-neurosciences",
     Work_SHU = "work/sheffield-hallam-students-union",
     Work_Webur = "work/webur",
-    CV_File = "res/CallumBeckwith_LatestCV.pdf"
+    CV_File = "res/CallumBeckwith_LatestCV.pdf",
+    Work = "work"
 }

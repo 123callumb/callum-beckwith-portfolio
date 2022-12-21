@@ -3,7 +3,7 @@ import ResourceEnum from "../enums/ResourceEnum";
 
 export default class ResourceHelper {
     public static CreateInternalURL(url: InternalLinkEnum): string {
-        return `/${url}${url !== InternalLinkEnum.Home ? `.html` : ""}`;
+        return `/${url}`;
     }
 
     public static CreateResourceURL(resource: ResourceEnum): string {

@@ -1,9 +1,12 @@
-import { Flex, SimpleGrid, Text, Container, Icon, Center, Box } from "@chakra-ui/react";
+import { Flex, Text, Container, Icon, Center } from "@chakra-ui/react";
 import ProjectManager from "../../lib/services/ProjectManager";
 import SummaryBox from "../Work/SummaryBox";
 import { TiArrowRight } from 'react-icons/ti/index';
 import { m, Variants } from 'framer-motion';
 import FramerBox from "../Motion/FramerBox";
+import NextLink from "next/link";
+import ResourceHelper from "../../lib/helpers/ResourceHelper";
+import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function Projects() {
     const projContainer: Variants = {
@@ -11,7 +14,10 @@ export default function Projects() {
             opacity: 1,
             transition: {
                 delayChildren: 0.1,
-                staggerChildren: 0.2
+                staggerChildren: 0.2,
+                delay: 0.1,
+                bounce: 0.4,
+                type: "spring"
             }
         },
         hidden: {
@@ -36,22 +42,21 @@ export default function Projects() {
                 <Text fontSize="34" fontWeight="700" mr="20px">My Work.</Text>
                 <Text>Here are a couple of my most recent projects I've worked on.</Text>
             </Flex>
-            <SimpleGrid
-                columns={{ sm: 1, md: 2 }}
-                gap="10"
-                rowGap="16"
-                as={m.div}
-                variants={projContainer}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}>
-                {ProjectManager.GetFeaturedProjects.map((x, i) => <FramerBox key={i} variants={projItem}>
+            <Flex as={m.div} variants={projContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} justifyContent="space-between" mb="60px">
+                {ProjectManager.GetFeaturedProjects.slice(0, 2).map((x, i) => <FramerBox key={i} variants={projItem}>
                     <SummaryBox {...x} />
                 </FramerBox>)}
-            </SimpleGrid>
+            </Flex>
+            <Flex as={m.div} variants={projContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} justifyContent="space-between">
+                {ProjectManager.GetFeaturedProjects.slice(2, 4).map((x, i) => <FramerBox key={i} variants={projItem}>
+                    <SummaryBox {...x} />
+                </FramerBox>)}
+            </Flex>
             <Flex justifyContent={"center"} alignItems="center" py="10" my="10">
                 <Flex flexDir={"row"} fontSize={"24"} fontWeight={"500"} className="linkAnimation">
-                    <Text>View all my work</Text>
+                    <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Work)}>
+                        <Text>View all my work</Text>
+                    </NextLink>
                     <Center pt={"1.5"}>
                         <Icon as={TiArrowRight} />
                     </Center>
