@@ -1,40 +1,9 @@
 import ResourceHelper from "../helpers/ResourceHelper";
 import ResourceEnum from "../enums/ResourceEnum";
-import { InternalLinkEnum } from "../enums/LinkEnum";
 import FeaturedProject from "../props/FeaturedProject";
 import { SiCsharp, SiCss3, SiDocker, SiDotnet, SiHtml5, SiJavascript, SiJquery, SiMysql, SiNextdotjs, SiPhp, SiPhpmyadmin, SiReact, SiSass, SiTypescript, SiWebpack } from "react-icons/si";
 
 export default class ProjectManager {
-    public static GetProjects: { imgSrc?: string, name: string | JSX.Element, custom?: JSX.Element, forceHeight?: string, slug: string }[] = [
-        {
-            name: "YouLearn",
-            forceHeight: "40px",
-            slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.Work_EasyLearn)
-        },
-        {
-            name: 'Webur',
-            imgSrc: ResourceHelper.CreateResourceURL(ResourceEnum.White_Logo_Webur),
-            forceHeight: '60px',
-            slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.Work_Webur)
-        },
-        {
-            name: 'Cruise Addicts',
-            imgSrc: ResourceHelper.CreateResourceURL(ResourceEnum.White_Logo_CruiseAddicts),
-            forceHeight: "120px",
-            slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.Work_CruiseAddicts)
-        },
-        {
-            name: 'Forensic Neuroscience',
-            imgSrc: ResourceHelper.CreateResourceURL(ResourceEnum.White_Logo_ForensicNeurosciences),
-            slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.Work_ForensicNeurosciences)
-        },
-        {
-            name: 'Sheffield Hallam Students\' Union',
-            imgSrc: ResourceHelper.CreateResourceURL(ResourceEnum.White_Logo_SHU),
-            slug: ResourceHelper.CreateInternalURL(InternalLinkEnum.Work_SHU)
-        }
-    ];
-
     public static GetFeaturedProjects: FeaturedProject[] = [
         {
             name: "YouLearn",
@@ -52,8 +21,8 @@ export default class ProjectManager {
             brandLogoURL: ResourceHelper.CreateResourceURL(ResourceEnum.Logo_Webur),
             colours: ["#F15D5E", "#2A2B2A", "#FAFAFA", "#393939"],
             link:"https://webur.co.uk",
-            technologyUsed: [SiReact, SiWebpack, SiPhpmyadmin, SiMysql],
-            languagesUsed: [SiPhp, SiJavascript, SiCss3, SiHtml5],
+            technologyUsed: [SiReact, SiWebpack, SiPhpmyadmin, SiMysql, SiNextdotjs, SiDocker],
+            languagesUsed: [SiPhp, SiJavascript, SiCss3, SiHtml5, SiTypescript],
             featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_Webur)
         },
         {
@@ -75,6 +44,16 @@ export default class ProjectManager {
             technologyUsed: [SiReact, SiWebpack, SiPhpmyadmin, SiMysql],
             languagesUsed: [SiPhp, SiJavascript, SiCss3, SiHtml5],
             featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_CruiseAddicts)
+        },
+        {
+            name:"Forensic Neuroscience",
+            desc:"Forensic Neurosciences specialise in providing neurosurgical medical reports. With Webur and Forensic Neurosciences, I helped produce a branding package and website.",
+            showcaseImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_ForensicNeurosciences),
+            brandLogoURL: ResourceHelper.CreateResourceURL(ResourceEnum.Logo_ForensicNeurosciences),
+            colours: ["#003A6A", "#005496", "#8FC9FF", "#FFFFFF"],
+            technologyUsed: [SiReact, SiWebpack, SiPhpmyadmin, SiMysql],
+            languagesUsed: [SiPhp, SiJavascript, SiCss3, SiHtml5],
+            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_ForensicNeurosciences)
         }
     ];
 }
