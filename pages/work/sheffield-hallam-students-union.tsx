@@ -3,6 +3,7 @@ import Summary from "../../components/Work/Summary";
 import { SiCss3, SiHtml5, SiJavascript, SiJquery } from "react-icons/si";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import ResourceEnum from "../../lib/enums/ResourceEnum";
+import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function SHU() {
     return <Layout breadcrumb="Work">
@@ -21,6 +22,7 @@ export default function SHU() {
             colours={["#E50071", "#EA8C04", "#1275BB", "#00ADCD"]}
             technologyUsed={[SiJquery]}
             languagesUsed={[SiJavascript, SiCss3, SiHtml5]}
+            slug={InternalLinkEnum.Work_SHU}
         />
     </Layout>;
 } 

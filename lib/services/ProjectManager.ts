@@ -2,6 +2,7 @@ import ResourceHelper from "../helpers/ResourceHelper";
 import ResourceEnum from "../enums/ResourceEnum";
 import FeaturedProject from "../props/FeaturedProject";
 import { SiCsharp, SiCss3, SiDocker, SiDotnet, SiHtml5, SiJavascript, SiJquery, SiMysql, SiNextdotjs, SiPhp, SiPhpmyadmin, SiReact, SiSass, SiTypescript, SiWebpack } from "react-icons/si";
+import { InternalLinkEnum } from "../enums/LinkEnum";
 
 export default class ProjectManager {
     public static GetFeaturedProjects: FeaturedProject[] = [
@@ -12,7 +13,8 @@ export default class ProjectManager {
             colours: ["#E4F2EE", "#BAD9C8", "#407352", "#68A67E", "#3B5946"],
             technologyUsed: [SiDotnet, SiReact, SiWebpack, SiMysql, SiDocker, SiNextdotjs],
             languagesUsed: [SiCsharp, SiTypescript, SiJavascript, SiSass],
-            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_EasyLearn)
+            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_EasyLearn),
+            slug: InternalLinkEnum.Work_EasyLearn
         },
         {
             name: "Webur",
@@ -23,7 +25,8 @@ export default class ProjectManager {
             link:"https://webur.co.uk",
             technologyUsed: [SiReact, SiWebpack, SiPhpmyadmin, SiMysql, SiNextdotjs, SiDocker],
             languagesUsed: [SiPhp, SiJavascript, SiCss3, SiHtml5, SiTypescript],
-            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_Webur)
+            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_Webur),
+            slug: InternalLinkEnum.Work_Webur
         },
         {
             name:"Sheffield Hallam Students' Union",
@@ -33,7 +36,8 @@ export default class ProjectManager {
             colours:["#E50071", "#EA8C04", "#1275BB", "#00ADCD"],
             technologyUsed:[SiJquery],
             languagesUsed:[SiJavascript, SiCss3, SiHtml5],
-            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_SHU)
+            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_SHU),
+            slug: InternalLinkEnum.Work_SHU
         },
         {
             name:"Cruise Addicts",
@@ -43,7 +47,8 @@ export default class ProjectManager {
             colours: ["#1384A3", "#33A5B8", "#EFF9FE", "#282828"],
             technologyUsed: [SiReact, SiWebpack, SiPhpmyadmin, SiMysql],
             languagesUsed: [SiPhp, SiJavascript, SiCss3, SiHtml5],
-            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_CruiseAddicts)
+            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_CruiseAddicts),
+            slug: InternalLinkEnum.Work_CruiseAddicts
         },
         {
             name:"Forensic Neuroscience",
@@ -53,7 +58,8 @@ export default class ProjectManager {
             colours: ["#003A6A", "#005496", "#8FC9FF", "#FFFFFF"],
             technologyUsed: [SiReact, SiWebpack, SiPhpmyadmin, SiMysql],
             languagesUsed: [SiPhp, SiJavascript, SiCss3, SiHtml5],
-            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_ForensicNeurosciences)
+            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_ForensicNeurosciences),
+            slug: InternalLinkEnum.Work_ForensicNeurosciences
         }
     ];
 }

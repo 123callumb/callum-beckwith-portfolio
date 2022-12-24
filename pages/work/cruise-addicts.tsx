@@ -3,6 +3,7 @@ import Summary from "../../components/Work/Summary";
 import { SiCss3, SiHtml5, SiJavascript, SiMysql, SiPhp, SiPhpmyadmin, SiReact, SiWebpack } from "react-icons/si";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import ResourceEnum from "../../lib/enums/ResourceEnum";
+import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function CruiseAddicts() {
     return <Layout breadcrumb="Work">
@@ -15,6 +16,7 @@ export default function CruiseAddicts() {
             technologyUsed={[SiReact, SiWebpack, SiPhpmyadmin, SiMysql]}
             languagesUsed={[SiPhp, SiJavascript, SiCss3, SiHtml5]}
             showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_CruiseAddicts)}
+            slug={InternalLinkEnum.Work_CruiseAddicts}
         />
     </Layout>;
 } 

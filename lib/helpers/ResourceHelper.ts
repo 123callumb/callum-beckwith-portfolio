@@ -14,6 +14,6 @@ export default class ResourceHelper {
         if (resource.toLowerCase().includes(".pdf"))
             fodlerName = `res`;
 
-        return `${fodlerName}/${resource}`;
+        return `/${fodlerName}/${resource}`;
     }
 }

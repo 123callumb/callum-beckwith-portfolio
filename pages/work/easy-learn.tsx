@@ -3,6 +3,7 @@ import Summary from "../../components/Work/Summary";
 import { SiDotnet, SiReact, SiMysql, SiDocker, SiCsharp, SiWebpack, SiTypescript, SiJavascript, SiSass, SiNextdotjs } from 'react-icons/si/index';
 import ResourceEnum from "../../lib/enums/ResourceEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
+import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function EasyLearn() {
     return <Layout breadcrumb="Work">
@@ -20,6 +21,7 @@ export default function EasyLearn() {
             technologyUsed={[SiDotnet, SiReact, SiWebpack, SiMysql, SiDocker, SiNextdotjs]}
             languagesUsed={[SiCsharp, SiTypescript, SiJavascript, SiSass]}
             showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_EasyLearn)}
+            slug={InternalLinkEnum.Work_EasyLearn}
         />
     </Layout>;
 } 
