@@ -7,7 +7,7 @@ const enum ResourceEnum {
     Showcase_CruiseAddicts = "ca-feature-preview.png",
     Showcase_ForensicNeurosciences = "fn-feature-preview.png",
     Showcase_SHU = "shu-feature-preview.png",
-    Showcase_EasyLearn = "el-feature-preview.png",
+    Showcase_YouLearn = "el-feature-preview.png",
     Logo_Webur = "wb-logo.png",
     Logo_CruiseAddicts = "ca-logo.png",
     Logo_ForensicNeurosciences = "fn-logo.png",
@@ -25,7 +25,7 @@ const enum ResourceEnum {
     AP_Logo = "ap-logo.png",
     Header_Abstract = "header-abstract.svg",
     HomeFeature_Webur = "wb-home-feature.png",
-    HomeFeature_EasyLearn = "el-home-feature.png",
+    HomeFeature_YouLearn = "el-home-feature.png",
     HomeFeature_SHU = "shu-home-feature.png",
     HomeFeature_CruiseAddicts = "ca-home-feature.png",
 }

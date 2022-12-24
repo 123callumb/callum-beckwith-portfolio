@@ -14,8 +14,8 @@ export default function ForensicNeurosciences() {
             with over 30 years’ experience. The development for Forensic Neurosciences
             was completed by my freelance design and development partnership,
             Webur. Webur delivered a branding package and a marketing website. "
-            featureImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_ForensicNeurosciences)}
-            brandLogoURL={ResourceHelper.CreateResourceURL(ResourceEnum.Logo_ForensicNeurosciences)}
+            featureImageURL={ResourceEnum.Showcase_ForensicNeurosciences}
+            brandLogoURL={ResourceEnum.Logo_ForensicNeurosciences}
             colours={["#003A6A", "#005496", "#8FC9FF", "#FFFFFF"]}
             technologyUsed={[SiReact, SiWebpack, SiPhpmyadmin, SiMysql]}
             languagesUsed={[SiPhp, SiJavascript, SiCss3, SiHtml5]}

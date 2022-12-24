@@ -9,12 +9,12 @@ export default class ProjectManager {
         {
             name: "YouLearn",
             desc: "YouLearn delivers learning experiences for users to get to grips with using online services and mobile apps.",
-            showcaseImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_EasyLearn),
+            showcaseImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_YouLearn),
             colours: ["#E4F2EE", "#BAD9C8", "#407352", "#68A67E", "#3B5946"],
             technologyUsed: [SiDotnet, SiReact, SiWebpack, SiMysql, SiDocker, SiNextdotjs],
             languagesUsed: [SiCsharp, SiTypescript, SiJavascript, SiSass],
-            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_EasyLearn),
-            slug: InternalLinkEnum.Work_EasyLearn
+            featureImageURL: ResourceHelper.CreateResourceURL(ResourceEnum.HomeFeature_YouLearn),
+            slug: InternalLinkEnum.Work_YouLearn
         },
         {
             name: "Webur",

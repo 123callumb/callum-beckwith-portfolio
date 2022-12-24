@@ -8,7 +8,7 @@ export const enum InternalLinkEnum {
     Home = "",
     Contact = "contact",
     CVSummary = "cv-summary",
-    Work_EasyLearn = "work/easy-learn",
+    Work_YouLearn = "work/you-learn",
     Work_CruiseAddicts = "work/cruise-addicts",
     Work_ForensicNeurosciences = "work/forensic-neurosciences",
     Work_SHU = "work/sheffield-hallam-students-union",

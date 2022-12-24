@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Head from 'next/head';
 import React from "react";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
