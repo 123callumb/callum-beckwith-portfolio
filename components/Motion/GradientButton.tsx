@@ -3,8 +3,9 @@ import FramerBox from './FramerBox';
 import React from 'react';
 import { Flex, Icon, transition } from '@chakra-ui/react';
 import { TiArrowRight } from 'react-icons/ti';
+import { IconType } from 'react-icons';
 
-export default function GradientButton(props: { href: string, title: string }) {
+export default function GradientButton(props: { href: string, title: string, customIcon?: IconType }) {
     const GradientButton = React.forwardRef((p: any, ref: any) => {
         return (<FramerBox
             flexDir={"column"}
@@ -22,7 +23,7 @@ export default function GradientButton(props: { href: string, title: string }) {
             fontWeight="500"
             variants={{
                 start: {
-                    background: "linear-gradient(to right, #589EA6 0%, #68D8C3  -10%, #589EA6  100%)"
+                    background: "linear-gradient(to right, #589EA6 0%, #61BEB6  0%, #589EA6  100%)"
                 },
                 hover: {
                     background: "linear-gradient(to right, #589EA6 0%, #68D8C3  100%, #589EA6  100%)",
@@ -37,9 +38,9 @@ export default function GradientButton(props: { href: string, title: string }) {
                 <FramerBox
                     variants={{
                         hover: {
-                            paddingRight: '16px',
+                            paddingRight: '20px',
                             transition: {
-                                 delay: 0.2 
+                                delay: 0.2
                             }
                         }
                     }}>{props.title}</FramerBox>
@@ -59,7 +60,7 @@ export default function GradientButton(props: { href: string, title: string }) {
                     }}
                     right="0px"
                     top="2px">
-                    <Icon as={TiArrowRight} />
+                    <Icon as={props.customIcon ? props.customIcon : TiArrowRight} />
                 </FramerBox>
             </Flex>
         </FramerBox>);

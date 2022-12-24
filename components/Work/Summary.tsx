@@ -4,7 +4,7 @@ import FeaturedProject from "../../lib/props/FeaturedProject";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import SlideInBox from "../Motion/SlideInBox";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
-import GradientLink from "../Motion/GradientLink";
+import GradientButton from "../Motion/GradientButton";
 
 export default class Summary extends React.Component<FeaturedProject> {
     constructor(props: FeaturedProject) {
@@ -48,7 +48,7 @@ export default class Summary extends React.Component<FeaturedProject> {
                 </SlideInBox>
                 <Text display={{ base: 'block', md: 'none' }} mt="4" fontWeight="100" fontStyle="italic" fontSize="sm" textAlign="center" w="100%">*It&apos;s recommend to view showcase images via desktop or pinching out to zoom in on a mobile device.*</Text>
                 {this.props.link && <Flex p="2" px="4" textAlign="center" w="100%" alignItems={"center"} justifyContent={"center"}>
-                    <GradientLink href={this.props.link} title="View Live" />
+                    <GradientButton href={this.props.link} title="View Live" />
                 </Flex>}
             </Flex>
         </Container>;
