@@ -18,9 +18,9 @@ export default function SummaryHorizontalBox(props: FeaturedProject) {
         initial={{
             x: 20,
             opacity: 0
-        }} display="flex" flexDir={"row"} viewport={{ once: true }} bgColor={"white"} border={`6px solid white`}>
-        <Box bgColor={ColourPaletteEnum.LightBlue} borderRadius="2" p="4" pb="0" alignSelf={"center"}>
-            <Box height={"200px"} width={"200px"} pos={"relative"}>
+        }} display="flex" flexDir={{md: "row", base: "column" }} viewport={{ once: true }} bgColor={"white"} border={`4px solid white`}>
+        <Box bgColor={ColourPaletteEnum.LightBlue} borderRadius="2" borderLeft={"4px solid white"} p="4" pb="0" alignSelf={"center"}>
+            <Box height={"200px"} width={{base: "100%" , md:"200px"}} pos={"relative"}>
                 <Image layout="fill" src={`/${props.featureImageURL}`} alt={props.name + " feature image"} />
             </Box>
         </Box>
