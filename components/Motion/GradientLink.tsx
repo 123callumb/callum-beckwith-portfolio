@@ -51,7 +51,7 @@ export default function GradientLink(props: { href: string, title: string }) {
             </Flex>
             <FramerBox
                 mt="2px"
-                height={"4px"}
+                height={"3px"}
                 w="100%"
                 boxShadow="2px 2px 3px rgba(0, 0, 0, 0.1)"
                 variants={{
