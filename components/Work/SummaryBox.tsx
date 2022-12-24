@@ -1,7 +1,9 @@
 import { VStack, Box, Text, HStack, Icon, Flex } from "@chakra-ui/react";
 import FeaturedProject from "../../lib/props/FeaturedProject";
-import FramerBox from "../Motion/FramerBox";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
+import NextLink from "next/link";
+import React from "react";
+import GradientLink from "../Motion/GradientLink";
 
 export default function SummaryBox(props: FeaturedProject) {
     return <VStack w="360px" alignItems={"center"} justifyContent="center">
@@ -33,15 +35,7 @@ export default function SummaryBox(props: FeaturedProject) {
                 />)}
             </HStack>
             <Text size={"sm"} fontWeight="300" w="100%">{props.desc}</Text>
-            <Flex flexDir={"column"} pt={2}>
-                <Text px="4" fontWeight={"600"}>View Details</Text>
-                <Box
-                    mt="2px"
-                    height={"4px"}
-                    w="100%"
-                    background={"linear-gradient(to right, #589EA6 0%, #68D8C3  61%, #589EA6  100%)"}
-                    boxShadow="2px 2px 3px rgba(0, 0, 0, 0.1)"></Box>
-            </Flex>
+            <GradientLink title="View Details" href={props.slug} />
         </VStack>
     </VStack>;
 }
