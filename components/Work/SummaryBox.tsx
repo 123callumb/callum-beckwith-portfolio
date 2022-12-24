@@ -1,7 +1,6 @@
-import { VStack, Box, Text, HStack, Icon, Flex } from "@chakra-ui/react";
+import { VStack, Box, Text, HStack, Icon } from "@chakra-ui/react";
 import FeaturedProject from "../../lib/props/FeaturedProject";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
-import NextLink from "next/link";
 import React from "react";
 import GradientLink from "../Motion/GradientLink";
 
