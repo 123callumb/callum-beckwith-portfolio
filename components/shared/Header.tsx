@@ -5,6 +5,7 @@ import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { VscProject } from 'react-icons/vsc/index'
+import GradientButton from "../Motion/GradientButton";
 import StandoutButton from "./StandoutButton";
 
 export default function Header({ breadcrumb }: { breadcrumb?: string }) {
@@ -73,7 +74,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
             </Center>
             <Spacer />
             <Center>
-                <StandoutButton text={"Contact Me"} />
+                <GradientButton title="Contact Me" href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)} />
             </Center>
         </Flex>
     </Container>;

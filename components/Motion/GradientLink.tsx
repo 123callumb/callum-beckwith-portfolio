@@ -4,7 +4,7 @@ import FramerBox from './FramerBox';
 import { Flex, Icon } from '@chakra-ui/react';
 import { TiArrowRight } from 'react-icons/ti';
 
-export default function GradientLink(props: { href: string, title: string }) {
+export default function GradientLink(props: { href: string, title: string, newTab?: boolean }) {
     const GradientButton = React.forwardRef((p: any, ref: any) => {
         return (<FramerBox
             flexDir={"column"}
@@ -25,7 +25,7 @@ export default function GradientLink(props: { href: string, title: string }) {
                         hover: {
                             paddingLeft: '8px',
                             transition: {
-                                delay: 0.5,
+                                delay: 0.3,
                                 ease: "easeIn"
                             }
                         }
@@ -40,7 +40,7 @@ export default function GradientLink(props: { href: string, title: string }) {
                             opacity: 1,
                             display: 'block',
                             transition: {
-                                delay: 0.5,
+                                delay: 0.3,
                                 ease: "easeIn"
                             }
                         }
@@ -61,7 +61,7 @@ export default function GradientLink(props: { href: string, title: string }) {
                     hover: {
                         background: "linear-gradient(to right, #589EA6 0%, #68D8C3  100%, #589EA6  100%)",
                         transition: {
-                            duration: 0.5,
+                            duration: 0.3,
                             type: "tween",
                             ease: "easeInOut"
                         }
@@ -70,7 +70,7 @@ export default function GradientLink(props: { href: string, title: string }) {
         </FramerBox>);
     });
 
-    return <NextLink href={props.href}>
+    return <NextLink href={props.href} target={props.newTab ? "_blank" : "_self"} rel={props.newTab ? "noopener noreferrer" : ""}>
         <GradientButton />
     </NextLink>;
 }

@@ -1,10 +1,11 @@
-import { Container, Divider, Flex, Text, Box, Link, VStack, Center, Icon, Spacer } from "@chakra-ui/react";
-import StandoutButton from "../shared/StandoutButton";
+import { Container, Divider, Flex, Text, Box, Link, Center, Icon, Spacer } from "@chakra-ui/react";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import CompanyManager from "../../lib/services/CompanyManager";
 import { MdLocationPin } from "react-icons/md";
+import GradientButton from "../Motion/GradientButton";
+import ResourceHelper from "../../lib/helpers/ResourceHelper";
 
 export default function FooterSummary() {
     return <Flex w="100%" bgColor="white" py="100px">
@@ -14,10 +15,10 @@ export default function FooterSummary() {
                 <Flex gap={3} w={{ md: "50%" }} alignItems="flex-start" flexDir={"column"}>
                     <Text fontSize={"20"} fontWeight="600">My Timeline</Text>
                     <Text mb="3">To find further information about my previous job positions, the technologies I have used, and the responsibilites I've had, click below to visit a detailed timeline:</Text>
-                    <StandoutButton text="View detailed timeline" href={InternalLinkEnum.CVSummary} />
+                    <GradientButton title="View detailed timeline" href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)} />
                     <Text fontSize={"20"} fontWeight="600" mt="10">Download CV</Text>
                     <Text mb="3">My CV is a compact version of this portfolio. I try to keep this document as up to date as possible, if you do not believe this is the most recent version, please contact me.</Text>
-                    <StandoutButton text="Download" href={InternalLinkEnum.CV_File} newWindow={true} />
+                    <GradientButton title="Download" href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CV_File)} />
                     <Text fontSize={"20"} fontWeight="600" mt="10">Contact Me</Text>
                     <Text mb="3">
                         Reach out to my email:  <Link fontWeight={"600"} href="mailto:123callumb@gmail.com" color={ColourPaletteEnum.Cyan}>123callumb@gmail.com</Link>

@@ -1,11 +1,10 @@
-import { Box, Text, Image, Container, VStack, HStack, Button, LinkBox, LinkOverlay, Icon, Flex } from "@chakra-ui/react";
+import { Box, Text, Image, Container, HStack, Icon, Flex } from "@chakra-ui/react";
 import React from "react";
-import NextLink from 'next/link';
 import FeaturedProject from "../../lib/props/FeaturedProject";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
-import StandoutButton from "../shared/StandoutButton";
 import SlideInBox from "../Motion/SlideInBox";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
+import GradientLink from "../Motion/GradientLink";
 
 export default class Summary extends React.Component<FeaturedProject> {
     constructor(props: FeaturedProject) {
@@ -48,15 +47,9 @@ export default class Summary extends React.Component<FeaturedProject> {
                     </Box>
                 </SlideInBox>
                 <Text display={{ base: 'block', md: 'none' }} mt="4" fontWeight="100" fontStyle="italic" fontSize="sm" textAlign="center" w="100%">*It&apos;s recommend to view showcase images via desktop or pinching out to zoom in on a mobile device.*</Text>
-                {this.props.link && <Box p="2" px="4" textAlign="center" w="100%">
-                    <LinkBox>
-                        <NextLink href={this.props.link} passHref>
-                            <LinkOverlay>
-                                <StandoutButton text="View Live" />
-                            </LinkOverlay>
-                        </NextLink>
-                    </LinkBox>
-                </Box>}
+                {this.props.link && <Flex p="2" px="4" textAlign="center" w="100%" alignItems={"center"} justifyContent={"center"}>
+                    <GradientLink href={this.props.link} title="View Live" />
+                </Flex>}
             </Flex>
         </Container>;
     }
