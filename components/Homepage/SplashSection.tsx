@@ -1,18 +1,21 @@
-import { Box, Flex, Text, Image, Container, IconButton, Icon } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, IconButton, Icon, chakra } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { ExternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import ResourceEnum from "../../lib/enums/ResourceEnum";
 import Vivus from "vivus";
-import React, { useEffect, useRef, useState } from "react";
+import React, { SetStateAction, useEffect, useRef, useState, Dispatch } from "react";
 import { motion } from "framer-motion";
 
 export default function SplashSection() {
     const [blueCircuitRef, setBlueCircuitRef] = useState<HTMLObjectElement>();
+    const [blueCircuitRefMobile, setBlueCircuitRefMobile] = useState<HTMLObjectElement>();
 
     useEffect(() => {
-        if (blueCircuitRef) {
-            new Vivus(blueCircuitRef, {
+        [blueCircuitRef, blueCircuitRefMobile].forEach(f => {
+            if (!f) return;
+
+            new Vivus(f, {
                 duration: 500,
                 type: "scenario",
                 reverseStack: true
@@ -25,13 +28,14 @@ export default function SplashSection() {
                     }, (1000));
                 }
             });
-        }
+        });
     });
 
     return <Flex
         w="100%"
         flexDir={"column"}
-        minH={"96vh"}>
+        minH={"100vh"}
+        overflowY={"hidden"}>
         <Flex
             color="blackShade"
             flexDirection="row"
@@ -39,20 +43,25 @@ export default function SplashSection() {
             alignItems={"center"}
             flex={1}>
             <Flex maxH={"240px"} minH={"240px"}>
-                <Box overflow="visible" height="100%" pr="10px" flex="1" pos={"relative"}>
-                    <object
+                <Box overflow="visible" height="100%" pr="10px" flex="1" pos={"relative"} display={{ base: "none", md: "none", lg: "block" }}>
+                    <chakra.object
                         ref={setBlueCircuitRef}
-                        style={{
-                            maxHeight: "233px",
-                            minHeight: "233px",
-                            left: "11px",
-                            top: "2px",
-                            position: "absolute"
-                        }}
+                        maxH={"233px"}
+                        minH={"233px"}
+                        left={"11px"}
+                        top={"2px"}
+                        position={"absolute"}
                         type="image/svg+xml"
                         data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
                     />
-                    <Image maxW={"unset"} height="240px" minH={"240px"} maxH={"240px"} width="432px" src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)} />
+                    <Image
+                        maxW={"unset"}
+                        height={"240px"}
+                        minH={"240px"}
+                        maxH={"240px"}
+                        width={"432px"}
+                        src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
+                    />
                 </Box>
                 <Flex flexDir="column" maxW="420px" justifyContent="center" borderLeft="6px solid">
                     <Box borderColor="blackShade" pl="6">
@@ -76,7 +85,29 @@ export default function SplashSection() {
                 </Flex>
             </Flex>
         </Flex>
-        <Flex w="100%" marginBottom={"-6%"}>
+        <Flex w="100%" flexDir={"column"}>
+            <Box display={{ base: "block", md: "block", lg: "none" }} pos="relative">
+                <Box transform={"rotate(90deg)"} pos="absolute" mx="auto" left="0" right="0" textAlign={"center"}>
+                    <chakra.object
+                        ref={setBlueCircuitRefMobile}
+                        maxH={"233px"}
+                        minH={"233px"}
+                        left={"11px"}
+                        top={"2px"}
+                        position={"absolute"}
+                        type="image/svg+xml"
+                        data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
+                    />
+                    <Image
+                        maxW={"unset"}
+                        height={"240px"}
+                        minH={"240px"}
+                        maxH={"240px"}
+                        width={"432px"}
+                        src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
+                    />
+                </Box>
+            </Box>
             <img src={ResourceHelper.CreateResourceURL(ResourceEnum.Header_Abstract)} width="100%" />
         </Flex>
     </Flex>;
