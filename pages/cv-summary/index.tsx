@@ -12,8 +12,8 @@ import { FaFileDownload } from "react-icons/fa";
 
 export default function CVSummary() {
     return <Layout>
-        <Box textAlign="center" py="40">
-            <Container maxW="2xl">
+        <Box textAlign="center" pt="40">
+            <Container maxW="2xl" bgColor={"white"} borderBottom={`2px solid ${ColourPaletteEnum.Cyan}`} p="4" borderRadius={"4"} boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.1)" >
                 <Text mb="8" fontSize="lg">
                     You can get a local copy of my cv here.
                 </Text>
@@ -22,17 +22,14 @@ export default function CVSummary() {
                 </Flex>
             </Container>
         </Box>
-        <Container maxW="6xl" py="8" pb="12">
-            <Box textAlign={{ lg: 'center', md: 'left' }} mb="4" fontWeight="600" fontSize="md">
-                <Text>My journey</Text>
-            </Box>
-            <VerticalTimeline>
+        <Container maxW="6xl" pb="8">
+            <VerticalTimeline lineColor={ColourPaletteEnum.Cyan} >
                 {CompanyManager.SoftwareJobs.filter(f => f.ShowInTimeline).map((m, i) => <JobTimelineElement key={i} {...m} />)}
             </VerticalTimeline>
             <Text my="6" fontWeight="600" fontSize="md" textAlign={{ lg: 'center', md: 'left' }}>
                 Non tech related
             </Text>
-            <VerticalTimeline>
+            <VerticalTimeline lineColor={ColourPaletteEnum.Cyan}>
                 {CompanyManager.NonSoftwareJobs.filter(f => f.ShowInTimeline).map((m, i) => <JobTimelineElement key={i} {...m} />)}
             </VerticalTimeline>
         </Container>
