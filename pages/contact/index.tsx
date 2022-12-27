@@ -1,37 +1,45 @@
-import { Avatar, Button, Center, Container, Flex, HStack, Icon, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverTrigger, Spacer, Text, VStack } from "@chakra-ui/react";
-import { FaPhone } from "react-icons/fa";
+import { Avatar, Button, Center, CloseButton, Container, Flex, HStack, Icon, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverTrigger, Spacer, Text, Tooltip, VStack, propNames, useToast } from "@chakra-ui/react";
+import { FaCopy, FaPhone } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import Layout from "../../components/shared/Layout";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
+import { InfoIcon } from "@chakra-ui/icons";
 
 export default function Contact() {
+    const toast = useToast();
+
+    function CopyEmail() {
+        navigator.clipboard.writeText("123callumb@gmail.com");
+        toast({
+            isClosable: true,
+            position: "bottom-right",
+            render: (props) => {
+                return <Flex bgColor={ColourPaletteEnum.Cyan} color={"white"} p="2" pl="3" borderRadius={"2"} alignItems="center">
+                    <Icon as={InfoIcon} />
+                    <Text ml="2" fontWeight={"500"}>Email copied to clipboard</Text>
+                    <Spacer />
+                    <CloseButton onClick={props.onClose}/>
+                </Flex>;
+            }
+        });
+    }
+
     return <Layout>
         <Center height="100%">
-            <Container maxW="6xl" color={ColourPaletteEnum.White} textAlign="center" pt="10%">
+            <Container maxW="6xl" textAlign="center" pt="10%">
                 <VStack spacing={3}>
                     <Avatar boxSize="52" name="Callum Beckwith" src="https://avatars.githubusercontent.com/u/6897908?v=4" userSelect="none" />
                     <Text fontSize="lg" fontWeight="600">Callum Beckwith</Text>
-                    <Text fontWeight="100" fontStyle="italic" fontSize="sm">123callumb@gmail.com</Text>
+                    <Flex alignItems={"center"}>
+                        <Text fontWeight="300" fontStyle="italic" fontSize="sm" mr={"2"}>123callumb@gmail.com</Text>
+                        <Icon as={FaCopy} aria-label="Copy email address" onClick={CopyEmail} cursor="pointer" />
+                    </Flex>
                     <HStack spacing={6} pt="4">
-                        <Popover trigger="hover" id="email-popover">
-                            <PopoverTrigger >
+                        <Tooltip label={"Click to email"}>
+                            <a href="mailto:123callumb@gmail.com">
                                 <Avatar bg={ColourPaletteEnum.Cyan} color={ColourPaletteEnum.White} icon={<Icon as={MdAlternateEmail} />} cursor="pointer" />
-                            </PopoverTrigger>
-                            <PopoverContent>
-                                <PopoverArrow />
-                                <PopoverBody color="black">
-                                    <Flex>
-                                        <Center>
-                                            <Text fontWeight="500">123callumb@gmail.com</Text>
-                                        </Center>
-                                        <Spacer />
-                                        <a href="mailto:123callumb@gmail.com">
-                                            <Button color={ColourPaletteEnum.White} bgColor={ColourPaletteEnum.Cyan} >Send email</Button>
-                                        </a>
-                                    </Flex>
-                                </PopoverBody>
-                            </PopoverContent>
-                        </Popover>
+                            </a>
+                        </Tooltip>
                         <Popover trigger="hover" id="phone-popover">
                             <PopoverTrigger >
                                 <Avatar bg={ColourPaletteEnum.Cyan} color={ColourPaletteEnum.White} icon={<Icon as={FaPhone} />} cursor="pointer" />

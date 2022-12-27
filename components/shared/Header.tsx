@@ -6,7 +6,6 @@ import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { VscProject } from 'react-icons/vsc/index'
 import GradientButton from "../Motion/GradientButton";
-import StandoutButton from "./StandoutButton";
 
 export default function Header({ breadcrumb }: { breadcrumb?: string }) {
     return <Container maxW={"4xl"}>
