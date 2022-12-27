@@ -43,9 +43,9 @@ export default function SplashSection() {
             justifyContent="center"
             alignItems={"center"}
             flex={1}
-            zIndex={"4"}
+            zIndex={"2"}
             pos="relative">
-            <Flex minH={"240px"}>
+            <Flex marginLeft={"-60px"}>
                 <Box overflow="visible" height="100%" pr="10px" flex="1" pos={"relative"} display={{ base: "none", md: "none", lg: "block" }} marginRight="-22px">
                     <chakra.object
                         ref={setBlueCircuitRef}
@@ -66,7 +66,7 @@ export default function SplashSection() {
                         src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
                     />
                 </Box>
-                <Flex maxW={"440px"} flexDir="column" justifyContent="center" borderLeft="12px solid" bgColor={"white"} borderRadius={3} borderTop={`10px solid ${ColourPaletteEnum.Cyan}`} boxShadow="1px 2px 1px rgba(40, 40, 40, 0.1)">
+                <Flex maxW={"440px"} flexDir="column" justifyContent="center" borderLeft="12px solid black" bgColor={"white"} borderTop={`10px solid ${ColourPaletteEnum.Cyan}`} borderRadius={2} boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)">
                     <Box borderColor="blackShade" p="6">
                         <Text fontSize="48" fontWeight="700" mt="-4">Callum Beckwith</Text>
                         <Text fontSize="34" fontWeight="700" mt="-2">Software Developer</Text>

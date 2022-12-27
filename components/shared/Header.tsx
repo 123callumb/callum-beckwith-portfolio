@@ -2,7 +2,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Center, Container, Divider, Flex, Icon, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
 import NextLink from 'next/link';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
-import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
+import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { VscProject } from 'react-icons/vsc/index'
 import GradientButton from "../Motion/GradientButton";
@@ -42,8 +42,8 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                         icon={<HamburgerIcon />}
                         variant='ghost'
                     />
-                    <MenuList bgColor={"white"} borderTop={`2px solid ${ColourPaletteEnum.Cyan}`}>
-                        <VStack px="4" pt="2" alignItems="start">
+                    <MenuList bgColor={"white"} borderTop={`2px solid ${ColourPaletteEnum.Cyan}`} zIndex="4" pos={"relative"} borderRadius={2}>
+                        <VStack px="4" pt="2" alignItems="start" >
                             <Text fontSize="sm" fontWeight="100">Menu</Text>
                             <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
                                 <Text fontWeight="500" className="linkAnimation">Timeline</Text>
