@@ -38,12 +38,13 @@ export default function SplashSection() {
             justifyContent="center"
             alignItems={"center"}
             flex={1}>
-            <Flex maxH={"240px"}>
+            <Flex maxH={"240px"} minH={"240px"}>
                 <Box overflow="visible" height="100%" pr="10px" flex="1" pos={"relative"}>
                     <object
                         ref={setBlueCircuitRef}
                         style={{
                             maxHeight: "233px",
+                            minHeight: "233px",
                             left: "11px",
                             top: "2px",
                             position: "absolute"
@@ -51,7 +52,7 @@ export default function SplashSection() {
                         type="image/svg+xml"
                         data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
                     />
-                    <Image height="240px" width="432px" src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)} />
+                    <Image maxW={"unset"} height="240px" minH={"240px"} maxH={"240px"} width="432px" src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)} />
                 </Box>
                 <Flex flexDir="column" maxW="420px" justifyContent="center" borderLeft="6px solid">
                     <Box borderColor="blackShade" pl="6">
