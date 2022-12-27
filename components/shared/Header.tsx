@@ -8,7 +8,7 @@ import { VscProject } from 'react-icons/vsc/index'
 import GradientButton from "../Motion/GradientButton";
 
 export default function Header({ breadcrumb }: { breadcrumb?: string }) {
-    return <Container maxW={"4xl"}>
+    return <Container maxW={"4xl"} zIndex={"4"}>
         <Flex flexDir={{ md: 'row' }} color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
             <Center>
                 <Flex fontWeight="700" display="flex" alignItems={"center"}>

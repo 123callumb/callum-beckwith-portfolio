@@ -6,6 +6,7 @@ import ResourceEnum from "../../lib/enums/ResourceEnum";
 import Vivus from "vivus";
 import React, { SetStateAction, useEffect, useRef, useState, Dispatch } from "react";
 import { motion } from "framer-motion";
+import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 
 export default function SplashSection() {
     const [blueCircuitRef, setBlueCircuitRef] = useState<HTMLObjectElement>();
@@ -35,40 +36,42 @@ export default function SplashSection() {
         w="100%"
         flexDir={"column"}
         minH={"100vh"}
-        overflowY={"hidden"}>
+        overflowY={"visible"}>
         <Flex
             color="blackShade"
             flexDirection="row"
             justifyContent="center"
             alignItems={"center"}
-            flex={1}>
-            <Flex maxH={"240px"} minH={"240px"}>
-                <Box overflow="visible" height="100%" pr="10px" flex="1" pos={"relative"} display={{ base: "none", md: "none", lg: "block" }}>
+            flex={1}
+            zIndex={"4"}
+            pos="relative">
+            <Flex minH={"240px"}>
+                <Box overflow="visible" height="100%" pr="10px" flex="1" pos={"relative"} display={{ base: "none", md: "none", lg: "block" }} marginRight="-22px">
                     <chakra.object
                         ref={setBlueCircuitRef}
                         maxH={"233px"}
                         minH={"233px"}
                         left={"11px"}
-                        top={"2px"}
+                        top={"22px"}
                         position={"absolute"}
                         type="image/svg+xml"
                         data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
                     />
                     <Image
                         maxW={"unset"}
-                        height={"240px"}
-                        minH={"240px"}
-                        maxH={"240px"}
+                        height={"280px"}
+                        minH={"280px"}
+                        maxH={"280px"}
                         width={"432px"}
                         src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
                     />
                 </Box>
-                <Flex flexDir="column" maxW="420px" justifyContent="center" borderLeft="6px solid">
-                    <Box borderColor="blackShade" pl="6">
+                <Flex maxW={"440px"} flexDir="column" justifyContent="center" borderLeft="12px solid" bgColor={"white"} borderRadius={3} borderTop={`10px solid ${ColourPaletteEnum.Cyan}`} boxShadow="1px 2px 1px rgba(40, 40, 40, 0.1)">
+                    <Box borderColor="blackShade" p="6">
                         <Text fontSize="48" fontWeight="700" mt="-4">Callum Beckwith</Text>
                         <Text fontSize="34" fontWeight="700" mt="-2">Software Developer</Text>
                         <Text fontSize="16" my="3">
-                            Hey! I&apos;m Callum, a software developer from the north of England. Come have a look at some of my work and experience :)
+                            Hey! I&apos;m Callum, a software developer from the north of England
                         </Text>
                         <Flex color="blackShade">
                             <motion.a whileHover={{ scale: 1.1, transition: { type: "spring", velocity: 6, stiffness: 500 } }} whileTap={{ scale: 0.8 }} href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
@@ -86,29 +89,30 @@ export default function SplashSection() {
             </Flex>
         </Flex>
         <Flex w="100%" flexDir={"column"}>
-            <Box display={{ base: "block", md: "block", lg: "none" }} pos="relative">
-                <Box transform={"rotate(90deg)"} pos="absolute" mx="auto" left="0" right="0" textAlign={"center"}>
+            <Box display={{ base: "block", md: "block" }} pos="relative">
+                <Box pos="absolute" mx="auto" right="-5vw" bottom={"-14vh"} textAlign={"center"} zIndex={"1"} >
                     <chakra.object
                         ref={setBlueCircuitRefMobile}
-                        maxH={"233px"}
-                        minH={"233px"}
-                        left={"11px"}
-                        top={"2px"}
+                        maxW={"unset"}
+                        maxH={"unset"}
+                        width={"143vh"}
+                        left={"4vh"}
+                        top={"0.7vh"}
                         position={"absolute"}
                         type="image/svg+xml"
+                        opacity={"0.05"}
                         data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
                     />
                     <Image
+                        opacity={"0.02"}
                         maxW={"unset"}
-                        height={"240px"}
-                        minH={"240px"}
-                        maxH={"240px"}
-                        width={"432px"}
+                        maxH={"unset"}
+                        width={"150vh"}
                         src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
                     />
                 </Box>
             </Box>
-            <img src={ResourceHelper.CreateResourceURL(ResourceEnum.Header_Abstract)} width="100%" />
+            <Image src={ResourceHelper.CreateResourceURL(ResourceEnum.Header_Abstract)} width="100%" zIndex={"4"} />
         </Flex>
     </Flex>;
 }

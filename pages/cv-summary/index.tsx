@@ -14,7 +14,7 @@ import { GrDocumentUser  } from 'react-icons/gr/index';
 export default function CVSummary() {
     return <Layout breadcrumb="Timeline">
         <Box textAlign="center" pt="36">
-            <Container maxW="2xl" bgColor={"white"} borderBottom={`2px solid ${ColourPaletteEnum.Cyan}`} p="4" pb="6" borderRadius={"4"} boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.1)" >
+            <Container maxW="2xl" bgColor={"white"} borderBottom={`2px solid ${ColourPaletteEnum.Cyan}`} p="4" pb="6" borderRadius={"4"} boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.1)">
                 <Icon as={GrDocumentUser} boxSize="10" m="4"/>
                 <Text mb="5" fontWeight={"500"} fontSize="md">
                     You can get a local copy of my cv here.
