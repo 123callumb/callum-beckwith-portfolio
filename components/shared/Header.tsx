@@ -1,5 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Center, Container, Divider, Flex, Icon, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
+import { Box, Center, Container, Divider, Flex, Icon, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
 import NextLink from 'next/link';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { ExternalLinkEnum, InternalLinkEnum } from "../../lib/enums/LinkEnum";
@@ -22,7 +22,7 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
             </Center>
             <Spacer />
             <Center>
-                <Stack direction={{ md: 'row' }} spacing={12} display={{ base: 'none', md: 'flex' }}>
+                <Stack direction={'row'} spacing={12} display={{ base: 'none', lg: 'flex' }}>
                     <Flex flexDir={"column"} alignItems="center">
                         <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
                             <Text className="linkAnimation" fontWeight="600" fontSize="sm">Timeline</Text>
@@ -36,43 +36,31 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                 </Stack>
                 <Menu id="mobile-menu">
                     <MenuButton
-                        display={{ base: 'flex', md: 'none' }}
+                        display={{ base: 'flex', md: 'flex', lg: 'none' }}
                         as={IconButton}
                         aria-label='Menu'
                         icon={<HamburgerIcon />}
                         variant='ghost'
                     />
-                    <MenuList bgColor={ColourPaletteEnum.DarkBlue} textAlign="right">
-                        <VStack px="4" pt="2" alignItems="end">
-                            <Text fontSize="sm" fontWeight="100">Site</Text>
+                    <MenuList bgColor={"white"} borderTop={`2px solid ${ColourPaletteEnum.Cyan}`}>
+                        <VStack px="4" pt="2" alignItems="start">
+                            <Text fontSize="sm" fontWeight="100">Menu</Text>
                             <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.CVSummary)}>
                                 <Text fontWeight="500" className="linkAnimation">Timeline</Text>
                             </NextLink>
                             <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Work)}>
                                 <Text fontWeight="500" className="linkAnimation">Work</Text>
                             </NextLink>
-                            <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)}>
-                                <Text fontWeight="500" className="linkAnimation">Contact Me</Text>
-                            </NextLink>
-                        </VStack>
-                        <Divider my="3" />
-                        <VStack spacing={2} px="4" pb="2" alignItems="end">
-                            <Text fontSize="sm" fontWeight="100">Socials</Text>
-                            <a href={ExternalLinkEnum.GitHub} target="_blank" rel="noreferrer">
-                                <Text fontWeight="500" className="linkAnimation">GitHub</Text>
-                            </a>
-                            <a href={ExternalLinkEnum.LinkedIn} target="_blank" rel="noreferrer">
-                                <Text fontWeight="500" className="linkAnimation">Linkedin</Text>
-                            </a>
-                            <a href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
-                                <Text fontWeight="500" className="linkAnimation">Twitter</Text>
-                            </a>
+                            <Divider />
+                            <Flex justifyContent={"center"} w="100%" pt="1">
+                                <GradientButton title="Contact Me" href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)} />
+                            </Flex>
                         </VStack>
                     </MenuList>
                 </Menu>
             </Center>
-            <Spacer />
-            <Center>
+            <Spacer display={{ base: "none", md: "none", lg: "block" }} />
+            <Center display={{ base: "none", md: "none", lg: "block" }}>
                 <GradientButton title="Contact Me" href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)} />
             </Center>
         </Flex>
