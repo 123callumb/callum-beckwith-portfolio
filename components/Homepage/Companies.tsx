@@ -78,7 +78,7 @@ export default function Companies() {
             </GrowBox>
         </Flex>
         <Flex flexDir={"column"} display={{ base: "flex", lg: "none" }} justifyContent={"center"} alignItems={"center"}>
-            {CompanyManager.SoftwareJobs.slice(0, 7).map((m, i) => <GrowBox>{CompanyBox(m, i)}</GrowBox>)}
+            {CompanyManager.SoftwareJobs.slice(0, 7).map((m, i) => <GrowBox key={i}>{CompanyBox(m, i)}</GrowBox>)}
         </Flex>
     </Flex>;
 }
