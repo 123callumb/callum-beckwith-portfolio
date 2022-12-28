@@ -1,18 +1,27 @@
-import { Box, Text, Image, Container, HStack, Icon, Flex } from "@chakra-ui/react";
+import { Box, Text, Image, Container, HStack, Icon, Flex, Center } from "@chakra-ui/react";
 import React from "react";
 import FeaturedProject from "../../lib/props/FeaturedProject";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import SlideInBox from "../Motion/SlideInBox";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import GradientButton from "../Motion/GradientButton";
+import { TiArrowLeft } from "react-icons/ti";
+import NextLink from "next/link";
+import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default class Summary extends React.Component<FeaturedProject> {
     constructor(props: FeaturedProject) {
         super(props);
     }
     render() {
-        return <Container maxW="4xl" pt="5%">
+        return <Container maxW="4xl" pt="50px">
             <Flex gap={4} alignItems="start" flexDir={"column"}>
+                <NextLink href={`..${ResourceHelper.CreateInternalURL(InternalLinkEnum.Work)}`}>
+                    <Center className="linkAnimation" fontSize={"18"} fontWeight="600">
+                        <Icon as={TiArrowLeft} verticalAlign="center" />
+                        Back to all work
+                    </Center>
+                </NextLink>
                 <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%">
                     <Text fontSize="24" fontWeight="600">{this.props.name}</Text>
                 </SlideInBox>

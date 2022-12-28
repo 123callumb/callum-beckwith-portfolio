@@ -6,7 +6,7 @@ import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function YouLearn() {
-    return <Layout breadcrumb="Work">
+    return <Layout breadcrumb="Work" useCircuit={true}>
         <Summary
             name="Easy Learn"
             desc="Easy Learn is one of my favourite ongoing projects to date.

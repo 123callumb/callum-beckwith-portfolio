@@ -6,7 +6,7 @@ import ResourceEnum from "../../lib/enums/ResourceEnum";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function SHU() {
-    return <Layout breadcrumb="Work">
+    return <Layout breadcrumb="Work" useCircuit={true}>
         <Summary
             name="Sheffield Hallam Students' Union"
             desc="After working for Sheffield Hallam Students Union for a period of time,

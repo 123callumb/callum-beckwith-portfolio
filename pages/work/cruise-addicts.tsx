@@ -6,8 +6,8 @@ import ResourceEnum from "../../lib/enums/ResourceEnum";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function CruiseAddicts() {
-    return <Layout breadcrumb="Work">
-        <Summary 
+    return <Layout breadcrumb="Work" useCircuit={true}>
+        <Summary
             name="Cruise Addicts"
             desc="Cruise Addicts Magazine is a free online Magazine subscription company that provides their fans with the latest and greatest Cruise content.The  development for Cruise Addicts was completed by my freelance design and development partnership, Webur. Webur delivered a branding package and built an original content management system. Here they were able to distribute all their content and subscribe users to their magazine."
             featureImageURL={ResourceEnum.Showcase_CruiseAddicts}

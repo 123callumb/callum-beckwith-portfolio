@@ -6,7 +6,7 @@ import ResourceEnum from "../../lib/enums/ResourceEnum";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function ForensicNeurosciences() {
-    return <Layout breadcrumb="Work">
+    return <Layout breadcrumb="Work" useCircuit={true}>
         <Summary
             name="Forensic Neurosciences"
             desc="Forensic Neurosciences specialise in providing neurosurgical

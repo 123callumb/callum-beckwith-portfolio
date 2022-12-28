@@ -7,22 +7,22 @@ import ResourceEnum from "../../lib/enums/ResourceEnum";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function Webur() {
-    return <Layout breadcrumb="Work">
-        <Summary 
+    return <Layout breadcrumb="Work" useCircuit={true}>
+        <Summary
             name="Webur"
-            desc={<a>Webur is my web design & development partnership I created with 
-            <Link href="https://www.linkedin.com/in/killian-comerford/" 
-             ml="1" 
-             fontWeight="500"
-             color={ColourPaletteEnum.Cyan} 
-             target="_blank">
-                 Killian Comerford
-            </Link>. 
-            Webur have delivered websites, online software, and branding for multiple
-            clients over the last several years. There are a couple of projects
-            showcased on my portfolio associated with Webur.
-            The work I&apos;ve done with Webur, the diversity of projects delivered, and
-            the client experience gained is something I am very proud of.</a>}
+            desc={<a>Webur is my web design & development partnership I created with
+                <Link href="https://www.linkedin.com/in/killian-comerford/"
+                    ml="1"
+                    fontWeight="500"
+                    color={ColourPaletteEnum.Cyan}
+                    target="_blank">
+                    Killian Comerford
+                </Link>.
+                Webur have delivered websites, online software, and branding for multiple
+                clients over the last several years. There are a couple of projects
+                showcased on my portfolio associated with Webur.
+                The work I&apos;ve done with Webur, the diversity of projects delivered, and
+                the client experience gained is something I am very proud of.</a>}
             featureImageURL={ResourceEnum.Showcase_Webur}
             showcaseImageURL={ResourceEnum.Showcase_Webur}
             brandLogoURL={ResourceEnum.Logo_Webur}
