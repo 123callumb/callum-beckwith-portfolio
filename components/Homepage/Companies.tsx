@@ -47,7 +47,8 @@ export default function Companies() {
                 h="120px"
                 alignItems={"center"}
                 justifyContent={"center"}
-                boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)">
+                boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)"
+                m={{ base: "2", lg: "0" }}>
                 <Image h="60px" src={ResourceHelper.CreateResourceURL(job.LogoUrl)} />
             </Flex>
         </Tooltip>;
@@ -59,7 +60,7 @@ export default function Companies() {
                 <Text fontSize="32" fontWeight="700">Who I've worked with.</Text>
             </Flex>
         </Container>
-        <Flex flexDir="column">
+        <Flex flexDir="column" display={{ base: "none", lg: "flex" }}>
             <GrowBox>
                 <HStack w="100%" justifyContent={"center"} gridGap={2}>
                     {CompanyManager.SoftwareJobs.slice(0, 2).map(CompanyBox)}
@@ -75,6 +76,9 @@ export default function Companies() {
                     {CompanyManager.SoftwareJobs.slice(5, 7).map(CompanyBox)}
                 </HStack>
             </GrowBox>
+        </Flex>
+        <Flex flexDir={"column"} display={{ base: "flex", lg: "none" }} justifyContent={"center"} alignItems={"center"}>
+            {CompanyManager.SoftwareJobs.slice(0, 7).map(CompanyBox)}
         </Flex>
     </Flex>;
 }
