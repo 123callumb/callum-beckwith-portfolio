@@ -36,19 +36,44 @@ export default function Projects() {
         }
     };
 
-    return <Flex pt={"120px"} bgColor="white" w="100%">
+    return <Flex pt={{ base: "50px", lg: "120px" }} bgColor="white" w="100%">
         <Container maxW={"4xl"} flexDirection={"column"} w="100%">
-            <Flex alignItems={"baseline"} mb="60px">
+            <Flex alignItems={"baseline"} mb="60px" flexDir={{ base: "column", lg: "row" }} px={{ base: "2", lg: 0}}>
                 <Text fontSize="34" fontWeight="700" mr="20px">My Work.</Text>
                 <Text>Here are a couple of my most recent projects I've worked on.</Text>
             </Flex>
-            <Flex as={m.div} variants={projContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} justifyContent="space-between" mb="60px">
-                {ProjectManager.GetFeaturedProjects.slice(0, 2).map((x, i) => <FramerBox key={i} variants={projItem}>
+            <Flex
+                as={m.div}
+                variants={projContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                justifyContent="space-between"
+                mb={{ base: 0, lg: "60px" }}
+                flexDir={{ base: "column", lg: "row" }}>
+                {ProjectManager.GetFeaturedProjects.slice(0, 2).map((x, i) => <FramerBox
+                    key={i}
+                    variants={projItem}
+                    justifyContent={"center"}
+                    display="flex"
+                    mb={{ base: "10", lg: "0" }}>
                     <SummaryBox {...x} />
                 </FramerBox>)}
             </Flex>
-            <Flex as={m.div} variants={projContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} justifyContent="space-between">
-                {ProjectManager.GetFeaturedProjects.slice(2, 4).map((x, i) => <FramerBox key={i} variants={projItem}>
+            <Flex
+                as={m.div}
+                variants={projContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                justifyContent="space-between"
+                flexDir={{ base: "column", lg: "row" }}>
+                {ProjectManager.GetFeaturedProjects.slice(2, 4).map((x, i) => <FramerBox
+                    key={i}
+                    variants={projItem}
+                    justifyContent={"center"}
+                    display={"flex"}
+                    mb={{ base: i == 0 ? "10" : "0", lg: "0" }} /* this is just gross lmao */>
                     <SummaryBox {...x} />
                 </FramerBox>)}
             </Flex>
