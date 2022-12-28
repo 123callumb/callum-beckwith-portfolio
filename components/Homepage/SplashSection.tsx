@@ -92,8 +92,8 @@ export default function SplashSection() {
                     boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)"
                     zIndex={"4"}>
                     <Box borderColor="blackShade" p={{ base: "5", lg: "6" }}>
-                        <Text fontSize={{ base: "39", lg: "48" }} fontWeight="700" mt="-4">Callum Beckwith</Text>
-                        <Text fontSize={{ base: "30", lg: "34" }} fontWeight="700" mt="-2">Software Developer</Text>
+                        <Text fontSize={{ base: "39", lg: "46" }} fontWeight="700" mt="-4">Callum Beckwith</Text>
+                        <Text fontSize={{ base: "30", lg: "34" }} fontWeight="600" mt="-2">Software Developer</Text>
                         <Text fontSize={"16"} mt="3" mb="4">
                             Hey! I&apos;m Callum, a software developer from the north of England
                         </Text>
