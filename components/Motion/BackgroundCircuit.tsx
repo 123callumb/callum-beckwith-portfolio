@@ -35,7 +35,7 @@ export default function BackgroundCircuit() {
             top={{ base: "-3.2vw", md: "-3vw", lg: "-3.2vw", xl: "-3.3vw" }}
             position={"fixed"}
             type="image/svg+xml"
-            opacity={"0.05"}
+            opacity={"0.07"}
             zIndex={"1"}
             data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
         />

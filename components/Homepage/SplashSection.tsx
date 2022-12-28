@@ -35,7 +35,7 @@ export default function SplashSection() {
     return <Flex
         w="100%"
         flexDir={"column"}
-        minH={{ base: "100vh", md: "100vh", lg: "107vh" }}
+        minH={{ base: "98vh", md: "100vh", lg: "107vh" }}
         overflowY={"visible"}>
         <Flex
             color="blackShade"
@@ -45,8 +45,20 @@ export default function SplashSection() {
             flex={1}
             zIndex={"2"}
             pos="relative">
-            <Flex marginLeft={"-60px"} marginTop={{ md: "0ch", lg: "6vh"}}>
-                <Box overflow="visible" height="100%" pr="10px" flex="1" pos={"relative"} display={{ base: "none", md: "none", lg: "block" }} marginRight="-22px">
+            <Flex
+                marginLeft={{ base: 0, lg: "-60px" }}
+                marginTop={{ md: "0vh", lg: "6vh" }}
+                flexDirection={{ base: "column-reverse", lg: "row" }}
+                justifyContent={"center"}
+                alignItems={"center"}>
+                <Box
+                    overflow="visible"
+                    height="100%"
+                    pr="10px"
+                    flex="1"
+                    pos={"relative"}
+                    marginRight={{ base: "0", lg: "-22px" }}
+                    transform={{ base: "rotate(270deg)", lg: "unset" }}>
                     <chakra.object
                         ref={setBlueCircuitRef}
                         maxH={"233px"}
@@ -60,20 +72,30 @@ export default function SplashSection() {
                     <Image
                         maxW={"unset"}
                         height={"280px"}
-                        minH={"280px"}    
+                        minH={"280px"}
                         maxH={"280px"}
                         width={"432px"}
                         src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
                     />
                 </Box>
-                <Flex maxW={"440px"} flexDir="column" justifyContent="center" borderLeft="12px solid black" bgColor={"white"} borderTop={`10px solid ${ColourPaletteEnum.Cyan}`} borderRightRadius={10} boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)">
-                    <Box borderColor="blackShade" p="6">
-                        <Text fontSize="48" fontWeight="700" mt="-4">Callum Beckwith</Text>
-                        <Text fontSize="34" fontWeight="700" mt="-2">Software Developer</Text>
-                        <Text fontSize="16" my="3">
+                <Flex
+                    maxW={{ base: "350px", lg: "440px" }}
+                    flexDir="column"
+                    justifyContent="center"
+                    borderLeft={{ base: "unset", lg: "12px solid black" }}
+                    bgColor={"white"}
+                    borderTop={`10px solid ${ColourPaletteEnum.Cyan}`}
+                    borderRightRadius={{ base: 0, lg: 10 }}
+                    borderRadius={5}
+                    borderBottom={{ base: "12px solid black", lg: "unset" }}
+                    boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)">
+                    <Box borderColor="blackShade" p={{ base: "5", lg: "6" }}>
+                        <Text fontSize={{ base: "39", lg: "48" }} fontWeight="700" mt="-4">Callum Beckwith</Text>
+                        <Text fontSize={{ base: "30", lg: "34" }} fontWeight="700" mt="-2">Software Developer</Text>
+                        <Text fontSize={"16"} mt="3" mb="4">
                             Hey! I&apos;m Callum, a software developer from the north of England
                         </Text>
-                        <Flex color="blackShade">
+                        <Flex color="blackShade" mb="-1" justifyContent={{ base: "center", lg: "start" }} w="100%">
                             <motion.a whileHover={{ scale: 1.1, transition: { type: "spring", velocity: 6, stiffness: 500 } }} whileTap={{ scale: 0.8 }} href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
                                 <IconButton mr="10px" variant="ghost" icon={<Icon as={FaTwitter} boxSize="8" />} aria-label="My Twitter" />
                             </motion.a>
