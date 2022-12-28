@@ -24,7 +24,7 @@ export default function Contact() {
         });
     }
 
-    return <Layout>
+    return <Layout useCircuit={true} breadcrumb="Contact Me">
         <Center height="100%">
             <Container maxW="6xl" textAlign="center" pt="10%">
                 <VStack spacing={3}>

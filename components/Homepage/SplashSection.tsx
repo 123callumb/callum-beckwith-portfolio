@@ -89,29 +89,6 @@ export default function SplashSection() {
             </Flex>
         </Flex>
         <Flex w="100%" flexDir={"column"}>
-            <Box display={{ base: "block", md: "block" }} pos="relative">
-                <Box pos="absolute" mx="auto" right="-5vw" bottom={"-14vh"} textAlign={"center"} zIndex={"1"} >
-                    <chakra.object
-                        ref={setBlueCircuitRefMobile}
-                        maxW={"unset"}
-                        maxH={"unset"}
-                        width={"143vh"}
-                        left={"4vh"}
-                        top={"0.7vh"}
-                        position={"absolute"}
-                        type="image/svg+xml"
-                        opacity={"0.05"}
-                        data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
-                    />
-                    <Image
-                        opacity={"0.02"}
-                        maxW={"unset"}
-                        maxH={"unset"}
-                        width={"150vh"}
-                        src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
-                    />
-                </Box>
-            </Box>
             <Image src={ResourceHelper.CreateResourceURL(ResourceEnum.Header_Abstract)} width={{ base: "200vw", md: "100%" }} zIndex={"4"} />
         </Flex>
     </Flex>;

@@ -5,7 +5,7 @@ import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const Layout = ({ children, breadcrumb }: { children: any, breadcrumb?: string }) => <Box bgColor="bgWhite">
+const Layout = ({ children, breadcrumb, useCircuit }: { children: any, breadcrumb?: string, useCircuit?: boolean }) => <Box bgColor="bgWhite">
     <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
@@ -13,8 +13,8 @@ const Layout = ({ children, breadcrumb }: { children: any, breadcrumb?: string }
     </Head>
     <main style={{ backgroundColor: ColourPaletteEnum.WhiteAlt }}>
         <Flex flexDir="column" minH="100vh" overflowX="hidden" >
-            <Header breadcrumb={breadcrumb} />
-            <Box w="100%" flex="1 1 auto">
+            <Header breadcrumb={breadcrumb} useCircuit={useCircuit ?? false} />
+            <Box w="100%" flex="1 1 auto" zIndex={"2"}>
                 {children}
             </Box>
             <Footer />

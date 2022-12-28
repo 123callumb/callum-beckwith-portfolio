@@ -6,10 +6,11 @@ import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { VscProject } from 'react-icons/vsc/index'
 import GradientButton from "../Motion/GradientButton";
+import BackgroundCircuit from "../Motion/BackgroundCircuit";
 
-export default function Header({ breadcrumb }: { breadcrumb?: string }) {
-    return <Container maxW={"4xl"} zIndex={"4"}>
-        <Flex flexDir={{ md: 'row' }} color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4">
+export default function Header({ breadcrumb, useCircuit }: { breadcrumb?: string, useCircuit: boolean }) {
+    return <Container maxW={"4xl"} pos="relative">
+        <Flex flexDir={{ md: 'row' }} pos="relative" color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4" zIndex={"4"}>
             <Center>
                 <Flex fontWeight="700" display="flex" alignItems={"center"}>
                     <Icon as={VscProject} mr="8px" />
@@ -64,5 +65,6 @@ export default function Header({ breadcrumb }: { breadcrumb?: string }) {
                 <GradientButton title="Contact Me" href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Contact)} />
             </Center>
         </Flex>
+        {useCircuit && <BackgroundCircuit />}
     </Container>;
 }

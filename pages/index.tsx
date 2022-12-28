@@ -5,7 +5,7 @@ import SplashSection from "../components/Homepage/SplashSection";
 import Layout from "../components/shared/Layout";
 
 export default function Home(){
-  return <Layout>
+  return <Layout useCircuit={true}>
     <SplashSection /> 
     <Projects />
     <Companies />
