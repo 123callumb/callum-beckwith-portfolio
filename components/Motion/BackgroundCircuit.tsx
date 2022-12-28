@@ -11,7 +11,7 @@ export default function BackgroundCircuit() {
         if (!bgCircuitRef) return;
 
         new Vivus(bgCircuitRef, {
-            duration: 500,
+            duration: 1000,
             type: "scenario",
             reverseStack: true
         }, vivus => {
@@ -25,24 +25,26 @@ export default function BackgroundCircuit() {
         });
     });
 
-    return <Box pos="fixed" mx="auto" textAlign={"center"} zIndex={"1"} left={"-10vw"} top={"-4vw"}>
+    return <Box pos="fixed" mx="auto" textAlign={"center"} zIndex={"1"} left={{ base: "-150vw", sm: "-80vw", md: "-40vw", lg: "-10vw"}} top={"-4vw"}>
         <chakra.object
             ref={setBgCircuitRef}
             maxW={"unset"}
             maxH={"unset"}
-            width={"114vw"}
-            left={"-6.6vw"}
-            top={"-3.3vw"}
+            width={{ base: "335.4vw", md: "191vw", lg: "143vw", xl: "114vw" }}
+            left={{ base: "-142vw", md: "-35vw", lg: "-6vw", xl: "-6.6vw" }}
+            top={{ base: "-3.2vw", md: "-3vw", lg: "-3.2vw", xl: "-3.3vw" }}
             position={"fixed"}
             type="image/svg+xml"
-            opacity={"0.04"}
+            opacity={"0.05"}
+            zIndex={"1"}
             data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
         />
         <Image
-            opacity={"0.02"}
+            opacity={"0.03"}
+            zIndex={"-1"}
             maxW={"unset"}
             maxH={"unset"}
-            width={"120vw"}
+            width={{ base: "350vw", md: "200vw", lg: "150vw", xl: "120vw" }}
             src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
         />
     </Box>;
