@@ -95,7 +95,7 @@ export default function SplashSection() {
                         <Text fontSize={{ base: "39", lg: "46" }} fontWeight="700" mt="-4">Callum Beckwith</Text>
                         <Text fontSize={{ base: "30", lg: "34" }} fontWeight="600" mt="-2">Software Developer</Text>
                         <Text fontSize={"16"} mt="3" mb="4">
-                            Hey! I&apos;m Callum, a software developer from the north of England
+                            Welcome to my portfolio. I&apos;m Callum, a software developer from England!
                         </Text>
                         <Flex color="blackShade" mb="-1" justifyContent={{ base: "center", lg: "start" }} w="100%">
                             <motion.a whileHover={{ scale: 1.1, transition: { type: "spring", velocity: 6, stiffness: 500 } }} whileTap={{ scale: 0.8 }} href={ExternalLinkEnum.Twitter} target="_blank" rel="noreferrer">
