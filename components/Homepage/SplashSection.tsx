@@ -47,10 +47,11 @@ export default function SplashSection() {
             pos="relative">
             <Flex
                 marginLeft={{ base: 0, lg: "-60px" }}
-                marginTop={{ md: "0vh", lg: "6vh" }}
+                marginTop={"6vh"}
                 flexDirection={{ base: "column-reverse", lg: "row" }}
                 justifyContent={"center"}
-                alignItems={"center"}>
+                alignItems={"center"}
+                zIndex={"2"}>
                 <Box
                     overflow="visible"
                     height="100%"
@@ -88,7 +89,8 @@ export default function SplashSection() {
                     borderRightRadius={{ base: 0, lg: 10 }}
                     borderRadius={5}
                     borderBottom={{ base: "12px solid black", lg: "unset" }}
-                    boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)">
+                    boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)"
+                    zIndex={"4"}>
                     <Box borderColor="blackShade" p={{ base: "5", lg: "6" }}>
                         <Text fontSize={{ base: "39", lg: "48" }} fontWeight="700" mt="-4">Callum Beckwith</Text>
                         <Text fontSize={{ base: "30", lg: "34" }} fontWeight="700" mt="-2">Software Developer</Text>
