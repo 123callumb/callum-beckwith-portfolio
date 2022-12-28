@@ -12,7 +12,7 @@ import { FaFileDownload } from "react-icons/fa";
 import { GrDocumentUser  } from 'react-icons/gr/index';
 
 export default function CVSummary() {
-    return <Layout breadcrumb="Timeline">
+    return <Layout breadcrumb="Timeline" useCircuit={true}>
         <Box textAlign="center" pt="36">
             <Container maxW="2xl" bgColor={"white"} borderBottom={`2px solid ${ColourPaletteEnum.Cyan}`} p="4" pb="6" borderRadius={"4"} boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.1)">
                 <Icon as={GrDocumentUser} boxSize="10" m="4"/>

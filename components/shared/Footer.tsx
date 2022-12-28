@@ -2,7 +2,7 @@ import { Box, Container, Flex, Spacer, Text } from "@chakra-ui/react";
 import { ExternalLinkEnum } from "../../lib/enums/LinkEnum";
 
 export default function Footer() {
-    return <Container maxW="sm" pb="10" pt="12">
+    return <Container maxW="sm" pb="10" pt="12" zIndex={"4"} pos="relative">
         <Flex direction={{ md: 'row' }} color="blackShade" fontWeight="500" px={{ base: '10' }}>
             <a href={ExternalLinkEnum.GitHub} target="_blank" rel="noreferrer">
                 <Text className="linkAnimation">GitHub</Text>

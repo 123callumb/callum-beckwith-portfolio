@@ -4,7 +4,7 @@ import { ExternalLinkEnum } from "../../lib/enums/LinkEnum";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import ResourceEnum from "../../lib/enums/ResourceEnum";
 import Vivus from "vivus";
-import React, { SetStateAction, useEffect, useRef, useState, Dispatch } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 
@@ -35,7 +35,7 @@ export default function SplashSection() {
     return <Flex
         w="100%"
         flexDir={"column"}
-        minH={{ base: "98vh", md: "100vh", lg: "107vh" }}
+        minH={{ base: "97vh", md: "100vh", lg: "107vh" }}
         overflowY={"visible"}>
         <Flex
             color="blackShade"
@@ -88,7 +88,7 @@ export default function SplashSection() {
                     borderTop={`10px solid ${ColourPaletteEnum.Cyan}`}
                     borderRightRadius={{ base: 0, lg: 10 }}
                     borderRadius={5}
-                    borderBottom={{ base: "12px solid black", lg: "unset" }}
+                    borderBottom={{ base: "8px solid black", lg: "unset" }}
                     boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)"
                     zIndex={"4"}>
                     <Box borderColor="blackShade" p={{ base: "5", lg: "6" }}>
