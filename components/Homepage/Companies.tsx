@@ -8,7 +8,7 @@ import GrowBox from "../Motion/GrowBox";
 
 export default function Companies() {
 
-    const GetTooltipProps = function (key: React.Key, job: Job): Partial<TooltipProps> {
+    const GetTooltipProps = function (job: Job, key: number): Partial<TooltipProps> {
         return ({
             key,
             borderRadius: "5px",
@@ -37,8 +37,8 @@ export default function Companies() {
         });
     }
 
-    const CompanyBox = function (job: Job, key: React.Key): JSX.Element {
-        return <Tooltip {...GetTooltipProps(key, job)}>
+    const CompanyBox = function (job: Job, key: number): JSX.Element {
+        return <Tooltip {...GetTooltipProps(job, key)}>
             <Flex
                 cursor={"pointer"}
                 bgColor={"white"}
@@ -78,7 +78,9 @@ export default function Companies() {
             </GrowBox>
         </Flex>
         <Flex flexDir={"column"} display={{ base: "flex", lg: "none" }} justifyContent={"center"} alignItems={"center"}>
-            {CompanyManager.SoftwareJobs.slice(0, 7).map((m, i) => <GrowBox key={i}>{CompanyBox(m, i)}</GrowBox>)}
+            {CompanyManager.SoftwareJobs.slice(0, 7).map((m, i) => <Box key={i}>
+                <GrowBox>{CompanyBox(m, i)}</GrowBox>
+            </Box>)}
         </Flex>
     </Flex>;
 }

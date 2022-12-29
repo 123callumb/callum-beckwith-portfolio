@@ -9,26 +9,24 @@ import { motion } from "framer-motion";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 
 export default function SplashSection() {
-    const [blueCircuitRef, setBlueCircuitRef] = useState<HTMLObjectElement>();
-    const [blueCircuitRefMobile, setBlueCircuitRefMobile] = useState<HTMLObjectElement>();
+    const [blueCircuitRef, setBlueCircuitRef] = useState<HTMLDivElement>();
 
     useEffect(() => {
-        [blueCircuitRef, blueCircuitRefMobile].forEach(f => {
-            if (!f) return;
+        if (!blueCircuitRef) return;
 
-            new Vivus(f, {
-                duration: 500,
-                type: "scenario",
-                reverseStack: true
-            }, vivus => {
-                if (vivus.getStatus() === "end") {
-                    (vivus as any).parentEl.classList.add("fade-out-long");
-                    setTimeout(() => {
-                        (vivus as any).parentEl.classList.remove("fade-out-long");
-                        vivus.reset().play();
-                    }, (1000));
-                }
-            });
+        new Vivus(blueCircuitRef, {
+            duration: 500,
+            type: "scenario",
+            reverseStack: true,
+            file: ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)
+        }, vivus => {
+            if (vivus.getStatus() === "end") {
+                (vivus as any).parentEl.classList.add("fade-out-long");
+                setTimeout(() => {
+                    (vivus as any).parentEl.classList.remove("fade-out-long");
+                    vivus.reset().play();
+                }, (1000));
+            }
         });
     });
 
@@ -60,15 +58,12 @@ export default function SplashSection() {
                     pos={"relative"}
                     marginRight={{ base: "0", lg: "-22px" }}
                     transform={{ base: "rotate(270deg)", lg: "unset" }}>
-                    <chakra.object
+                    <chakra.div
                         ref={setBlueCircuitRef}
-                        maxH={"233px"}
-                        minH={"233px"}
+                        height={"233px"}
                         left={"11px"}
                         top={"22px"}
                         position={"absolute"}
-                        type="image/svg+xml"
-                        data={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuitBlue)}
                     />
                     <Image
                         maxW={"unset"}

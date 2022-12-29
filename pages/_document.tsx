@@ -21,9 +21,14 @@ export default class MyDocument extends Document {
 
     render() {
         return (
-            <Html>
+            <Html lang="en" dir="ltr">
                 <Head>
-                    {/* <style type="text/css" dangerouslySetInnerHTML={{ __html: this.props.styleTags}}/> */}
+                    <meta charSet="utf-8" />
+                    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                    <meta name="description" content="Welcome to my portfolio. I'm Callum, a software developer from England!" />
+                    <meta property="og:title" content="Callum Beckwith | Software Developer | England" />
+                    <meta property="og:url" content="https://cbeckwith.co.uk" />
+                    <meta property="og:type" content="website" />
                 </Head>
                 <body>
                     <Main />
