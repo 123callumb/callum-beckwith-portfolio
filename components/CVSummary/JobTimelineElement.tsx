@@ -10,9 +10,9 @@ export default function JobTimelineElement(props: Job) {
         icon={<Icon as={props.IconContext} />}
         iconStyle={{ background: ColourPaletteEnum.Cyan, color: ColourPaletteEnum.White }}
         contentStyle={{ padding: '0', boxShadow: 'unset' }}
-        contentArrowStyle={{ backgroundColor: ColourPaletteEnum.Cyan }}
+        contentArrowStyle={{ backgroundColor: ColourPaletteEnum.Cyan }}   
         date={props.StartDate.toLocaleString('default', { month: 'long', year: 'numeric' }) + " - " + (props.EndDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present')}>
-        <Flex borderRadius={"4"} boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)" flexDir={"column"} bgColor={"white"} borderTop={`2px solid ${ColourPaletteEnum.Cyan}`} p="2" pl="3">
+        <Flex borderRadius={"4"} boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)" flexDir={"column"} bgColor={"white"} borderTop={`3px solid ${ColourPaletteEnum.Cyan}`} p="4" pt="2">
             <Box fontSize="xl" fontWeight="600">{props.Title}</Box>
             <Box fontSize="md" fontWeight="400">{props.CompanyName}</Box>
             <Flex my={"2"}>
