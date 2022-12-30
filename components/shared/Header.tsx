@@ -14,7 +14,7 @@ export default function Header({ breadcrumb, useCircuit }: { breadcrumb?: string
         <Flex flexDir={{ md: 'row' }} pos="relative" color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4" zIndex={"4"}>
             <Center>
                 <Flex fontWeight="700" display="flex" alignItems={"center"}>
-                    <Image src={ResourceHelper.CreateResourceURL(ResourceEnum.TempFavicon)} height={"22px"} mr="2" backgroundColor={"black"} borderRadius={10}/>
+                    <Image src={ResourceHelper.CreateResourceURL(ResourceEnum.TempFavicon)} height={"21px"} mr="2" backgroundColor={"black"} borderRadius={"50%"} p={"2px"}/>
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Home)}>
                         <Text fontSize="lg" className="linkAnimation">cbeckwith.co.uk</Text>
                     </NextLink>
