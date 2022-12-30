@@ -52,25 +52,24 @@ export default function SplashSection() {
                 zIndex={"2"}>
                 <Box
                     overflow="visible"
-                    height="100%"
-                    pr="10px"
+                    height="280px"
+                    width={"432px"}
                     flex="1"
                     pos={"relative"}
                     marginRight={{ base: "0", lg: "-22px" }}
                     transform={{ base: "rotate(270deg)", lg: "unset" }}>
                     <chakra.div
                         ref={setBlueCircuitRef}
-                        height={"233px"}
-                        left={"11px"}
-                        top={"22px"}
                         position={"absolute"}
+                        height={"90.9%"}
+                        width={"99%"}
+                        right={"0.1%"}
+                        pt={"5.2%"}
                     />
                     <Image
                         maxW={"unset"}
-                        height={"280px"}
-                        minH={"280px"}
-                        maxH={"280px"}
-                        width={"432px"}
+                        height={"100%"}
+                        width={"100%"}
                         src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
                     />
                 </Box>
