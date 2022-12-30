@@ -1,5 +1,5 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Center, Container, Divider, Flex, Icon, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack } from "@chakra-ui/react"
+import { Center, Container, Divider, Flex, IconButton, Menu, MenuButton, MenuList, Spacer, Stack, Text, VStack, Image } from "@chakra-ui/react"
 import NextLink from 'next/link';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
@@ -7,13 +7,14 @@ import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import { VscProject } from 'react-icons/vsc/index'
 import GradientButton from "../Motion/GradientButton";
 import BackgroundCircuit from "../Motion/BackgroundCircuit";
+import ResourceEnum from "../../lib/enums/ResourceEnum";
 
 export default function Header({ breadcrumb, useCircuit }: { breadcrumb?: string, useCircuit: boolean }) {
     return <Container maxW={"4xl"} pos="relative">
         <Flex flexDir={{ md: 'row' }} pos="relative" color="blackShade" py={{ md: "4", base: '2' }} px={{ md: "8", base: "2" }} pl="4" zIndex={"4"}>
             <Center>
                 <Flex fontWeight="700" display="flex" alignItems={"center"}>
-                    <Icon as={VscProject} mr="8px" />
+                    <Image src={ResourceHelper.CreateResourceURL(ResourceEnum.TempFavicon)} height={"22px"} mr="2" backgroundColor={"black"} borderRadius={10}/>
                     <NextLink href={ResourceHelper.CreateInternalURL(InternalLinkEnum.Home)}>
                         <Text fontSize="lg" className="linkAnimation">cbeckwith.co.uk</Text>
                     </NextLink>

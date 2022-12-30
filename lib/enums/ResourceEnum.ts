@@ -28,6 +28,7 @@ const enum ResourceEnum {
     HomeFeature_YouLearn = "el-home-feature.png",
     HomeFeature_SHU = "shu-home-feature.png",
     HomeFeature_CruiseAddicts = "ca-home-feature.png",
+    TempFavicon = "Favicon.svg"
 }
 
 export default ResourceEnum;
