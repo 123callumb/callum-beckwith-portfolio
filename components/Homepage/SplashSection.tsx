@@ -74,7 +74,7 @@ export default function SplashSection() {
                     />
                 </Box>
                 <Flex
-                    maxW={{ base: "350px", lg: "440px" }}
+                    maxW={{ base: "310px", lg: "440px" }}
                     flexDir="column"
                     justifyContent="center"
                     borderLeft={{ base: "unset", lg: "12px solid black" }}
@@ -86,8 +86,8 @@ export default function SplashSection() {
                     boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.12)"
                     zIndex={"4"}>
                     <Box borderColor="blackShade" p={{ base: "5", lg: "6" }}>
-                        <Text fontSize={{ base: "39", lg: "46" }} fontWeight="700" mt="-4">Callum Beckwith</Text>
-                        <Text fontSize={{ base: "30", lg: "34" }} fontWeight="600" mt="-2">Software Developer</Text>
+                        <Text fontSize={{ base: "33", lg: "46" }} fontWeight="700" mt="-4">Callum Beckwith</Text>
+                        <Text fontSize={{ base: "28", lg: "34" }} fontWeight="600" mt="-2">Software Developer</Text>
                         <Text fontSize={"16"} mt="3" mb="4">
                             Welcome to my portfolio. I&apos;m Callum, a software developer from England!
                         </Text>

@@ -4,9 +4,12 @@ import { MdAlternateEmail } from "react-icons/md";
 import Layout from "../../components/shared/Layout";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import { InfoIcon } from "@chakra-ui/icons";
+import UtilHelper from "../../lib/helpers/UtilHelper";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
     const toast = useToast();
+    const [isIOS, setIsIOS] = useState(false);
 
     function CopyEmail() {
         navigator.clipboard.writeText("123callumb@gmail.com");
@@ -24,7 +27,9 @@ export default function Contact() {
         });
     }
 
-    return <Layout useCircuit={true} breadcrumb="Contact Me">
+    useEffect(() => setIsIOS(UtilHelper.IsIOS()));
+
+    return <Layout useCircuit={true} breadcrumb="Contact">
         <Container maxW="6xl" textAlign="center" display="flex" justifyContent={"center"} alignItems={"center"} pt="10vh">
             <VStack
                 spacing={3}
@@ -39,7 +44,7 @@ export default function Contact() {
                 <Text fontSize="lg" fontWeight="600">Callum Beckwith</Text>
                 <Flex alignItems={"center"}>
                     <Text fontWeight="300" fontStyle="italic" fontSize="sm" mr={"2"}>123callumb@gmail.com</Text>
-                    <Icon as={FaCopy} aria-label="Copy email address" onClick={CopyEmail} cursor="pointer" />
+                    {!isIOS && <Icon as={FaCopy} aria-label="Copy email address" onClick={CopyEmail} cursor="pointer" />}
                 </Flex>
                 <HStack spacing={6} pt="4">
                     <Tooltip label={"Click to email"}>
