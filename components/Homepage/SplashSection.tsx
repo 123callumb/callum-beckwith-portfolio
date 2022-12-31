@@ -51,12 +51,10 @@ export default function SplashSection() {
                 alignItems={"center"}
                 zIndex={"2"}>
                 <Box
-                    overflow="visible"
                     height="280px"
                     width={"432px"}
-                    flex="1"
                     pos={"relative"}
-                    marginRight={{ base: "0", lg: "-22px" }}
+                    marginRight={{ base: "0px", lg: "-22px" }}
                     transform={{ base: "rotate(270deg)", lg: "unset" }}>
                     <chakra.div
                         ref={setBlueCircuitRef}
