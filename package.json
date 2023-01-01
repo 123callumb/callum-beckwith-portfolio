@@ -7,7 +7,7 @@
     "start": "next start",
     "export": "next export",
     "lint": "next lint",
-    "build-static": "next build && next export"
+    "export-static": "next export"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.11",

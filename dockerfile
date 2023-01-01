@@ -7,7 +7,8 @@ COPY package.json /usr/src/app/
 RUN npm install --omit=dev
 
 COPY . /usr/src/app
-RUN npm run build-static
+RUN npm run build
+RUN npm run export-static
 
 FROM nginx:1.23.2-alpine
 COPY --from=build-stage /usr/src/app/out/ /usr/share/nginx/html
