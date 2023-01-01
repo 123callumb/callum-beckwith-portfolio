@@ -1,32 +1,27 @@
 import React from "react";
-import { Job } from "../../lib/props/Job_Props";
+import { Job } from "../../lib/props/Job";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
-import { Box, VStack, Text, Icon, Center } from "@chakra-ui/react";
+import { Box, VStack, Text, Icon, Center, Flex } from "@chakra-ui/react";
 import { MdLocationPin } from "react-icons/md";
 
-export default class JobTimelineElement extends React.Component<Job> {
-    render() {
-        return <VerticalTimelineElement
-            key={this.props.jobIndex}
-            contentStyle={{ boxShadow: 'unset', backgroundColor: ColourPaletteEnum.White }}
-            icon={this.props.relatedIcon}
-            iconStyle={{ background: ColourPaletteEnum.Blue, color: ColourPaletteEnum.White }}
-            date={<Text mt='0' color={{ lg: ColourPaletteEnum.White, md: 'black' }}>
-                {this.props.startDate.toLocaleString('default', { month: 'long', year: 'numeric' })} - {this.props.endDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present'}
-            </Text>}
-        >
-            <VStack spacing={2} alignItems="start">
-                <Box fontSize="xl" fontWeight="500">{this.props.jobRole}</Box>
-                <Box fontSize="md" fontWeight="500">{this.props.companyName}</Box>
-                <Center>
-                    <Icon as={MdLocationPin} />
-                    <Box marginLeft="2" fontSize="sm" fontStyle="italic">
-                        {this.props.location}
-                    </Box>
-                </Center>
-                {this.props.roleDescription && <Box fontSize="sm">{this.props.roleDescription}</Box>}
-            </VStack>
-        </VerticalTimelineElement>
-    }
+export default function JobTimelineElement(props: Job) {
+    return <VerticalTimelineElement
+        icon={<Icon as={props.IconContext} />}
+        iconStyle={{ background: ColourPaletteEnum.Cyan, color: ColourPaletteEnum.White }}
+        contentStyle={{ padding: '0', boxShadow: 'unset' }}
+        contentArrowStyle={{ backgroundColor: ColourPaletteEnum.Cyan }}   
+        date={props.StartDate.toLocaleString('default', { month: 'long', year: 'numeric' }) + " - " + (props.EndDate?.toLocaleString('default', { month: 'long', year: 'numeric' }) ?? 'Present')}>
+        <Flex borderRadius={"4"} boxShadow="1px 2px 0px rgba(40, 40, 40, 0.05)" flexDir={"column"} bgColor={"white"} borderTop={`3px solid ${ColourPaletteEnum.Cyan}`} p="4" pt="2">
+            <Box fontSize="xl" fontWeight="600">{props.Title}</Box>
+            <Box fontSize="md" fontWeight="400">{props.CompanyName}</Box>
+            <Flex my={"2"}>
+                <Icon as={MdLocationPin} />
+                <Box marginLeft="2" fontSize="sm" fontStyle="italic">
+                    {props.Location}
+                </Box>
+            </Flex>
+            {props.Description && <Box fontSize="sm">{props.Description}</Box>}
+        </Flex>
+    </VerticalTimelineElement>;
 }

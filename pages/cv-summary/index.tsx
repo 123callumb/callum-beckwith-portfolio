@@ -1,99 +1,64 @@
-import { Box, Button, Container, Icon, Link, Text, VStack } from "@chakra-ui/react";
+import { Box, Container, Flex, Icon, Spacer, Text, VStack } from "@chakra-ui/react";
 import Layout from "../../components/shared/Layout";
-import { Job } from "../../lib/props/Job_Props";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
-import { MdGroups, MdAnalytics, MdFoodBank } from 'react-icons/md/index';
-import { FaHotel, FaPencilRuler } from 'react-icons/fa/index';
-import { AiOutlineFileSearch } from 'react-icons/ai/index';
 import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
 import JobTimelineElement from "../../components/CVSummary/JobTimelineElement";
 import ResourceHelper from "../../lib/helpers/ResourceHelper";
 import ResourceEnum from "../../lib/enums/ResourceEnum";
-
-const jobDetails: Job[] = [
-    {
-        companyName: 'Audit Partnership Ltd',
-        jobRole: 'Software Developer',
-        location: 'York, UK - Remote',
-        roleDescription: 'Full stack application developer working with large client datasets - skills include .Net Core/Framework,  Node.Js, TypeScript, SQL and more...',
-        startDate: new Date(2019, 6, 1, 0, 0, 0, 0),
-        relatedIcon: <Icon as={AiOutlineFileSearch} />
-    },
-    {
-        companyName: 'Webur',
-        jobRole: 'Freelance Web Designer and Developer',
-        location: 'Sheffield, UK',
-        roleDescription: 'Duties include handling clients, producing company branding, site designs and full stack web development - skills include PHP, React.JS, Node.Js and more...',
-        startDate: new Date(2018, 6, 1, 0, 0, 0, 0),
-        relatedIcon: <Icon as={FaPencilRuler} />
-    },
-    {
-        companyName: 'Sheffield Hallam Students Union',
-        jobRole: 'Junior Web Developer',
-        location: 'Sheffield, UK',
-        roleDescription: 'Duties include the creation of multiple web pages (including designs), a blog system and a Welcome Week page.',
-        startDate: new Date(2018, 6, 1, 0, 0, 0, 0),
-        endDate: new Date(2018, 8, 1, 0, 0, 0, 0),
-        relatedIcon: <Icon as={MdGroups} />
-    },
-    {
-        companyName: 'Liberty Trading GB Ltd',
-        jobRole: 'Junior Web Application Developer',
-        location: 'Barnsley, UK',
-        roleDescription: 'Duties include handling stock values across three companies and developing private inventory analysis software. ',
-        startDate: new Date(2017, 4, 1, 0, 0, 0, 0),
-        endDate: new Date(2017, 8, 1, 0, 0, 0, 0),
-        relatedIcon: <Icon as={MdAnalytics} />
-    }
-]
-
-const nonTechJobDetails: Job[] = [
-    {
-        companyName: 'Wetherby Whaler',
-        jobRole: 'Waiter',
-        location: 'Wakefield, UK',
-        startDate: new Date(2016, 6, 1, 0, 0, 0, 0),
-        endDate: new Date(2016, 8, 1, 0, 0, 0, 0),
-        relatedIcon: <Icon as={MdFoodBank} />
-    },
-    {
-        companyName: 'Cedar Court Hotel Wakefield',
-        jobRole: 'Conference and Banqueting',
-        location: 'Wakefield, UK',
-        startDate: new Date(2014, 11, 1, 0, 0, 0, 0),
-        endDate: new Date(2016, 1, 1, 0, 0, 0, 0),
-        relatedIcon: <Icon as={FaHotel} />
-    }
-]
+import CompanyManager from "../../lib/services/CompanyManager";
+import GradientButton from "../../components/Motion/GradientButton";
+import { FaFileDownload } from "react-icons/fa";
 
 export default function CVSummary() {
-    return <Layout>
-        <Box textAlign="center" py="40">
-            <Container maxW="6xl" color={ColourPaletteEnum.White}>
-                <Text mb="8" fontSize="xl">
-                    You can get a local copy of my cv here.
-                </Text>
-                <Link href={ResourceHelper.CreateResourceURL(ResourceEnum.CV_PDF)} target="_blank">
-                    <Button bgColor="cyanShade1" color={ColourPaletteEnum.White}>Download CV</Button>
-                </Link>
+    return <Layout breadcrumb="Timeline" useCircuit={true}>
+        <Box textAlign="center" pt={{ base: "4%", md: "10%"}}>
+            <Container maxW="4xl">
+                <VStack
+                    bgColor={"white"}
+                    borderBottom={`6px solid ${ColourPaletteEnum.Cyan}`}
+                    borderTop={`4px solid black`}
+                    p="4"
+                    pb="6"
+                    borderRadius={"4"}
+                    mx={{ base: "5", md: 0}}
+                    boxShadow="1px 0px 10px 1px rgba(40, 40, 40, 0.1)"
+                    alignItems={"start"}>
+                    <Text fontSize={"20"} fontWeight={"600"}>About me:</Text>
+                    <Text fontSize={"md"} textAlign="left">
+                        I have a Bachelor of Science with First Class
+                        Honours in Computer Science and currently,
+                        work as a Senior Software Developer for Audit
+                        Partnership. 
+                        <Box my="2" />
+                        I build and maintain data-heavy software used 
+                        to audit some of the largest companies in the
+                        UK and USA. 
+                        <Box my="2" />
+                        Prior to working in the finance sector, I ran
+                        a freelance design and development partnership,
+                        where I produced branding, marketing, and online
+                        software solutions for a wide range of clients.
+                    </Text>
+                    <Flex w={"100%"} justifyContent={"center"} alignItems={"center"} flexDir="column" pt="5">
+                        <Text fontStyle={"italic"} fontWeight="light" fontSize={"sm"}>For further information you can access my cv here:</Text>
+                        <Flex mt="4">
+                            <GradientButton title="Click to Download CV" href={ResourceHelper.CreateResourceURL(ResourceEnum.CV_PDF)} customIcon={FaFileDownload} />
+                        </Flex>
+                    </Flex>
+                </VStack>
             </Container>
         </Box>
-        <Box bgColor="blueShade1">
-            <Container maxW="6xl" py="8" pb="12">
-                <Box textAlign={{ lg: 'center', md: 'left' }} mb="4" fontWeight="500" fontSize="lg" color={ColourPaletteEnum.White}>
-                    <Text>My journey</Text>
-                </Box>
-                <VerticalTimeline>
-                    {jobDetails.map((m, i) => <JobTimelineElement key={i} {...m} />)}
-                </VerticalTimeline>
-                <Text my="6" color={ColourPaletteEnum.White} fontWeight="500" fontSize="md" textAlign={{ lg: 'center', md: 'left' }}>
-                    Non tech related
-                </Text>
-                <VerticalTimeline>
-                    {nonTechJobDetails.map((m, i) => <JobTimelineElement key={i} {...m} />)}
-                </VerticalTimeline>
-            </Container>
-        </Box>
-    </Layout>
+        <Container maxW="5xl" pb="8" px={{ base: "6", '2xl': "14" }}>
+            <VerticalTimeline lineColor={ColourPaletteEnum.Cyan} className="timeline-extra">
+                {CompanyManager.SoftwareJobs.filter(f => f.ShowInTimeline).map((m, i) => <JobTimelineElement key={i} {...m} />)}
+            </VerticalTimeline>
+            <Text my="6" fontWeight="600" fontSize="md" textAlign={{ md: 'center', base: 'left' }}>
+                Non tech related
+            </Text>
+            <VerticalTimeline lineColor={ColourPaletteEnum.Cyan}>
+                {CompanyManager.NonSoftwareJobs.filter(f => f.ShowInTimeline).map((m, i) => <JobTimelineElement key={i} {...m} />)}
+            </VerticalTimeline>
+        </Container>
+    </Layout>;
 }

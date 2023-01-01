@@ -1,55 +1,65 @@
-import { Box, Text, Image, Container, VStack, HStack, Button, LinkBox, LinkOverlay, Icon } from "@chakra-ui/react";
+import { Box, Text, Image, Container, HStack, Icon, Flex, Center } from "@chakra-ui/react";
 import React from "react";
-import NextLink from 'next/link';
-import Summary_Props from "../../lib/props/Summary_Props";
+import FeaturedProject from "../../lib/props/FeaturedProject";
+import ColourPaletteEnum from "../../lib/enums/ColourPaletteEnum";
+import SlideInBox from "../Motion/SlideInBox";
+import ResourceHelper from "../../lib/helpers/ResourceHelper";
+import GradientButton from "../Motion/GradientButton";
+import { TiArrowLeft } from "react-icons/ti";
+import NextLink from "next/link";
+import { InternalLinkEnum } from "../../lib/enums/LinkEnum";
 
-export default class Summary extends React.Component<Summary_Props> {
-    constructor(props: Summary_Props) {
+export default class Summary extends React.Component<FeaturedProject> {
+    constructor(props: FeaturedProject) {
         super(props);
     }
     render() {
-        return <Container maxW="6xl" pt="5%">
-            <VStack spacing={4} alignItems="start" color="whiteShade">
-                <Box borderLeft="6px white solid" p="2" px="4">
-                    <Text fontSize="40" fontWeight="400">{this.props.name}</Text>
-                </Box>
-                <Box borderLeft="6px white solid" p="2" px="4">
-                    <Box fontSize="18" fontWeight="400">{this.props.desc}</Box>
-                </Box>
-                {this.props.brandLogoURL && <Box borderLeft="6px white solid" p="2" px="4">
-                    <Box bgColor="whiteShade" p="8" borderRadius="8">
-                        <Image src={`../${this.props.brandLogoURL}`} height="80px" draggable="false" w="auto" />
-                    </Box>
-                </Box>}
-                {this.props.colours?.length && <Box borderLeft="6px white solid" p="2" px="4">
+        return <Container maxW="4xl" pt="50px">
+            <Flex gap={4} alignItems="start" flexDir={"column"}>
+                <NextLink href={`..${ResourceHelper.CreateInternalURL(InternalLinkEnum.Work)}`}>
+                    <Center className="linkAnimation" fontSize={"18"} fontWeight="600">
+                        <Icon as={TiArrowLeft} verticalAlign="center" />
+                        Back to all work
+                    </Center>
+                </NextLink>
+                <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%">
+                    <Text fontSize="24" fontWeight="600">{this.props.name}</Text>
+                </SlideInBox>
+                <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%">
+                    <Text fontWeight="400">{this.props.desc}</Text>
+                </SlideInBox>
+                {this.props.brandLogoURL && <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%">
+                    <Image src={ResourceHelper.CreateResourceURL(this.props.brandLogoURL)} height="80px" draggable="false" w="auto" />
+                </SlideInBox>}
+                {this.props.colours?.length && <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%" flexDir={"column"}>
                     <Text fontWeight="500" fontSize="sm" mb="3" fontStyle="italic">Colour palette</Text>
                     <HStack>
                         {this.props.colours.map((m, i) => <Box borderRadius="8" bgColor={m} key={i} border="2px white solid " h={{ md: "75px", base: '50px' }} w={{ md: "75px", base: '50px' }}></Box>)}
                     </HStack>
-                </Box>}
-                <Box borderLeft="6px white solid" p="2" px="4">
+                </SlideInBox>}
+                <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%" flexDir={"column"}>
                     <Text fontWeight="500" fontSize="sm" mb="3" fontStyle="italic">Technologies</Text>
-                    {this.props.technologyUsed.map((m, i) => <Icon key={i} as={m} boxSize={10} mr={4} />)}
-                </Box>
-                <Box borderLeft="6px white solid" p="2" px="4">
+                    <Flex>
+                        {this.props.technologyUsed.map((m, i) => <Icon key={i} as={m} boxSize={10} mr={4} />)}
+                    </Flex>
+                </SlideInBox>
+                <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%" flexDir={"column"}>
                     <Text fontWeight="500" fontSize="sm" mb="3" fontStyle="italic">Languages</Text>
-                    {this.props.languagesUsed.map((m, i) => <Icon key={i} as={m} boxSize={10} mr={4} />)}
-                </Box>
-                <Box borderLeft="6px white solid" p="2" px="4">
+                    <Flex>
+                        {this.props.languagesUsed.map((m, i) => <Icon key={i} as={m} boxSize={10} mr={4} />)}
+                    </Flex>
+                </SlideInBox>
+                <SlideInBox borderLeft={`6px ${ColourPaletteEnum.Cyan} solid`} bgColor="white" p="2" px="4" w="100%" flexDir={"column"}>
                     <Text fontWeight="500" fontSize="sm" mb="3" fontStyle="italic">Showcase</Text>
-                    <Image src={`../${this.props.featureImageURL}`} width="100%" draggable="false" />
-                </Box>
+                    <Box px="4" pb="6">
+                        <Image src={ResourceHelper.CreateResourceURL(this.props.featureImageURL)} width="100%" draggable="false" />
+                    </Box>
+                </SlideInBox>
                 <Text display={{ base: 'block', md: 'none' }} mt="4" fontWeight="100" fontStyle="italic" fontSize="sm" textAlign="center" w="100%">*It&apos;s recommend to view showcase images via desktop or pinching out to zoom in on a mobile device.*</Text>
-                {this.props.link && <Box p="2" px="4" textAlign="center" w="100%">
-                    <LinkBox>
-                        <NextLink href={this.props.link} passHref>
-                            <LinkOverlay>
-                                <Button bgColor="cyanShade1">View live</Button>
-                            </LinkOverlay>
-                        </NextLink>
-                    </LinkBox>
-                </Box>}
-            </VStack>
+                {this.props.link && <Flex p="2" px="4" textAlign="center" w="100%" alignItems={"center"} justifyContent={"center"}>
+                    <GradientButton href={this.props.link} title="View Live" />
+                </Flex>}
+            </Flex>
         </Container>;
     }
 }

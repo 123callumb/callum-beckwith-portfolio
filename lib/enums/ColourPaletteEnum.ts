@@ -1,9 +1,11 @@
 const enum ColourPaletteEnum {
-    Cyan = '#75bfbf',
-    LightBlue = '#496373',
+    Cyan = '#68D8C2',
+    LightBlue = '#F4F9F6',
     Blue = '#364F59',
     DarkBlue = '#2A333A',
-    White = '#F0F1F2'
+    White = '#F0F1F2',
+    WhiteAlt = "#f8f9fa",
+    BtnBlue = "#589ea6",
 } 
 
 export default ColourPaletteEnum;

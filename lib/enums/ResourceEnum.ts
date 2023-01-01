@@ -7,12 +7,28 @@ const enum ResourceEnum {
     Showcase_CruiseAddicts = "ca-feature-preview.png",
     Showcase_ForensicNeurosciences = "fn-feature-preview.png",
     Showcase_SHU = "shu-feature-preview.png",
-    Showcase_EasyLearn = "el-feature-preview.png",
+    Showcase_YouLearn = "el-feature-preview.png",
     Logo_Webur = "wb-logo.png",
     Logo_CruiseAddicts = "ca-logo.png",
     Logo_ForensicNeurosciences = "fn-logo.png",
     Logo_SHU = "shu-logo.png",
-    CV_PDF = "CallumBeckwith_LatestCV.pdf"
-} 
+    CV_PDF = "CallumBeckwith_LatestCV.pdf",
+    IsometricSplash = "laptop-chip-isometric.svg",
+    TitleCircuit = "title-circuit.svg",
+    TitleCircuitBlue = "title-circuit-blue.svg",
+    YouLearn_Preview_Desktop = "el-feature-desktop.png",
+    YouLearn_Preview_Mobile = "el-feature-mobile.png",
+    Webur_Preview_Desktop = "wb-feature-desktop.png",
+    SHU_Preview_Desktop = "shu-feature-desktop.png",
+    LC_Logo = "lc-logo.jpg",
+    LT_Logo = "lt-logo.jpg",
+    AP_Logo = "ap-logo.png",
+    Header_Abstract = "header-abstract.svg",
+    HomeFeature_Webur = "wb-home-feature.png",
+    HomeFeature_YouLearn = "el-home-feature.png",
+    HomeFeature_SHU = "shu-home-feature.png",
+    HomeFeature_CruiseAddicts = "ca-home-feature.png",
+    TempFavicon = "Favicon.svg"
+}
 
 export default ResourceEnum;
