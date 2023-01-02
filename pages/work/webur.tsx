@@ -10,7 +10,7 @@ export default function Webur() {
     return <Layout breadcrumb="Work" useCircuit={true}>
         <Summary
             name="Webur"
-            desc={<a>Webur is my web design & development partnership I created with
+            desc={<a>Webur is a web design & development partnership I created with
                 <Link href="https://www.linkedin.com/in/killian-comerford/"
                     ml="1"
                     fontWeight="500"

@@ -14,7 +14,7 @@ export default function SHU() {
             Webur, throughout my time at university. Although there are multiple projects
             that have been worked on with Sheffield Hallam Students' Union, the one showcased
             below is a personal favourite of mine. These are the deliverables produced
-            for their 2018 Welcome Week, which is viewed by the majority of people starting
+            for their 2018 Welcome Week, which are viewed by the majority of people starting
             at Sheffield Hallam university."
             featureImageURL={ResourceEnum.Showcase_SHU}
             showcaseImageURL={ResourceHelper.CreateResourceURL(ResourceEnum.Showcase_SHU)}
