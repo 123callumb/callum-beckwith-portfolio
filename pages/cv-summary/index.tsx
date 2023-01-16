@@ -26,6 +26,11 @@ export default function CVSummary() {
                     alignItems={"start"}>
                     <Text fontSize={"20"} fontWeight={"600"}>About me:</Text>
                     <Text fontSize={"md"} textAlign="left">
+                        I'm a full-stack software developer with multiple
+                        years of programming experience that engages with
+                        market-leading technologies to deliver creative
+                        and effective business solutions. 
+                        <Box my="2"/>
                         I have a Bachelor of Science with First Class
                         Honours in Computer Science and currently,
                         work as a Senior Software Developer for Audit
