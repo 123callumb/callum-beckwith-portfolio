@@ -57,7 +57,7 @@ export default function Companies() {
     return <Flex w="100%" py="100px" flexDir={"column"}>
         <Container maxW={"4xl"}>
             <Flex flexDir={"column"} mb="50px">
-                <Text fontSize="32" fontWeight="700">Who I've worked with.</Text>
+                <Text fontSize="32" fontWeight="700">Who I&apos;ve worked with.</Text>
             </Flex>
         </Container>
         <Flex flexDir="column" display={{ base: "none", lg: "flex" }}>

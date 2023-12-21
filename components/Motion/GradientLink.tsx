@@ -5,7 +5,7 @@ import { Flex, Icon } from '@chakra-ui/react';
 import { TiArrowRight } from 'react-icons/ti';
 
 export default function GradientLink(props: { href: string, title: string, newTab?: boolean }) {
-    const GradientButton = React.forwardRef((p: any, ref: any) => {
+    const GradientLinkComp = React.forwardRef((p: any, ref: any) => {
         return (<FramerBox
             flexDir={"column"}
             pt={2}
@@ -69,8 +69,9 @@ export default function GradientLink(props: { href: string, title: string, newTa
                 }}></FramerBox>
         </FramerBox>);
     });
-
+    GradientLinkComp.displayName = "GradientLinkComp";
+    
     return <NextLink href={props.href} target={props.newTab ? "_blank" : "_self"} rel={props.newTab ? "noopener noreferrer" : ""}>
-        <GradientButton />
+        <GradientLinkComp />
     </NextLink>;
 }

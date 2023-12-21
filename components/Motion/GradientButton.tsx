@@ -1,12 +1,12 @@
 import NextLink from 'next/link';
 import FramerBox from './FramerBox';
 import React from 'react';
-import { Flex, Icon, transition } from '@chakra-ui/react';
+import { Flex, Icon } from '@chakra-ui/react';
 import { TiArrowRight } from 'react-icons/ti';
 import { IconType } from 'react-icons';
 
 export default function GradientButton(props: { href: string, title: string, customIcon?: IconType }) {
-    const GradientButton = React.forwardRef((p: any, ref: any) => {
+    const GradientButtonComp = React.forwardRef((p: any, ref: any) => {
         return (<FramerBox
             flexDir={"column"}
             px={"10px"}
@@ -65,8 +65,9 @@ export default function GradientButton(props: { href: string, title: string, cus
             </Flex>
         </FramerBox>);
     });
-
+    GradientButtonComp.displayName = "GradientButtonComp";
+    
     return <NextLink href={props.href} passHref legacyBehavior>
-        <GradientButton />
+        <GradientButtonComp />
     </NextLink>;
 }

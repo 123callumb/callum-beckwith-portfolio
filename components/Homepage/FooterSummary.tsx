@@ -35,7 +35,7 @@ export default function FooterSummary() {
             <Flex w={"100%"} flexDir={{ base: "column-reverse", lg: "row" }}>
                 <Flex gap={3} w={{ lg: "50%" }} alignItems="flex-start" flexDir={"column"}>
                     <Text fontSize={"20"} fontWeight="600">My Timeline</Text>
-                    <Text mb="3">To find further information about my previous job positions, the technologies I have used, and the responsibilites I've had, click below to visit a detailed timeline:</Text>
+                    <Text mb="3">To find further information about my previous job positions, the technologies I have used, and the responsibilites I&apos;ve had, click below to visit a detailed timeline:</Text>
                     <Flex display={{ base: "flex", lg: "none" }} w="100%">
                         <VerticalTimeline lineColor={ColourPaletteEnum.Cyan} layout="1-column-left">
                             {CompanyManager.SoftwareJobs.filter(f => f.ShowInTimeline).map(timelineEl)}
@@ -50,10 +50,10 @@ export default function FooterSummary() {
                         Reach out to my email:  <Link fontWeight={"600"} href="mailto:123callumb@gmail.com" color={ColourPaletteEnum.Cyan}>123callumb@gmail.com</Link>
                     </Text>
                     <Box fontStyle={"italic"} fontWeight="light" fontSize={"sm"}>
-                        If you're interested, you can view the source code for this portfolio site on my GitHub
+                        If you&apos;re interested, you can view the source code for this portfolio site on my GitHub
                         <Link fontWeight={"500"} color={ColourPaletteEnum.Cyan} href="https://github.com/123callumb/callum-beckwith-portfolio" target={"_blank"}> here</Link>.
                         <Divider w="10%" my="2" />
-                        As much as I'd love to share all of my code, most repositories on my GitHub are not public for client privacy reasons.
+                        As much as I&apos;d love to share all of my code, most repositories on my GitHub are not public for client privacy reasons.
                     </Box>
                 </Flex>
                 <Spacer />

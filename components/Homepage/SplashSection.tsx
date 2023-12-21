@@ -69,6 +69,7 @@ export default function SplashSection() {
                         height={"100%"}
                         width={"100%"}
                         src={ResourceHelper.CreateResourceURL(ResourceEnum.TitleCircuit)}
+                        alt="Circuit Art"
                     />
                 </Box>
                 <Flex
@@ -105,7 +106,7 @@ export default function SplashSection() {
             </Flex>
         </Flex>
         <Flex w="100%" flexDir={"column"}>
-            <Image src={ResourceHelper.CreateResourceURL(ResourceEnum.Header_Abstract)} width={{ base: "200vw", md: "100%" }} zIndex={"4"} />
+            <Image alt="Header Art" src={ResourceHelper.CreateResourceURL(ResourceEnum.Header_Abstract)} width={{ base: "200vw", md: "100%" }} zIndex={"4"} />
         </Flex>
     </Flex>;
 }

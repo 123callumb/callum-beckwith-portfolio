@@ -9,7 +9,7 @@ export default function Custom404() {
 
     return <Layout>
         <Flex height={"100%"} pt={"20%"} flexDirection={"column"} alignContent="center" alignItems={"center"} justifyContent={"center"}>
-            <Text fontSize={"xl"}>Hmm this doesn't seem right, how did you get here?</Text>
+            <Text fontSize={"xl"}>Hmm this doesn&apos;t seem right, how did you get here?</Text>
             <SlideInBox className="linkAnimation" display={"flex"} alignItems="center" mt={"4"} fontWeight={"600"}>
                 <Icon as={TiArrowLeft} />
                 <Text onClick={() => router.back()}>Click to go back</Text>

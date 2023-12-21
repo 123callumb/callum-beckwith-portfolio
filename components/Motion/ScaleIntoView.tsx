@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-export default ({ children, style= {} }) => {
+export default function ScaleIntoView({ children, style= {} }){
     const controls = useAnimation();
     const { ref, inView } = useInView();
 

@@ -40,7 +40,7 @@ export default function Projects() {
         <Container maxW={"4xl"} flexDirection={"column"} w="100%">
             <Flex alignItems={"baseline"} mb="60px" flexDir={{ base: "column", lg: "row" }} px={{ base: "2", lg: 0}}>
                 <Text fontSize="34" fontWeight="700" mr="20px">My Work.</Text>
-                <Text>Here are a couple of my most recent projects I've worked on.</Text>
+                <Text>Here are a couple of my most recent projects I&apos;ve worked on.</Text>
             </Flex>
             <Flex
                 as={m.div}
