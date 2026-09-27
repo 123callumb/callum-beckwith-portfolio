@@ -1,0 +1,90 @@
+{
+  "profile": {
+    "name": "Callum Beckwith",
+    "title": "Lead Software Engineer",
+    "location": "England",
+    "email": "123callumb@gmail.com",
+    "phone": "07403333115",
+    "website": "https://cbeckwith.co.uk",
+    "cv": "/res/Callum_Beckwith_CV_2026.pdf",
+    "intro": "I’m a software developer and team lead at PSSG, working across AI, full-stack development and product direction. I led the engineering behind Capture Expense, helping take it from early development to a seven-figure business.",
+    "socials": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/123callumb"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/callumbeckwith/"
+      },
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/CalZonie_"
+      }
+    ],
+    "subtitle": "I lead teams, modernise software and put AI to work."
+  },
+  "experience": [
+    {
+      "label": "Now",
+      "company": "PSSG",
+      "context": "Technical Lead · Cintra People HR",
+      "description": "Driving the modernisation of Cintra People HR, bringing the experience of scaling Capture Expense to the product’s next stage. Shaping a better user experience and identifying where AI can simplify everyday HR work."
+    },
+    {
+      "label": "Joined 2023",
+      "company": "Capture Expense",
+      "context": "Technical Lead · Part of the PSSG",
+      "description": "Led development through the startup phase and helped scale Capture Expense into a seven-figure business. Turned customer needs into product direction, scoped and built the solutions, and drove practical AI opportunities across the product."
+    },
+    {
+      "label": "2019–2023",
+      "company": "Audit Partnership",
+      "context": "Senior Software Developer",
+      "description": "Built software to audit millions of financial records for major UK and US businesses, while leading sprints and guiding the work of other developers."
+    },
+    {
+      "label": "From 2018",
+      "company": "Webur",
+      "context": "Freelance Designer & Developer",
+      "description": "Ran a client-facing design and development partnership, turning business briefs into brand identities, websites and full-stack software."
+    },
+    {
+      "label": "2018",
+      "company": "Sheffield Hallam Students’ Union",
+      "context": "Junior Developer",
+      "description": "Combined design and development to deliver blog systems, Welcome Week pages and wider student-facing web experiences, with work reaching thousands of students."
+    },
+    {
+      "label": "2017",
+      "company": "Liberty Trading",
+      "context": "Junior Systems Developer",
+      "description": "Combined software development with stock management across three companies, building bespoke tools for inventory analysis."
+    }
+  ],
+  "background": [
+    "At PSSG, I lead technical development for Cintra People HR. I set the technical direction for the work, guide the team through delivery and stay hands-on with development. I’m modernising the interface and exploring where AI can make the product more useful.",
+    "At Capture Expense, one of the UK’s leading AI-powered expense platforms, I led development through the startup phase and helped grow the business to seven figures. My work stretched across client conversations, the roadmap, product direction and delivery: understanding what people needed, shaping the solution and building it.",
+    "At Audit Partnership, I built data-heavy software used to audit millions of financial records, including accounts payable and receivable data, for major UK and US businesses. I led sprints, guided and mentored developers, and contributed to technical interviews.",
+    "With Webur, I ran a freelance design and development partnership, working directly with clients to turn their ideas into branding, websites and software."
+  ],
+  "education": "BSc Computer Science · First Class Honours · Sheffield Hallam University",
+  "strengths": [
+    {
+      "title": "AI in products",
+      "description": "Building AI into software to simplify complex tasks and make information easier to access."
+    },
+    {
+      "title": "Full-stack engineering",
+      "description": "Building software that scales with a business, from the interface to the data and services behind it."
+    },
+    {
+      "title": "Product direction",
+      "description": "Turning customer needs into product priorities, shaping the roadmap and deciding what to build next."
+    },
+    {
+      "title": "Technical leadership",
+      "description": "Setting technical direction, guiding developers through delivery and staying hands-on with the code."
+    }
+  ]
+}

@@ -1,15 +1,10 @@
-FROM node:16-alpine as build-stage
-
-RUN mkdir -p /usr/src/app
+FROM node:24-alpine AS build
 WORKDIR /usr/src/app
-
-COPY package.json /usr/src/app/
-RUN npm install --omit=dev
-
-COPY . /usr/src/app
-RUN npm run build
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
 RUN npm run export-static
 
-FROM nginx:1.23.2-alpine
-COPY --from=build-stage /usr/src/app/out/ /usr/share/nginx/html
+FROM nginx:stable-alpine
+COPY --from=build /usr/src/app/out/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf

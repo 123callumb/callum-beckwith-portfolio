@@ -1,0 +1,34 @@
+[
+  {
+    "source": "/work",
+    "destination": "/#background"
+  },
+  {
+    "source": "/cv-summary",
+    "destination": "/#experience"
+  },
+  {
+    "source": "/contact",
+    "destination": "/#contact"
+  },
+  {
+    "source": "/work/you-learn",
+    "destination": "/#background"
+  },
+  {
+    "source": "/work/webur",
+    "destination": "/#background"
+  },
+  {
+    "source": "/work/sheffield-hallam-students-union",
+    "destination": "/#background"
+  },
+  {
+    "source": "/work/cruise-addicts",
+    "destination": "/#background"
+  },
+  {
+    "source": "/work/forensic-neurosciences",
+    "destination": "/#background"
+  }
+]
