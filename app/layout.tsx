@@ -16,9 +16,15 @@ export const metadata: Metadata = {
     locale: "en_GB",
   },
   icons: {
-    icon: "/favicons/favicon.ico",
+    icon: [
+      { url: "/favicons/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicons/favicon.ico", sizes: "any" },
+      { url: "/favicons/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+    ],
     apple: "/favicons/apple-touch-icon.png",
+    other: [{ rel: "mask-icon", url: "/favicons/safari-pinned-tab.svg", color: "#286b60" }],
   },
+  manifest: "/favicons/site.webmanifest",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
