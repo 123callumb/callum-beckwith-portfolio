@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { profile, strengths, experience, background, education } from "@/content/portfolio.json";
+import { ArrowUpRight } from "./arrow-up-right";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 
@@ -12,8 +13,8 @@ export default function HomePage() {
         <p className="intro-subtitle">{profile.subtitle}</p>
         <p className="lead">{profile.intro}</p>
         <div className="actions">
-          <a className="button" href={`mailto:${profile.email}`}>Let’s talk <span aria-hidden="true">↗</span></a>
-          <a className="text-link" href={profile.socials.find((social) => social.label === "LinkedIn")?.url}>Find me on LinkedIn <span aria-hidden="true">↗</span></a>
+          <a className="button" href={`mailto:${profile.email}`}>Let’s talk <ArrowUpRight /></a>
+          <a className="text-link" href={profile.socials.find((social) => social.label === "LinkedIn")?.url}>Find me on LinkedIn <ArrowUpRight /></a>
         </div>
         <p className="intro-note">Based in England.</p>
       </section>
@@ -52,7 +53,7 @@ export default function HomePage() {
       <section id="contact" className="contact-section" aria-labelledby="contact-title">
         <p className="section-label">Have something in mind?</p><h2 id="contact-title">Let’s talk.</h2>
         <p>Talk to me about software, practical AI, or the team behind your next product.</p>
-        <a className="contact-email" href={`mailto:${profile.email}`}>{profile.email} <span aria-hidden="true">↗</span></a>
+        <a className="contact-email" href={`mailto:${profile.email}`}>{profile.email} <ArrowUpRight /></a>
         <div className="contact-secondary"><a href={profile.cv} download>Download my CV (PDF) <span aria-hidden="true">↓</span></a><span>Experience, skills and education in one page.</span></div>
       </section>
     </>
