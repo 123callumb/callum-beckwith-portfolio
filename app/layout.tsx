@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { profile } from "@/content/portfolio.json";
+import { ArrowUpRight } from "./arrow-up-right";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -37,7 +38,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <nav aria-label="Main navigation">
             <Link href="/#experience">Experience</Link>
             <Link href="/#approach">What I do</Link>
-            <Link href="/#contact">Contact <span aria-hidden="true">↗</span></Link>
+            <Link href="/#contact">Contact <ArrowUpRight /></Link>
           </nav>
         </header>
         <main id="main-content" className="container" tabIndex={-1}>{children}</main>
