@@ -1,4 +1,8 @@
 node_modules
 .next
 out
-package-lock.json
+.git
+.env*
+docs
+*.tsbuildinfo
+npm-debug.log*
